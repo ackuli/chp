@@ -1,0 +1,765 @@
+﻿
+@{
+    ViewBag.Title = "Tamattu Hajj At A Glance";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content=" Details guide to how to perform Hajj Tamattu" />
+    <meta name="Keywords" content=" how hajj is performed step by step, hajj guide, Step By Step Guide To Hajj Tamattu, How to perform Tamattu Hajj?, Tammattu Hajj, Step by step guide to hajj, meeqat, miqat, sa’i, making hajj niyah, ‘umrah hajj, hajj preparation" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+           #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+        table, th, td {
+        border: 1px #4094D0;
+        border-collapse: collapse;
+          padding: 10px;
+        width: auto;
+        color: white;
+        font-size: 1.1em;
+       
+    }
+
+
+        table#t01 {
+       background: #4094D0;
+    }
+        table#t02 {
+       background: #0070c0;
+    }
+    .step .media-body {
+        border: 2px solid #4094D0;
+        padding: 10px;
+    }
+
+    .step .media {
+        padding: 1px;
+    }
+
+       .small-arrow {
+        width: 100px;
+        height: 120px;
+    }
+
+    .medium-arrow {
+        width: 70px;
+        height: 110px;
+    }
+
+    .large-arrow {
+        width: 100%;
+        height: 300px;
+    }
+
+    .horigontal-arrow {
+        width: 200px;
+        height:100px;
+    }
+
+    .horigontalLong-arrow {
+        width: 220px;
+        height: 300px;
+    }
+
+    .extraLarge-arrow {
+        width: 100px;
+        height: 200px;
+    }
+
+    .media-object {
+        display: inline;
+    }
+
+    .stepPosition-Part1-Umrah {
+        color: white;
+        font-weight: bold;
+        left: 75px;
+        margin-left:10px;
+        margin-top: 35px;
+        position: absolute;
+    }
+
+    .stepPosition-Part2-hajj {
+        color: white;
+        font-weight: bold;
+        left: 470px;
+        margin-left: 25px;
+        margin-top: 35px;
+        position: absolute;
+    }
+
+    .stepPosition-Ihram-break {
+        color: black;
+        font-weight: bold;
+        left: 240px;
+        margin-left: 0;
+        position: absolute;
+        text-align: center;
+        top: 10px;
+    }
+
+
+    .arabicCSS p {
+        font-size: 20px;
+        font-weight: normal;
+        margin-right: 10px;
+        text-align: right;
+    }
+
+    .stepPosition {
+        position: absolute;
+        margin-left: 0px;
+        color: white;
+        left: 22px;
+        top: 30px;
+        text-align: center;
+    }
+
+    .stepPosition1 {
+        position: absolute;
+        margin-left: 0px;
+        color: white;
+        left: 44px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .stepPosition2 {
+        position: absolute;
+        margin-left: 0px;
+        color: white;
+        left: 44px;
+        margin-top: 50px;
+        text-align: center;
+    }
+    /*//breadcrumb starts here//*/
+       ul.breadcrumb {
+    padding: 8px 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    content: "/\00a0";
+    }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*//breadcrumb ends//*/
+   </style>
+
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/GettingReadyForHajj">Getting Ready for Hajj</a></li>
+    <li><a href="../Footer/Hajjritesataglance">Hajj rites at a glance</a></li>
+    <li>Hajj Tammattu at a glance</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+
+
+    <div class="row-fluid">
+        <div class="Footercontent">
+            <h2>Hajj Tammattu at a glance </h2>
+            <p>
+                ‘Umrah and Hajj with two separate Ihrams
+            </p>
+            @**/----------------------------*@
+
+            <div class="step">
+                <div class="media" style="position:relative">
+                    <a>
+                        <img class="media-object horigontal-arrow img-responsive" alt="64x64" src="~/Content/images/Part.jpg" />
+                        <span class="stepPosition-Part1-Umrah">
+                           'Umrah
+                        </span>
+                        <img class="media-object horigontal-arrow img-responsive" alt="64x64" src="~/Content/images/IhramBreak.png" />
+                        <span class="stepPosition-Ihram-break">
+                            'Umrah complete <br>
+                          IHRAM BREAK <br />
+                          waiting for hajj 
+                        </span>
+                        <img class="media-object horigontal-arrow img-responsive" alt="64x64" src="~/Content/images/Part.jpg" />
+                        <span class="stepPosition-Part2-hajj">
+                           Hajj
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+            <br />
+
+            <div class="step">
+                <div class="media">
+
+                    <table id="t01">
+                        <tr>
+                            <td>
+                                Actions for 'Umrah in Tamattu Hajj
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+            <br />
+            <div class="step boxstep">
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            1
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <ul style="list-style-type:disc">
+                            <li>Cleansing Rituals</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            2
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <ul style="position:relative">
+                            <li>
+                                Wearing Ihram Attire
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            3
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+                    </a>
+                    <div class="media-body">
+                        <ul style="list-style-type:disc">
+
+                            <li>
+                                Salah before
+                                making
+                                intention (OPTIONAL)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            4
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body  arabicCSS">
+                        <ul style="list-style-type:disc">
+                            <li>
+                                Miqat
+                                &
+                                making
+                                intention
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            5
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+                    </a>
+                    <div class="media-body arabicCSS">
+                        <ul>
+                            <li>
+                                Recite
+                                Talbiyah
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            6
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <ul>
+                            <li>Arrive in hotel in Makkah and get ready for 'Umrah.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            7
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+                    </a>
+                    <div class="media-body">
+
+
+                        <ul>
+                            <li>
+                                Perform
+                                'Umrah Tawaf
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            8
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+
+                        <ul>
+                            <li>
+                                Two rakat
+                                salah behind
+                                Maqaam
+                                Ibraheem
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            9
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <ul>
+                            <li>
+                                Drink
+                                Zamzam
+                                Water
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            10
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <ul>
+                            <li>
+                                Leaving the
+                                Holy Mosque
+                                for Sa’i
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            11
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+
+                        <ul>
+                            <li>	Perform Sa’i</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            12
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <ul>
+                            <li>
+                                Hair cutting
+                                /Shaving
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition1">
+                            13
+
+
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/Step.jpg" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+
+                        <ul>
+                            <li>
+                                ‘Umrah
+                                Complete
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <br />
+            <div class="step">
+                <div class="media">
+
+                    <table id="t02">
+                        <tr>
+                            <td>
+                                Actions for Hajj in Tamattu Hajj
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div><br />
+
+            <p>
+                <b><u>Main actions of Hajj take place between 8th – 13th Dhul-hijja </u></b>
+            </p>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            14
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>8th Dhul-Hijja (Makkah to Mina) </b><br />
+                        <ul>
+
+                            <li>
+                                make intention for hajj
+                            </li>
+                            <li>
+                                re-enter into the state of ihram
+                            </li>
+                            <li>
+                                Recite talbiya
+                            </li>
+                            <li>
+                                Stay night in Mina
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            15
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            9th Dhul-Hijja (morning) (Mina to Arafat)
+                        </b><br />
+                        <ul>
+                            <li>
+                                Standing in Arafat
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            16
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            9th Dhul-Hijja(after sunset) (Arafat to Muzdalifah)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                Night at Muzdalifah
+
+
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            17
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            10th Dhul-Hijja (Muzdalifah to Mina)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                Throw 7 pebbles at the largest jamrah, Sacrifice animal
+
+
+                            </li>
+                            <li>
+                                Shave or cut/clip their hair (partial Ihram restrictions lifted)
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            18
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            10th Dhul-Hijja (Mina - Makkah - Mina)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                Tawaaf-al-Ifadah (Full Ihram restrictions lifted)
+
+
+                            </li>
+                            <li>
+                                Sa'i
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            19
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            11th Dhul-Hijja (Mina)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                Throw 7 pebbles on each of the 3 pillars (totall 21 pebbles)
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            20
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            12th Dhul-Hijja (Mina)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                7 pebbles on each of the 3 pillars (totall 21 pebbles)
+
+
+                            </li>
+                            <li>
+                                If the sun sets before you are able to depart, then remain in Mina for the third night and throw 21 pebbles again the next day.
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            21*
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            13th Dhul-Hijja (Mina to Makkah)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                Throw 7 pebbles on each of the 3 pillars (totall 21 pebbles)
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="media" style="position:relative">
+                    <a href="#" class="pull-left">
+                        <span class="stepPosition2">
+                            22
+                        </span>
+                        <img class="media-object small-arrow" alt="64x64" src="~/Content/images/arrow-blue2.png" height="80" width="80" />
+
+                    </a>
+                    <div class="media-body">
+                        <b>
+                            Tawaaf-al-Wida (Makkah)
+
+                        </b><br />
+                        <ul>
+                            <li>
+                                Hajj complete
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 style="text-align:center;">*Ignore step 21 if you are able to depart Mina before the sun sets on 12th Dhul-hijja. </h4>
+            </div>
+            @**/---------------------------*@
+
+
+
+        </div>
+    </div>

@@ -1,0 +1,51 @@
+﻿@using System.Web.Optimization
+@model  HMS.Entities.Models.News
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+
+<h4>News Details</h4>
+
+<div>
+    
+	<hr />
+    <dl class="dl-horizontal">
+     
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewsTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewsTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @MvcHtmlString.Create(Model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsArchive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsArchive)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NewsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

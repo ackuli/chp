@@ -1,0 +1,385 @@
+﻿@{
+    ViewBag.Title = "What is Tawaf?";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content=" What is Tawaf" />
+    <meta name="Keywords" content=" how to perform tawaf, hajj tawaf, umrah tawaf, umra tawaf, Welcome Tawaf, Tawaf-al-Qudoom, Tawaf for Hajj, Tawaf-al-Ifada also known as Tawaf –as-Ziyarah or Tawaf –al-Hajj, Farewell Tawaf, Tawaf-al-Widaa, Nafl Tawaf, number of rounds in tawaf, different types of tawaf" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+<style type="text/css">
+    #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    h2 {
+        /*font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;*/
+        padding: 0 45px;
+        color: #444;
+    }
+
+    .hero-banner {
+        height: 400px;
+        width: 100%;
+    }
+
+        .hero-banner img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-banner span {
+            display: block;
+            padding: 5px;
+            color: #eee;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 150px;
+        }
+
+
+    /* call - out container */
+    .call-outs-container {
+        max-width: 1400px;
+        margin: 40px auto 0 auto;
+        /*background-color: #4d0026;*/
+        justify-content: space-between;
+    }
+
+    .call-out1 {
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        flex-basis: 75%;
+        background-color: black;
+    }
+
+    .call-out2 {
+        padding: 15px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        flex-basis: 20%;
+        background-color: #f4eee8;
+    }
+
+
+        .call-out2 img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .call-out2 a {
+            text-decoration: none;
+        }
+
+    table, th, td {
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    th {
+        text-align: center;
+        background-color: #303030;
+        color: white;
+    }
+    /*table#t01 {
+        width: auto;
+        background-color: #EBEBEB;
+    }*/
+
+    .step .media-body {
+        border: 2px solid #F79646;
+        /*padding: 1px;*/
+    }
+
+    .step .media {
+        padding: 1px;
+    }
+
+    .boxstep .media-body div {
+        border-bottom: 1px solid #981C19;
+        padding: 10px;
+    }
+
+    .small-arrow {
+        width: 70px;
+        height: 80px;
+    }
+
+    .medium-arrow {
+        width: 70px;
+        height: 150px;
+    }
+
+    .mediumLarge-arrow {
+        width: 70px;
+        height: 210px;
+    }
+
+    .large-arrow {
+        width: 100%;
+        height: 300px;
+    }
+
+    .horigontal-arrow {
+        width: 140px;
+        height: 60px;
+    }
+
+    .horigontalLong-arrow {
+        width: 180px;
+        height: 60px;
+    }
+
+    .extraLarge-arrow {
+        width: 70px;
+        height: 1000px;
+    }
+
+    .stepPosition1 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 65px;
+        text-align: center;
+    }
+
+    .stepPosition2 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .stepPosition3 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .mediumLarge-arrow3 {
+        width: 70px;
+        height: 150px;
+    }
+
+    .stepPosition4 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .mediumLarge-arrow4 {
+        width: 70px;
+        height: 150px;
+    }
+
+    .stepPosition5 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .stepPosition6 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .stepPosition7 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .stepPosition8 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .stepPosition9 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 29px;
+        margin-top: 65px;
+        text-align: center;
+    }
+
+    .stepPosition10 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left: 26px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    .arabicCSS p {
+        font-size: 25px;
+        font-weight: normal;
+        text-align: right;
+    }
+
+    .arabicCSS li {
+        font-size: 25px;
+        font-weight: normal;
+        text-align: right;
+    }
+    /*//breadcrumb starts here//*/
+    ul.breadcrumb {
+        padding: 8px 10px;
+        list-style: none;
+        background-color: #eee;
+    }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+            ul.breadcrumb li + li:before {
+                padding: 5px;
+                color: black;
+                content: "/\00a0";
+            }
+
+            ul.breadcrumb li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+
+                ul.breadcrumb li a:hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
+
+    /*//breadcrumb ends//*/
+</style>
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="~/Views/Footer/UmrahhajjGuide">'Umrah Hajj Guide</a></li>
+    <li>What is Tawaf?</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+
+<h2>What is tawaf?</h2>
+
+
+<div class="row-fluid">
+
+    <div class="Footercontent">
+
+        <div class=" call-outs-container">
+            <div class="call-out1">
+                <div class="hero-banner">
+
+                    <img src="~/Content/images/kaba diagram 2.png" style="height:400px;" alt="Alternate Text" />
+
+                    <span>Ka'ba diagram</span>
+                </div><br />
+            </div>
+
+
+            <div class="call-out2">
+                <a href="../Footer/StepbystepguidetoTawaf">
+                    <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px; float:none;" alternate text" />
+
+                    <h4>How to perform tawaf? Step by step guide to performing tawaf</h4>
+                    <p>Start at the Hajr-al-Aswad (black stone). Kiss the stone if possible. If not, touch it with your right hand (Istilam) and kiss your hand. If this is not possible due to the crowd, then face ...</p>
+                </a>
+            </div>
+
+        </div>
+
+        <p>
+            Tawaf is circumambulation around the Ka’ba. Ibn ‘Abbas reported that Allah’s Messenger (pbuh) said, “Every day Allah descends a hundred and twenty folds of His Mercy to His slaves who perform Hajj (to His House). Sixty-folds of these are specified for people performing tawaf, fort-fold for those who pray there, and twenty for those who took at the Ka’ba.”
+        </p>
+        <p>Tawaf involves seven times circumambulations around the Ka’ba which the pilgrims perform during the hajj and ‘umrah, in a counter clockwise direction. This circling is believed to demonstrate the unity of the believers in the worship of the One God, as they move in harmony together around the Ka’ba, while supplicating to Allah. Muslims do not worship Ka’ba. They worship what it represents. </p>
+        <p>Tawaf is the best form of ibadah to perform other than the obligatory salah in the Haram. It is sunnah to perform a tawaf of Ka’ba as a salutation to the Sacred Mosque upon entering it, unlike other mosques where on entering them a two rakah salah is performed as a salutation to the mosque.  </p>
+        <p>Before starting tawaf, there is no requirement to make intention audibly as the intention is in the heart. The total number of circuits is always seven regardless of the type of tawaf one is intending to do. The majority of the scholars agree unanimously that the form of the tawaf whether obligatory or recommended, is that the pilgrim begins at al-hajar al-aswad.  </p>
+        <h3>Different types of Tawaf</h3>
+        <p>Although there are a few different types of tawaf in general; in relation to 'Umrah, there could be three types of tawafs. These are namely:</p>
+        <ol>
+            <li>'<u>Umrah Tawaf</u>:This tawaf is performed by those pilgrims who made intention for the Tammattu Hajj.</li>
+            <li><u>Farewell Tawaf (Tawaf-al-Widaa)</u>:This is performed before leaving Mecca.</li>
+            <li> <u> Nafl Tawaf (Supererogatory Tawaf)</u>:This tawaf is can be performed at any time and as many times as possible. The pilgrim should make full use of his or her stay at Makkah performing as much nafl tawaf. Tawaf is superior to nafl salah in the Haram.</li>
+        </ol>
+
+       <h3>Requirements and guidelines on Tawaf</h3>
+        <ul style="list-style-type:square">
+            <li>One must have wudhu and be clean from all major or minor physical impurities to perform tawaf.</li>
+            <li>During tawaf one must cover his or her ‘awrah (private parts) properly. Throughout tawaf men’s right shoulder must be open. However, at all other times both shoulders must be covered.</li>
+            <li>Some men continue to walk with their right shoulders exposed even after completing Tawaf. There is no basis of such action in sunnah.</li>
+            <li>For the first three rounds of tawaf, men adopt ramal (rhythmic trot while shrugging the shoulders; marking time but moving ahead). Men walk normal in the remaining four rounds and complete tawaf. Please note, the adoption of ramal is required only in ‘Umra tawaf’ and ‘Welcome Tawaf’ (Tawaf-al-Qudoom). For other types of tawaf, there is no ramal.</li>
+            <li>For women there is no idtiba or ramal. Women walk normally in all 7 rounds.</li>
+            <li>The pilgrims must begin and end tawaf at the black stone (hajar al-aswad).</li>
+            <li>One must complete all seven rounds of the Ka’ba.</li>
+            <li>When making tawaf, the Ka’ba should be to the left of the person performing tawaf.</li>
+            <li>Tawaf must be performed outside and around the Ka’ba. Do not enter the Hateem (Commonly known as Hijr Isma’il, and situated to the north of Ka’ba. It is surrounded by semicircular wall).</li>
+            <li>Thus if someone were to walk within the Hateem, his or her tawaf will not be valid. It will not be counted as one. He or she has to repeat this particular round again.</li>
+            <li>Tawaf must be interrupted for fardh salah and recommended for janazah salah. Resume tawaf where you have stopped.</li>
+            <li>Also if you get tired, thirsty or feel to use toilet during tawaf, there is no harm if you take a break. After the break make sure you have wudhu and continue from where you had stopped. You do not need to start tawaf again from the beginning.</li>
+            <li>In any occasion, if you are in doubt about the number of rounds you have made, rely on the lesser number you remember.</li>
+            <li>During tawaf talking is permissible, but with some restrictions. Most scholars agree that one should only discuss necessary things, not merely engage in idle gossip. (Tirmidhi)</li>
+            <li>One must not raise voice while performing tawaf.  (Bukhari) </li>
+        </ul>
+
+
+        <br />
+
+    </div>
+</div>
+
+

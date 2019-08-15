@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <link href="~/Content_old/image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        .imageprofile {
+            width: 100px;
+        }
+        footer{
+            bottom:0;
+            position:fixed;
+            width:100%;
+            margin:0px;
+            
+        }
+            footer ul li {
+                text-align: center;
+            }
+        .panel-body, .panel-h4 {
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
+        .focusedform .panel {
+            width: auto;
+        }
+        .panel {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="focusedform">
+    @Html.Partial("_header")
+    <div class="container">
+        <div class="row">
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            <div class="col-sm-4">
+                </div>
+            <div class="col-sm-4">
+                
+                  
+                <div class="centeralign">
+                    @*<a  href="#"><img  src="#" alt="Logo" class="brand"></a>*@
+                    @RenderBody()
+                </div> 
+                </div>
+            <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
+    
+    @Html.Partial("_footer")
+
+
+
+  
+    @RenderSection("scripts", required: false)
+  
+
+
+   
+    <script type='text/javascript' src='~/assets/js/enquire.js'></script>
+    <script type='text/javascript' src='~/assets/js/jquery.cookie.js'></script>
+    <script type='text/javascript' src='~/assets/js/jquery.nicescroll.min.js'></script>
+    <script type='text/javascript' src='~/assets/js/placeholdr.js'></script>
+    <script type='text/javascript' src='~/assets/js/application.js'></script>
+    <script type='text/javascript' src='~/assets/demo/demo.js'></script>
+   
+</body>
+</html>

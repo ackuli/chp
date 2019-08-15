@@ -1,0 +1,294 @@
+﻿@{
+    ViewBag.Title = "Historic sites around Madinah";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+    #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    h2 {
+        /*font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;*/
+        padding: 0 45px;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+
+    section.page-container {
+        display: flex;
+        padding: 0 35px;
+    }
+
+    .main-content {
+        flex-basis: 70%;
+        margin: 0 10px 1rem;
+    }
+
+    aside {
+        flex-basis: 30%;
+        margin: 0 10px 1rem;
+        background: #C7C7C7;
+        height: 800px;
+    }
+
+
+    .hero-banner {
+        margin-bottom: 1rem;
+    }
+
+        .hero-banner img {
+            display: block;
+        }
+
+        .hero-banner span {
+            display: block;
+            padding: 5px;
+            color: #888888;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+    /*.inline-ads {
+        clear: left;
+        margin: 5px 15px 10px 0;
+    }*/
+
+    .sidebar-ads {
+        padding-top: 10px;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post-list {
+        padding: 0 15px;
+        padding-top: 5vh;
+    }
+
+        .post-list h4 {
+            color: #252525;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0 0.5rem;
+            border-bottom: 1px solid #aeaeac;
+        }
+
+        .post-list ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .post-list ul li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .post-list ul li a {
+                padding: 0.8rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: #252525;
+                background: #D1D1D1;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid #aeaeac;
+                box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
+            }
+
+                .post-list ul li a:hover {
+                    text-decoration: none;
+                }
+
+                .post-list ul li a img {
+                    border-radius: 10px;
+                    margin-bottom: 0.8rem;
+                    border: 1px solid #aeaeac;
+                }
+
+                .post-list ul li a span {
+                    padding-left: 0.8rem;
+                    flex: 1;
+                }
+
+    /*//breadcrumb starts here//*/
+    ul.breadcrumb {
+        padding: 8px 14px;
+        list-style: none;
+        background-color: #eee;
+    }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+            ul.breadcrumb li + li:before {
+                padding: 5px;
+                color: black;
+                content: "/\00a0";
+            }
+
+            ul.breadcrumb li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+
+                ul.breadcrumb li a:hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
+
+    /*//breadcrumb ends//*/
+</style>
+
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/GettingReadyForHajj">Getting Ready for Hajj</a></li>
+    <li><a href="../Footer/MadinahVisit">Madinah Visit</a></li>
+    <li>Historic sites around Madinah</li>
+</ul>
+<h2>Historic sites around Madinah</h2>
+
+<section class="page-container">
+    <div class="main-content">
+
+        <p>Madinah is full of Islamic history. In addition to Prophet's Mosque and his grave, there are plenty of places to visit. You need to plan and be selective to places you want to visit. Remember, visit these places as out of interest, not as part of ritual. There is no religious advantage or reward for visiting these places. Below we have listed a few of the historical sites.    </p>
+        <h3>Al- Baqi Cemetery </h3>
+        <div class="hero-banner">
+
+            @*<img src="http://via.placeholder.com/900x400" alt="Alternate Text" />*@
+
+            <img src="~/content/images/Jannatul_Baqi.jpg" alt="Baqi cemetery" />
+
+
+
+            <span>Baqi Cemetery</span>
+        </div>
+
+
+        <p>The Baqi Cemetery located to the southeast of the Masjid al-Nabawi. The cemetery is also known as Jannatul Baqi, meaning  The Garden of Baqi. </p>
+        <p>The cemetery holds much significance. Thousands of companions of the Prophet (pbuh) including his family members Fatima Az-Zahra, Ruqaiyah, Umm Kultum, Zainab and Ibrahim - may Allah be pleased with all of them, are buried in Al-Baqi Cemetery. It is not known which of the companions of the Prophet (pbuh)are buried there. </p>
+        <p>There are many Ahadith concerning the virtue of Al-Baqi. 'A'isha reported (that whenever it was her turn for Allah's Messenger [may peace be upon him] to spend the night with her) he would go out towards the end of the night to al-Baqi' and say: </p><br />
+        <p style="font-size:25px; text-align: right;"> "‏ السَّلاَمُ عَلَيْكُمْ دَارَ قَوْمٍ مُؤْمِنِينَ وَأَتَاكُمْ مَا تُوعَدُونَ غَدًا مُؤَجَّلُونَ وَإِنَّا إِنْ شَاءَ اللَّهُ بِكُمْ لاَحِقُونَ اللَّهُمَّ اغْفِرْ لأَهْلِ بَقِيعِ الْغَرْقَدِ ‏"‏ </p>
+        <p>"As-salamu 'alykum, Dara Qawmin Mu'minin, wa atakum ma tu'adun ghadan mu'ajjalan, wa inna in sha Allahu bikum lahiqun; Allahummaghfir li ahli Baqiil Gharaqad."</p>
+        <p>(Peace be upon you, abode of a people who are believers. What you were promised would come to you tomorrow, you receiving it after some delay; and God willing we shall join you. O Allah, grant forgiveness to the inhabitants of Baqi' al-Gharqad). ( Muslim 974; and Ibn Hibban 3172)</p>
+        <p>In another hadith, Ibn 'Umar narrated that Prophet (pbuh) said: </p>
+        <p>"I am the first one for whom the earth will be cleft, then Abu  Bakr, then 'Umar and then the inhabitants of Al-Baqi; they will be gathered with me. Then I will await the people of Makkah between the two Holy Mosques. (At-Tirmidhi 3692; Al-Hakim 2/465)</p>
+        <h3>Mount Uhudh</h3>
+        <div class="hero-banner">
+
+            @*<img src="http://via.placeholder.com/900x400" alt="Alternate Text" />*@
+
+            <img src="~/content/images/Mount_Uhud.jpg" alt="Mount Uhud" />
+
+
+
+            <span>Mount Uhud. The Grave of Hazrat Hamzah (R) inside this grilled boundary.</span>
+        </div>
+        <p>Mount Uhud is situated in the north of Al-Madinah. It is 5.5 kilometres away from the Masjid-an-Nawabi. The colour of the mountain is inclined towards red. It is the mountain where Muslim had the second battle against Makkahn forces. The battle took place in the third year after the Hijrah. Seventy Muslims including Hamzah, the uncle of the Prophet (pbuh) - may Allah be pleased with all them, died in this battle. In the battle, the Prophet's tooth broke, his face was wounded and his lip was cut. </p>
+        <p>Regarding the virtue  of Uhud, Allah's Prophet (pbuh) said:</p>
+        <p>"Uhud is a mountain which loves us and we love it." (Al-Bukhari 2889; Muslim 1635)</p>
+        <p>It has also been reported that the Prophet (pbuh) prayed for the dead of the Uhud and bid farewell to the living. He (pbuh) ascended the pulpit and said: </p>
+        <p>"Verily, I am your predecessor before you, and I am a witness over you, and your promised place to meet me will be al-Haud (i.e. Al-Kawthar)." (Al-Bukhari 4042) </p>
+        <h3>Quba Mosque </h3>
+        <div class="hero-banner">
+
+            @*<img src="http://via.placeholder.com/900x400" alt="Alternate Text" />*@
+
+            <img src="~/content/images/Masjid_al-Quba.jpg" alt="Mount Uhud" />
+
+
+
+            <span>Quba Mosque</span>
+        </div>
+        <p>The Masjid Quba or Quba mosque is situated around 4/5 km away from the Masjid-an-Nawabi. It was the first mosque built by the Prophet (pbuh) when he emigrated to Madinah from Makkah. The Prophet (pbuh) directly took part in building the Quba Mosque. In this mosque, the Prophet (pbuh) for the first time prayed openly with his companions. Allah (SWT) mentions in the Holy Quran:</p>
+        <p style="font-size:25px; text-align: right;">
+            لَّمَسۡجِدٌ أُسِّسَ عَلَى ٱلتَّقۡوَىٰ مِنۡ أَوَّلِ يَوۡمٍ أَحَقُّ أَن تَقُومَ فِيهِ
+        </p>
+        <p>“Verily, the mosque whose foundation was laid from the first day on piety is more worthy that you stand therein (to pray).” (At-Taubah 9:108)</p>
+        <p>At first, the Qiblah of Quba Mosque was towards Jerusalem. Later on when Allah commanded the Messenger (pbuh) to change the direction of prayer towards Ka’ba, the Prophet went back to Quba and changed its Qiblah direction. </p>
+        <p>The merits of Masjid Quba are also mentioned in number of hadiths. </p>
+        <p> Sahl bin Hunaif (May Allah be pleased with him) narrated that the Messenger of Allah (saw) said: ‘Whoever purifies himself in his house, then comes to the Quba’ Mosque and offers one prayer therein, will have a reward like that for ‘Umrah (i.e. in reward)" (Ibn Majah, 1412) </p>
+        <p>Abdullah bin Dinar (May Allah be pleased with him) narrated that Ibn 'Umar said, "The Prophet used to go to the Mosque of Quba every Saturday (sometimes) walking and (sometimes) riding." As such Abdullah (Ibn 'Umar) used to do the same. (Sahih Bukhari, 284) </p>
+
+        <h3>Masjid al-Qiblatayn </h3>
+        <div class="hero-banner">
+
+            @*<img src="http://via.placeholder.com/900x400" alt="Alternate Text" />*@
+
+            <img src="~/content/images/Masjid_al-Qiblatain.jpg" alt="Masjid al-Qiblatayn " />
+
+
+
+            <span>Masjid al-Qiblatayn</span>
+        </div>
+        <p> Masjid al-Qiblatayn (also known as the Mosque of the two Qiblahs) is another historical mosque in Madinah.  It is one of three earliest mosques in Islam's history, along with Quba Mosque and Al-Masjid al-Nabawi.</p>
+        <p>The Prophet (pbuh) prayed towards Jerusalem (Baitul-Maqdis) for sixteen or seventeen months, but he desired to pray towards the Ka'ba. So Allah revealed: </p>
+        <p>"Verily, We have seen the turning of your (Muhammad's) face towards the heaven." (Al- Qur'an 2: 144)</p>
+        <p>Narrated Al-Bara' (bin 'Azib):</p>
+        <p>
+            When the Prophet (ﷺ) came to Medina, he stayed first with his grandfathers or maternal uncles from Ansar. He offered his prayers facing Baitul-Maqdis (Jerusalem) for sixteen or seventeen months, but he wished that he could pray facing the Ka'ba (at Mecca). The first prayer which he offered facing the Ka'ba was the 'Asr prayer in the company of some people. Then one of those who had offered that prayer with him came out and passed by some people in a mosque who were bowing during their prayers (facing Jerusalem). He said addressing them, "By Allah, I testify that I have prayed with Allah's Messenger (ﷺ) facing Mecca (Ka'ba).' Hearing that, those people changed their direction towards the Ka'ba immediately. Jews and the people of the scriptures used to be pleased to see the Prophet (ﷺ) facing Jerusalem in prayers but when he changed his direction towards the Ka'ba, during the prayers, they disapproved of it.
+            Al-Bara' added, "Before we changed our direction towards the Ka'ba (Mecca) in prayers, some Muslims had died or had been killed and we did not know what to say about them (regarding their prayers.) Allah then revealed: And Allah would never make your faith (prayers) to be lost (i.e. the prayers of those Muslims were valid).' " ( Quran 2:143). (Sahih al-Bukhari 40)
+        <p>
+            Masjid Qiblatain used to uniquely contain two mehrabs, one in the direction of Bait-al-Maqdis and the other towards Makkah. However, the old mehrab has now been covered.
+        </p>
+        <p>Apart from some of the sites mentioned above, there are many other mosques and historic places in Madinah. However, be mindful that there is no religious merit to visiting sites, and also there not part of hajj.   </p>
+    </div>
+    <aside>
+        <div class="post-list">
+            <h4>More on Madinah</h4>
+
+
+            <ul>
+                <li>
+                    <a href="../Footer/MadinahVisit">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/map_of_madinah_ThumbsNail.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="Map of Madinah" />
+
+                        <span style="color: #004d66"><strong> Madinah</strong> - the most beloved place on earth especially in the heart of every Muslim. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Footer/ProphetsMosque">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Prophets_mosque_Thumbnail.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="Prophets Mosque" />
+
+                        <span style="color: #004d66"><strong> Visiting the Prophet’s Mosque </strong>- It is highly commendable. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Footer/RiadulJannah">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Riadul_jannah_Thumbs_nail.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="Riad ul Jannah" />
+                        <span style="color: #004d66"><strong>  Praying at Riad ul-Jannah -  </strong> a very special area located close to the front of the mosque.   </span>
+
+                    </a>
+
+
+
+
+                </li>
+                <li>
+                    <a href="../Footer/ProphetsGrave">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Prophets_grave_Thumbnail.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="Prophet's Grave" />
+
+                        <span style="color: #004d66"><strong> Visiting the Prophet’s Grave</strong>•	When visiting the grave the clarity of your intention is very important.  </span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </aside>
+</section>
+

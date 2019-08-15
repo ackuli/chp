@@ -1,0 +1,68 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("MetaContent", required: false)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>
+    <style type="text/css">
+        .header .row-fluid
+        {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body style="background-color: #CCCCCC">
+    <div class="container">
+        <header class="header">
+            <div class="row-fluid">
+                <div class="span6">
+                    <img alt="logo" class="logo" src="../../Content/images/CHP_logo.png" />
+                </div>
+                <div class="span6 hidden-phone">
+                    <div class="input-append pull-right">
+                        <input id="appendedInput" style="text-align: center; width: 150px" value="United Kingdom"
+                            readonly="readonly" type="text">
+                        <img alt="uk" class="add-on" src="../../Content/images/uk.png" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row-fluid">
+            @Scripts.Render("~/js") @RenderSection("Scripts", required: false)
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".alert button").click(function () {
+                        $("div.alert").fadeOut(400);
+                    });
+                    var interval = setInterval(function () {
+                        $(".alert button").trigger("click");
+                    }, 3000);
+
+
+                    $("button.buttonwithimage").click(function () {
+                        window.location.assign("Events/create");
+                    });
+
+                });
+            </script>
+            @Html.Partial("_alerts")
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="row-fluid">
+                <div class="span12 backgroundColor">
+                    <div class="row-fluid contentBG" style="text-align: center">
+                        <br />
+                        <p style="font-size: 1.1em">
+                            &copy;@System.DateTime.Now.ToString("yyyy") Comparehajjpackages.com all rights reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

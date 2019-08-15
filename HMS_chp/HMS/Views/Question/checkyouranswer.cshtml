@@ -1,0 +1,136 @@
+﻿@model IEnumerable<HMS.Entities.Models.QuizDetail>
+@{
+    ViewBag.Title = "Check Your Answer.";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="Frequently asked questions about hajj and umrah" />
+    <meta name="Keywords" content="Check Your Answer" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+    .backgroundcolor {
+        background: rgba(128, 128, 128, 0.23);
+        /*margin-right: -50px;*/
+        margin-bottom: 14px;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    text1 {
+        font-size: 14px;
+    }
+</style>
+
+
+
+<div style="width: 100%;margin-left: auto;margin-right: auto;">
+    <div class="row-fluid">
+        <div class="container-fluid">
+            <div class="span12 backgroundcolor">
+
+                <div class="row-fluid">
+
+
+
+
+
+
+
+                    <div class="span12 mobileview" style="margin:13px">
+
+                        @{ int i = 1;
+
+                         foreach (var quiz in Model.ToList())
+                         {
+
+
+
+                            <h4>@i<text>. <text>@quiz.Question.QuestionText</h4>
+
+                            <ol type="a">
+                                @foreach (var item in @quiz.Question.QuestionDetails)
+                                {
+                                    <li style="font-size:14px"><p>@item.QuestionDetailsText</p></li>
+                                }
+                            </ol>
+                             foreach (var choice in @quiz.Question.AnswerChoices.OrderBy(x => x.AnswerChoiceId).ToList())
+                             {
+                                <ul>
+                                    @if (choice.AnswerChoiceId == quiz.GivenAnswerChoiceId)
+                                    {
+                                        @Html.CheckBox("Answer", true)
+                                        <text1> @choice.Choices</text1>
+                                    }
+                                    else
+                                    {
+                                        @Html.CheckBox("Answer", false)
+                                        <text1> @choice.Choices</text1>
+                                    }
+                                </ul>
+                             }
+                             if (quiz.CorrectAnswerChoiceId == quiz.GivenAnswerChoiceId)
+                             {
+                                <p style="color:#0000e6">Correct.You scored:@quiz.Score </p>
+                                <p>@quiz.AnswerChoice1.WhyAnswerCorrect</p>
+                             }
+                             else if (quiz.GivenAnswerChoiceId == null)
+                             {
+                                <p style="color:red">You skipped this question.You scored:@quiz.Score</p>
+                                <p>Correct Answer<text>: <text> @quiz.AnswerChoice1.Choices</p>
+                                <p>@quiz.AnswerChoice1.WhyAnswerCorrect</p>
+                             }
+                             else
+                             {
+                                <p style="color:red">Wrong. You scored:@quiz.Score</p>
+                                <p>Correct Answer<text>: <text> @quiz.AnswerChoice1.Choices</p>
+                                <p>@quiz.AnswerChoice1.WhyAnswerCorrect</p>
+                             }
+
+                             i++;
+                            <br />
+                         }
+
+                        }
+
+                    </div>
+                    <div class="span12" style="margin-top: 5px">
+                        <div class="row-fluid">
+                            <div class="span3" style="text-align:left">
+                                <div style="text-align: left; margin-top: 5px;">
+                                    <a class="btn-danger btn-large" id="btnlink" href="~/Question/quiztest?quizId=@Model.FirstOrDefault().QuizId">Try Again</a>
+                                </div>
+                            </div>
+                            <div class="span9">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+    });
+</script>
+
+

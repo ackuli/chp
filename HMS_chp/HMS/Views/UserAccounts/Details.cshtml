@@ -1,0 +1,83 @@
+﻿@model HMS.Entities.Models.UserAccount
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.CountryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.CountryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role.RoleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SetDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SetDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SetBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SetBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserAccountsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

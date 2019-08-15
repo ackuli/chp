@@ -1,0 +1,34 @@
+﻿@model HMS.Entities.Models.News
+@*@{
+    ViewBag.Title = "Hajj News";
+    Layout = "~/Views/shared/_LayoutEvent.cshtml";
+}*@
+@{
+    ViewBag.Title = "Hajj News Details";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: justify;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    ul.a {
+        list-style-type: square;
+    }
+</style>
+<div class="row-fluid">
+    <div class="Footercontent">
+        <h4>@Html.DisplayName("Title:") @Html.DisplayFor(model => model.NewsTitle)</h4>
+        @Html.DisplayName("Published Date:") @Model.PublishDate.ToString("dd-MMM-yyyy")<br />
+        <p>@MvcHtmlString.Create(@Model.Description)</p>
+    </div>
+
+    </div> 

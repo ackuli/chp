@@ -1,0 +1,180 @@
+﻿@model HMS.ViewModels.AskedScholarVm
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    #askthescholer {
+        background-color: #D95902 !important;
+    }
+
+    #btnaskthescholer {
+        background-color: #D95902 !important;
+    }
+
+    .panel {
+        height: 150px;
+    }
+
+    .imgScholarFooter h4 {
+        color: rgb(51, 51, 51);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .imgScholarFooter a p {
+        font-size: 0.9em;
+        font-style: italic;
+        padding: 20px;
+    }
+
+    .imgScholarFooter a.a {
+        background: url("../content/images/ats.png") no-repeat scroll 205px 117px rgb(255, 255, 255);
+    }
+
+    .imgScholarFooter a {
+        border: 1px solid rgb(237, 237, 237);
+        color: rgb(111, 111, 111);
+        display: block;
+        float: left;
+       
+        outline: medium none;
+        overflow: hidden;
+        width: 100%;
+        text-decoration: none;
+    }
+
+        .imgScholarFooter a:hover {
+            background: none repeat scroll 0 0 rgb(48, 175, 232);
+            color: rgb(255, 255, 255) !important;
+            transition: background-color 1s ease-out 0s;
+        }
+
+        .imgScholarFooter a.a:hover {
+            background: url("../content/images/ats.png") no-repeat scroll 205px 117px rgb(48, 175, 232);
+        }
+    /*Nazmul*/
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+    .backgroundcolor {
+        background: #F8F8F8;
+        margin-right: 20px;
+    }
+
+    .hr1 {
+        border: 1px solid #0c0101;
+    }
+
+    .hr2 {
+        border: 1px solid #820000;
+    }
+    .footerbutton {
+       
+        height: 100px;
+        margin-top: 20px;
+        border-radius:8px;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:20px;
+    }
+    .button {
+        width: 50px;
+        height: 50px;
+        shape-rendering: optimizeQuality;
+        border-style: dotted;
+        background-color: #0c0101;
+        font: 11;
+        color: #ffd800;
+    }
+</style>
+<div class="FAQ">
+    <div class="row-fluid">
+        <div class="backgroundcolor" >
+            <hr class="hr1">
+            <h4>
+                Recently added question
+            </h4>
+            <div style="margin-left:6px">
+                <div class="eventborder" style="margin-top: 1px">
+
+                    <ul>
+                        @foreach (var item in Model.RecentQuestionAnswersList)
+                        {
+                            <li>@item.Question</li>
+                        }
+                    </ul>
+
+                </div>
+                <hr class="hr2">
+                <div class="row-fluid">
+                    <h4>
+                        Hajj & Umrah – Frequently Asked Questions
+                    </h4>
+                    <div class="eventborder" style="margin-top: 5px">
+                        <ul style="margin-left: 30px">
+                            @foreach (var item in Model.FAQ)
+                            {
+                                <li>@item.Question</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="hr2">
+            <div class=" imgScholarFooter" style="margin-right: 30px; margin-bottom: 20px">
+                <div class="row-fluid">
+                    <div class="span4 eventborder">
+
+                        <a class="pane a" href="inner.html">
+                            <div class="footerbutton" style="background-color:#000000;">
+                                <p style="color:#948A54">
+                                    <br>
+                                    Search Answer by Keywords
+                                </p>
+
+                            </div>
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="span4 eventborder">
+                        <a class="pane a" href="inner.html">
+
+                            <div class="footerbutton" style="background-color:#938953">
+                                <p style="color:#000000">
+                                    <br>
+                                    Search Answer by Category
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="span4 eventborder">
+                        <a class="pane a" href="~/FAQScholar/Askquestion">
+                            <div class="footerbutton" style="background-color:#000000">
+                                <p style="color:#FFFFFF">
+                                    <br>
+                                    Submit A Question
+                                </p>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr1">
+</div>
+

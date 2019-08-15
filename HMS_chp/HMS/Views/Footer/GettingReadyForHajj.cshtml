@@ -1,0 +1,277 @@
+﻿@{
+    ViewBag.Title = "Getting Ready For Hajj";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+
+         #btninformation {
+        background-color: #D95902 !important;
+    }
+
+  
+    .Footercontent {
+        width: 90%;
+       margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+           line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        /*.Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }*/
+
+    .arabicCSS p {
+        font-size: 20px;
+        font-weight: normal;
+        text-align: right;
+        line-height: 35px;
+    }
+    .imgsize {
+        height: 200px;
+        width: 180px;
+         display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding:15px;
+
+       
+    }
+  
+    a {
+     text-decoration: none ;
+  }
+a:hover
+  {
+    color:grey;
+    text-decoration:none;
+    cursor:pointer;
+   }
+
+    .button--primary--More {
+        background: #A37519;
+        border-color: #005689;
+        color: #fff;
+        border-radius: 20px;
+        width: 82px;
+        height: 27px;
+    }
+
+   .textPosition1 {
+        position: absolute;
+        margin-left: 0;
+        color: white;
+        left: 45px;
+        margin-top: 145px;
+        text-align: center;
+         font-size: 16px;
+
+    }
+    .textPosition2 {
+        position: absolute;
+        margin-left: 0;
+        color: black;
+        left:77px;
+        margin-top: 18px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* call - out container */
+.call-outs-container {
+   max-width: 1400px;
+  margin: 40px auto 0 auto;
+  /*background-color: #4d0026;*/
+  }
+   
+.call-out {
+    /*padding: 20px;*/
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  flex-basis: 30%;
+  border: solid;
+  border-style: ridge;
+  }
+
+/*.call-out:nth-child(1) {background-color: #c0dbe2;}
+.call-out:nth-child(2) {background-color: #cdf1c3;}
+.call-out:nth-child(3) {background-color: #ccb9da;}
+.call-out:nth-child(4) {background-color: #ccb9da;}
+.call-out:nth-child(5) {background-color: #ccb9da;}
+.call-out:nth-child(6) {background-color: #ccb9da;}*/
+
+.call-out h3 {
+  color: #b30059;
+  text-align:center;
+}
+
+ .call-out ul li {
+                padding: 0.3rem;
+                list-style-type:none;
+                flex-wrap: wrap;
+                color: #252525;
+                box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+               }
+
+
+  .call-out :hover {
+                   background-color: #e6ac00;
+                    display: block;
+                }
+
+
+     /*//breadcrumb starts here//*/
+       ul.breadcrumb {
+    padding: 8px 14px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    content: "/\00a0";
+    }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*//breadcrumb ends//*/
+</style>
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+     <li>Getting Ready for Hajj</li>
+</ul>
+
+<div class="row-fluid">
+
+    <div class="Footercontent">
+
+        <h2>Getting Ready For Hajj</h2>
+        <h4 style="color: #996600">A to Z guide to how to perform hajj</h4> <br />
+
+        <p>
+            In the name of Allah, the Beneficent, the Merciful. Peace and blessings upon His Prophet Muhammad. 
+        </p>
+        <p>
+            To begin, it is very important to be clear that for any prayer or action including Hajj to be accepted by Allah (SWT), it is fundamental that the prayer or action is based on pure Ikhlas, i.e. the prayer or action is solely for Allah. No other deity is part of this prayer. The sincerity towards Allah is a must prerequisite for the acceptance of one’s worship. No matter how big or small the prayer is, a Muslim, all the time, must make conscious effort to keep his or her heart clean from all form of shirks (associations with Allah). So when going to Hajj, we must make sure that no showing off feeling is in our heart. Showing off invalidates good deeds and brings punishment. 
+        </p>
+
+        <p>
+            The second precondition for any worship to be accepted by Allah is that the action or ritual has to be in accordance with the teachings of the Prophet (peace and blessings of Allah be upon him). The Prophet (pbuh) said, “Whoever does any action that is not in accordance with this matter of ours, will have it rejected,” Narrated by Muslim ( Book 18, Hadith 1647).  Therefore, it is obligatory upon us to learn and apply all the rulings of Hajj and Umrah according to the Sunnah of the Prophet (peace and blessings of Allah be upon him). Unfortunately many Muslim men and women do not pay enough attention to this and turn up to Makkah without any preparation. 
+        </p>
+    </div> 
+  
+
+ 
+        @*call out section*@
+    <div class="Footercontent">
+        <div class="call-outs-container">
+            <div class="call-out">
+                <a href="../Footer/SpritualPreparations">
+                  <img class="img-responsive imgsize" src="~/Content/images/spritual_preparations.gif" />
+                        <h3>Spritual Preparation </h3>
+
+                        <ul>
+                            <li>Attain knowledge before going </li>
+                            <li>Paying debts </li>
+                            <li>Custody of goods  </li>
+                            <li>Writing a will  </li>
+                        </ul>
+                    </a>
+            </div>
+
+            
+            <div class="call-out">
+                <a href="../Footer/HajjAndHajjRites">
+                    <img class="img-responsive imgsize" src="~/Content/images/your_journey.gif" />
+                    <h3>Making the most</h3>
+                    <ul>
+                        <li>Before leaving home</li>
+                        <li>During the journey </li>
+                        <li>Taking care of fellow pilgrims </li>
+                        <li>Waiting time until hajj</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="call-out">
+                <a href="../Footer/HajjAndHajjRites">
+                    <img class=" img-responsive imgsize" src="~/Content/images/hajj_rites.gif" />
+                    <h3>Hajj and Hajj Rites</h3>
+                    <ul>
+                        <li>Pillars of Hajj</li>
+                        <li>Obligatory Actions of Hajj  </li>
+                        <li>Which type of Hajj to choose? </li>
+                        <li>How to make Hajj intention?</li>
+                    </ul>
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="call-outs-container">
+           
+
+            <div class="call-out">
+                <a href="../Footer/MadinahVisit">
+                    <img class="img-responsive imgsize" src="~/Content/images/Madinah_visit.gif" />
+                    <h3>Madinah Visit</h3>
+                    <ul>
+                        <li>Introduction to Madinah</li>
+                        <li>Visiting Prophet’s Mosque </li>
+                        <li>Praying at Raudahtul Jannah  </li>
+                        <li>Etiquette of visiting Prophet’s Grave</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="call-out">
+
+                <a href="../Footer/HajjPlus">
+                    <img class=" img-responsive imgsize" src="~/Content/images/Hajj_Plus.gif" />
+                    <h3>Hajj Plus</h3>
+                    <ul>
+                        <li>FAQs on Hajj & ‘Umrah</li>
+                        <li>Du'a for Hajj & 'Umrah </li>
+                        <li>How to Perform Janaza Salah </li>
+                        <li>Hajj & ‘Umrah Glossary </li>
+                    </ul>
+                </a>
+            </div>
+            <div class="call-out">
+                <a href="../Footer/HajjAndHajjRites">
+                    <img class="img-responsive imgsize" src="~/Content/images/Returning-from-hajj.gif" />
+                    <h3>After Returing from Hajj</h3>
+
+                    <ul>
+                        <li>When to seek medical help?</li>
+                        <li>The 'Haji-Saab' Culture </li>
+                        <li>Signs of hajj acceptance </li>
+                        <li>How to retain achievements?   </li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+

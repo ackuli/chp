@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HMS.Entities.Models.Experience>
+
+@{
+    ViewBag.Title = "Hajj Experience";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: justify;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    .arabicCSS p {
+        font-size: 20px;
+        font-weight: normal;
+        text-align: right;
+        line-height: 35px;
+    }
+
+    .imgsize {
+        height: 200px;
+        width: 200px;
+    }
+   
+    .button--primary--More {
+        background: #A37519;
+        border-color: #005689;
+        color: #fff;
+        border-radius: 20px;
+        width: 82px;
+        height: 27px;
+    }
+
+   
+</style>
+<ul class="breadcrumb">
+
+    <li calss="breadcrum"><a href="~/Information/Index"><b>Information</b></a><span class="divider" style="color:black"><b>></b></span></li>
+
+    <li class="active" style="color:black"><b>@ViewBag.Title</b></li>
+
+</ul>
+<div class="row-fluid">
+    <div class="Footercontent">
+        <h4>Hajj Experience</h4>
+        @*<h6 style="color: #996600">An A to Z guide on how to perform hajj</h6>*@
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Narratives)
+                </th>
+
+
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+
+                    </td>
+                    <td>
+                        @MvcHtmlString.Create(item.Narratives);
+                    </td>
+
+
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

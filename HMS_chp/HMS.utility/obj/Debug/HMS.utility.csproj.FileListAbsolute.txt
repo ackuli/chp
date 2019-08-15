@@ -1,0 +1,15 @@
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\bin\Debug\HMS.utility.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\bin\Debug\HMS.utility.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\obj\Debug\HMS.utility.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\obj\Debug\HMS.utility.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\obj\Debug\HMS.utility.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.utility\bin\Debug\HMS.utility.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.utility\bin\Debug\HMS.utility.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.utility\obj\Debug\HMS.utility.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.utility\obj\Debug\HMS.utility.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.utility\obj\Debug\HMS.utility.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.utility\bin\Debug\HMS.utility.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.utility\bin\Debug\HMS.utility.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.utility\obj\Debug\HMS.utility.csprojResolveAssemblyReference.cache
+P:\CHP\Chp_git\chp\HMS_chp\HMS.utility\obj\Debug\HMS.utility.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.utility\obj\Debug\HMS.utility.pdb

@@ -1,0 +1,536 @@
+﻿body {
+    background-image: url("../../Content/images/kabaBackgroundlong.gif");
+    font-size: 13px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+}
+
+.FAQ {
+    margin-left: 30px;
+}
+
+    .FAQ li {
+        line-height: 30px;
+    }
+
+hr {
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table th:last-child {
+    width: 130px;
+}
+/*Search*/
+.midcol {
+    border-bottom: 1px solid rgb(143, 142, 223);
+}
+
+.eventimg {
+    height: 40px;
+    width: 30px;
+}
+
+.navSlid {
+    border-top: 5px solid rgb(233, 182, 3);
+    border-bottom: 5px solid rgb(233, 182, 3);
+}
+
+.carousel {
+    margin-bottom: 0px;
+}
+
+/*End Search*/
+.header {
+    background: url("../Views/../Content/images/header_bg.jpg") no-repeat;
+    background-size: cover;
+    border-top: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../Views/../Content/images/header_bg.jpg', sizingMethod='scale'); /*     border-top: 10px solid #DDDDDD;     border-left: 10px solid #DDDDDD;     border-right: 10px solid #DDDDDD;      border-bottom: 10px solid #DDDDDD;     */
+    margin-top: 10px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.header div {
+    margin-left: 20px;
+}
+
+.header .menu {
+    margin-top: 15px;
+    margin-left: -20px;
+}
+
+    .header .menu .navbar {
+        margin-left: 0 !important;
+        margin-bottom: 0px;
+    }
+
+        .header .menu .navbar .navbar-inner {
+            margin-left: 0px;
+        }
+
+.aw-widget-current {
+    width: 250px;
+    height: 100px;
+}
+
+.logo {
+    width: 100px;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+}
+
+
+.addthis_default_style {
+    margin-top: 10px;
+    margin-left: 0px !important;
+}
+
+.menu .navbar .nav > li > a {
+    font-size: 16px;
+}
+
+.Follow {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.input-append.date input[type="datetime"] {
+    width: 180px;
+}
+
+.menuLeft {
+    width: 100%;
+    height: 460px;
+    background-color: #F2F2F2;
+}
+
+.nav {
+    /*     margin-left: -60px !important;     */
+}
+
+
+.Search label {
+    color: #FFF;
+}
+
+.Search input[type=text] {
+    width: 90%;
+    height: 30px;
+}
+
+.Search select {
+    width: 96%;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.Search input[type="radio"], input[type="checkbox"] {
+    margin: 0 0 0;
+}
+
+.Search label, input, button, textarea {
+    /*font-size: 18px;*/
+}
+
+.Search label, .Search button {
+    font-weight: 600;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    /*font-size: 16px;*/
+}
+
+.marginLeft {
+    margin-left: 20px;
+}
+
+.type {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.packege hr {
+    margin: 10px 0;
+}
+
+/*Remot data*/
+
+.singlePackage {
+    background: none repeat scroll 0 0 rgb(238, 238, 238);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+    .singlePackage h3 {
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    .singlePackage .content {
+    }
+
+        .singlePackage .content .nspArt div {
+            padding: 10px !important;
+        }
+
+.nspArt h4.nspHeader {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-bottom: 6px;
+    margin-top: 5px;
+}
+
+.nspArt h4 a {
+    color: black;
+}
+
+.pricetag {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 115%;
+    font-weight: bold;
+}
+
+.pricetag_bg {
+    background: url("http://www.zamzamtravels.org.uk/templates/default/images/pricetag_bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: right;
+    margin: 0 0 0 10px;
+    padding-bottom: 17px;
+    padding-top: 70px;
+    text-align: center;
+    width: 91px;
+}
+
+.pricetag_note {
+    color: rgb(102, 102, 102);
+    display: block;
+    font-size: 0.8em;
+}
+
+p.readmore a, a.readon {
+    background: none repeat scroll 0 0 rgb(0, 102, 51);
+    border-radius: 3px;
+    clear: both;
+    color: rgb(255, 255, 255) !important;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 80px;
+}
+
+.nspArt {
+    margin-bottom: 10px;
+    background-color: #FAFAFA;
+}
+
+    .nspArt p {
+        margin: 0.5em 0;
+    }
+
+.pricetag_note strong {
+}
+
+p.readmore a:hover, a.readon:hover, p.readmore a:focus, a.readon:focus {
+    text-decoration: none;
+}
+
+.nspArt h4 a:hover {
+    text-decoration: none;
+}
+
+/*Remot data*/
+
+.socialMedia {
+    margin: 0px !important;
+    padding: 0px;
+}
+
+    .socialMedia .content {
+        background-color: #DDDDDD;
+        margin: 0;
+    }
+
+.siteCountry {
+    margin-top: 10px;
+}
+
+.socialMedia .siteCountry {
+    margin-left: -50px !important;
+}
+
+.field-validation-error span {
+    color: red;
+}
+
+.siteCountry a {
+    color: #FFF;
+    font-size: 1em;
+}
+
+.btn-danger {
+    background-color: #DA5A03;
+    background-image: none;
+}
+
+
+.btn-large {
+    padding: 5px 19px;
+}
+
+.RecentSearchIMG {
+    height: 20px;
+    padding: 5px;
+}
+
+.packagelogo {
+    height: 40px;
+    width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.panel {
+    background-color: #22A3CA;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer .backgroundColor {
+    background-color: #3E567C;
+    color: #FFF;
+    border-radius: 10px;
+}
+
+footer h2 {
+    margin-left: 3%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer h5 {
+    color: #8FB54C;
+    font-weight: bold;
+    font-size: medium;
+}
+
+footer .content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 94%;
+    border-radius: 10px;
+}
+
+footer .contentBG {
+    background-color: #1E3B65;
+}
+
+footer .link-footer {
+    margin-left: 20px;
+}
+
+    footer .link-footer li {
+        line-height: 25px;
+    }
+
+    footer .link-footer a {
+        color: #FFF;
+        font-size: 1.1em;
+    }
+
+.IMGFullSize {
+    width: 100%;
+}
+
+/*css hotel search*/
+
+#hotelresults table tr:first-child td {
+    width: auto !important;
+}
+
+.searchresult .span2, .searchresult .span8 {
+    margin: 0px;
+}
+
+
+.product ul {
+    list-style: none outside none;
+    margin-bottom: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0;
+}
+
+.pricing.non-spaced .product {
+    box-sizing: border-box;
+    float: left;
+    margin-left: -1px;
+}
+
+
+
+.product {
+    border: 1px solid rgb(204, 204, 204);
+    margin-bottom: 2em;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+    .product h2 {
+        background: -moz-linear-gradient(center bottom, rgb(229, 229, 233) 0%, rgb(251, 251, 252) 100%) repeat scroll 0 0 padding-box rgba(0, 0, 0, 0);
+        border-bottom: 1px solid rgb(180, 180, 191);
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 1px rgb(255, 255, 255) inset;
+        font-size: 1.25em;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0.5em;
+        text-shadow: 1px 1px 0 rgb(255, 255, 255);
+    }
+
+.text-info {
+    color: rgb(58, 135, 173);
+}
+
+.product .price.large {
+    font-size: 1.25em;
+}
+
+.product .price {
+    font-weight: bold;
+    text-align: center;
+}
+
+.product ul li {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    font-size: 0.9em;
+    padding: 1em 0;
+}
+
+
+.product .call-to-action {
+    background: none repeat scroll 0 0 rgb(249, 249, 249);
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid rgb(207, 207, 214);
+    margin: 0;
+    text-align: center;
+}
+
+.product p {
+    padding: 1em 0;
+    text-align: left;
+}
+
+.step .media-body {
+    border: 1px solid #ddd;
+    /*padding: 10px;*/
+}
+
+.step .media {
+    padding: 20px;
+}
+    .boxstep .media-body div {
+        border-bottom: 1px solid #4094d0;
+        padding: 10px;
+    }
+    
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .Search input[type=text] {
+        width: 88%;
+        height: 25px;
+        min-width: 200px;
+    }
+
+    .Search select {
+        width: 92%;
+        height: 35px;
+        padding-top: 10px;
+        min-width: 200px;
+    }
+
+    .header div {
+        margin-left: 0px;
+    }
+
+    .header .menu {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .header h2 {
+        font-size: 20.5px;
+    }
+
+    .subscribe {
+        margin-top: 10px !important;
+    }
+
+    .socialMedia .siteCountry {
+        margin-top: 10px;
+        margin-left: 0px !important;
+    }
+
+    .row-fluid.hmenu div {
+        margin-left: 0px !important;
+    }
+
+}

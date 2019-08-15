@@ -1,0 +1,159 @@
+﻿@using System.Web.Optimization
+@model HMS.Entities.Models.News
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h4>News Edit</h4>
+@*<script src="~/assets/plugins/form-ckeditor/ckeditor.js"></script>*@
+<script type="text/javascript" src="@Url.Content("~/ckfinder/ckfinder.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/ckeditor/ckeditor.js")"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var editor = CKEDITOR.instances['editor1'];
+        if (editor) { editor.destroy(true); }
+        CKEDITOR.replace('Description',
+            { enterMode: CKEDITOR.ENTER_BR, });
+        CKFinder.setupCKEditor(null, '@Url.Content("~/ckfinder/")');
+
+        $('.input-append.date.Date').datepicker({
+            format: "dd/M/yyyy",
+            //daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+
+        $('.input-append.date.EndDate').datepicker({
+            format: "dd/M/yyyy",
+            //daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $("#News_Date").val("");
+
+        $("#News_EndDate").val("");
+    });
+</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@using (Html.BeginForm("Edit", "News", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.NewsId)
+    @Html.HiddenFor(model => model.Img)
+    <fieldset>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NewsTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NewsTitle)
+            @Html.ValidationMessageFor(model => model.NewsTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div>
+            <img src="~/binaryObjects/GetBinaryObjectById?id=@Model.NewsId&objectTypeId=7">
+        </div>
+        <div class="editor-label">
+            @Html.Label("Change Image")
+        </div>
+        <div class="editor-field">
+            <input type="file" name="file" id="file" />
+        </div>
+        <div class="panel panel-magenta">
+            <div class="panel-heading">
+                <h4>Description</h4>
+            </div>
+            <div class="panel-body collapse in">
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Description, new { @class = "ckeditor" })
+
+                    @*<textarea class="ckeditor" rows="20" cols="80" id="description" name="ckeditor" style="visibility: hidden; display: none;">
+
+                        </textarea>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NewsLink)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NewsLink)
+            @Html.ValidationMessageFor(model => model.NewsLink)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Source)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Source)
+            @Html.ValidationMessageFor(model => model.Source)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SourceDate)
+        </div>
+        <div class="editor-field">
+            <div class="editor-field">
+                <div class="input-append date Date">
+                    @Html.EditorFor(model => model.SourceDate)
+                    <span class="add-on"><i class="icon-th"></i></span>
+                    @Html.ValidationMessageFor(model => model.SourceDate)
+                </div>
+            </div>
+        </div>       
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PublishDate)
+        </div>
+        <div class="editor-field">
+            <div class="editor-field">
+                <div class="input-append date Date">
+                    @Html.EditorFor(model => model.PublishDate)
+                    <span class="add-on"><i class="icon-th"></i></span>
+                    @Html.ValidationMessageFor(model => model.PublishDate)
+                </div>
+            </div>
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsVisible)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsVisible)
+            @Html.ValidationMessageFor(model => model.IsVisible)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsArchive)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsArchive)
+            @Html.ValidationMessageFor(model => model.IsArchive)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsDefault)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsDefault)
+            @Html.ValidationMessageFor(model => model.IsDefault)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

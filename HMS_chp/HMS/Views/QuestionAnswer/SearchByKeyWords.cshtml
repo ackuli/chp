@@ -1,0 +1,117 @@
+﻿@model  IEnumerable<HMS.Entities.Models.QuestionAnswer>
+
+@{
+    ViewBag.Title = "Search Question By Keywords";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+    #askthescholer {
+        background-color: #D95902 !important;
+    }
+
+
+
+    .panel {
+        height: 150px;
+    }
+
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+    .backgroundcolor {
+        background: rgba(221, 216, 194, 0.12);
+        margin-right: 20px;
+    }
+
+    .hr1 {
+        border: 1px solid #0c0101;
+    }
+
+    .hr2 {
+        border: 1px solid #820000;
+    }
+
+    .hr3 {
+        border: 1px solid #0c0101;
+        margin-right: 20px;
+    }
+</style>
+@Html.Partial("_questionModal")
+@using (Html.BeginForm("SearchByKeyWords", "QuestionAnswer"))
+{
+    <div class="FAQ">
+        <div class="row-fluid">
+
+
+
+            <div class="row-fluid form-inline" style="margin-bottom:20px">
+                <div class="span8">
+                    <b> Search Question by Keywords </b>
+
+                    <div>
+                        <div class="input-append">
+                            <input required type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Search Question by Keywords" value="@ViewData[" searchitem"]">
+
+                            <button type="submit" class="btn">
+                                <i class="icon-search"></i>&nbsp;Search
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="backgroundcolor">
+                <hr class="hr1">
+                <div class="span12" style="margin:10px;">
+                    <div class="span3">
+                       <b> <span>Search Results</span></b>
+                        </div>
+                    <div class="span6">
+                     
+                        @*<div class="pull-right"> </div>*@
+                    </div>
+                    
+
+                    <div class="span3">
+                      <b>  Results Found:<sapn class="label label-danger"> @Model.ToList().Count</sapn> </b>
+                    </div>
+                </div>
+
+                <div style="margin-left:6px">
+                    <div class="eventborder" style="margin-top:54px;height:auto">
+
+                        <ul>
+                            @foreach (var item in Model)
+                            {
+                                <li>@Html.ActionLink(@item.Question, "QuestionDetails", "QuestionAnswer", new { id = @item.Id }, null)</li>
+                            }
+                        </ul>
+                        @if (@Model.ToList().Count < 5)
+                        {
+                            for (int i = 0; i < 12; i++)
+                            {
+
+                                <br />
+
+                            }
+                        }
+                    </div>
+
+
+                </div>
+                <hr class="hr2">
+                <div class="" style="margin-right: 0px; margin-bottom: 10px;width: 99%;margin-left: 6px;">
+
+
+                    @Html.Partial("_question")
+
+                </div>
+            </div>
+        </div>
+        <hr class="hr3">
+    </div>
+
+}
+

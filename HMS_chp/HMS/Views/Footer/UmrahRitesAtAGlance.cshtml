@@ -1,0 +1,377 @@
+﻿@{
+    ViewBag.Title = "Umrah Hajj At A Glance";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+        #btninformation {
+        background-color: #D95902 !important;
+    }
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: justify;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+        .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    .step .media-body {
+        border: 2px solid #1F497D;
+        padding: 10px;
+    }
+
+    /*.step .media-body {
+        border: 3px solid #1F497D;
+        border-radius: 8px;
+        /*padding: 10px;*/
+    }*/
+
+    .step .media {
+        padding: 1px;
+    }
+
+    .small-arrow {
+        width: 70px;
+        height: 80px;
+    }
+
+    .medium-arrow {
+        width: 70px;
+        height: 110px;
+    }
+
+    .large-arrow {
+        width: 100%;
+        height: 300px;
+    }
+
+    .horigontal-arrow {
+        width: 140px;
+        height: 60px;
+    }
+
+    .horigontalLong-arrow {
+        width: 180px;
+        height: 60px;
+    }
+
+    .extraLarge-arrow {
+        width: 70px;
+        height: 1000px;
+    }
+
+    .stepPosition {
+        position: absolute;
+        margin-left: 0px;
+        color: #1F497D;
+        left: 48px;
+        margin-top: 34px;
+        text-align: center;
+    }
+    /*//breadcrumb starts here//*/
+       ul.breadcrumb {
+    padding: 8px 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    content: "/\00a0";
+    }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*//breadcrumb ends//*/
+</style>
+
+
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/UmrahhajjGuide">Umrah Hajj Guide</a></li>
+    <li>‘Umrah Hajj at a glance</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+<div class="row-fluid">
+    <div class="Footercontent">
+        <h2>‘Umrah Hajj at a glance</h2>
+        
+        @*<h5>1. Introduction</h5>*@
+        <p>
+            Abu Hurairah reported that the Prophet (peace be upon him) said, “From one ‘‘Umrah to the next is an atonement for any sins committed in between, and the reward for an accepted Hajj is nothing but Paradise.” (Bukhari 27:1)
+        </p><br />
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>1</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                    <ul>
+                        <li>
+                            Cleansing Rituals.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>2</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                    <ul>
+                        <li>
+                            Wear Ihram Attire.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>3</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                    <ul>
+                        <li>
+                            Perform Salah before making intention for 'umrah.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>4</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                   <ul>
+                       <li>
+                           Make intention for 'umrah before entering the miqat boundary.
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>5</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                    <ul>
+                        <li>
+                            Recite talbiya.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>6</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                   <ul>
+                       <li>
+                           Arrive in Makkah.
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>7</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                   <ul>
+                       <li>
+                           Perform 'umrah Tawaf.
+                       </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>8</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                    <ul>
+                        <li>
+                            2 rakat salah at Muqaam Ibraheem.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>9</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                   <ul>
+                       <li>
+                           Drink Zamzam Water.
+                       </li>
+                   </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>10</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                    <ul>
+                        <li>
+                            Leave the holy Mosque for sa'i.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>11</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                <ul>
+                    <li>
+                        Perform sa'i.
+                    </li>
+                </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>12</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                   <ul>
+                       <li>
+                           Cut/shave/clip hair here and release yourself from Ihram restrictions.
+                       </li>
+                   </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="step boxstep">
+            <div class="media" style="position:relative">
+                <a href="#" class="pull-left">
+                    <span class="stepPosition">
+                        <b>13</b>
+                    </span>
+                    <img class="media-object small-arrow" alt="64x64" src="~/Content/images/downArrowLight.jpg" />
+                </a>
+                <div class="media-body">
+                  <ul>
+                      <li>
+                          'Umrah completed.
+                      </li>
+                  </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <h4 style="text-align:center;">
+            
+            For full details about ‘Umrah rites, please read the section entitled <a href="../Footer/StepByStepGuideToUmrahHajj">‘Step by Step guide to ‘Umrah Hajj.’</a>
+        </h4><br />
+       
+
+
+
+    </div>
+</div>

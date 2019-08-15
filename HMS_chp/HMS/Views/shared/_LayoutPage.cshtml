@@ -1,0 +1,113 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-69237169-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+    <meta charset="utf-8">
+    @*<img alt="logo" class="logo" src="~/Content/images/CHP_logo.png" />*@
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/images/favicon-hajj.jpg" rel="shortcut icon" type="image/x-icon" />
+    @RenderSection("MetaContent", required: false)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    @RenderSection("head", required: false) @Html.Partial("_html5shiv")
+   
+</head>
+<body>
+    <div class="container body-wrapper">
+        @Html.Partial("_header")
+        <div class="row-fluid" style="background-color: #FFF">
+            @*<ol class="breadcrumb">
+
+                    @RenderSection("breadcrumb", required: false)
+                </ol>*@
+            @*@Html.MvcSiteMap().SiteMapPath()*@
+            @Scripts.Render("~/js") @RenderSection("Scripts", required: false)
+
+            @RenderBody()
+
+        </div>
+
+        @Html.Partial("_footer")
+
+    </div>
+    <script src="~/Content/slick/slick.min.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+
+    $(document).on('submit', 'form', function () {
+        var buttons = $(this).find('[type="submit"]');
+        if ($(this).valid()) {
+            buttons.each(function (btn) {
+                $(buttons[btn]).prop('disabled', true);
+            });
+        } else {
+            buttons.each(function (btn) {
+                $(buttons[btn]).prop('disabled', false);
+            });
+        }
+
+    });
+</script>
+
+@*<div class="addthis_toolbox addthis_default_style">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count" fb:like:href="http://www.facebook.com/<Your_Page>"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+</div>*@
+@*<div class="addthis_toolbox addthis_default_style"
+     addthis:url="<You Domain URL>"
+     addthis:title="Your Site Title"
+     addthis:description="">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"
+       addthis:url="<Facebook Fan Page>"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_pinterest_pinit"
+       addthis:url="<Pinterest Profile Page>"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=%YOUR_ADDTHIS_PROFILE_ID%"></script>
+<script type="text/javascript">
+    //var addthis_config = { "data_track_addressbar": true };
+    addthis.layers({
+        'theme': 'transparent',
+        'share': {
+            'position': 'left',
+            'numPreferredServices': 10
+
+        },
+        'follow': {
+            'services': []
+        }
+    });
+   </script>*@
+
+@*<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c438cf42ad4b0d"></script>
+<script type="text/javascript">
+    addthis.layers({
+        'theme': 'transparent',
+        'share': {
+            'position': 'left',
+            'numPreferredServices': 10
+            
+        },
+        'follow': {
+            'services': []
+        }
+    });
+   
+</script>*@

@@ -1,0 +1,34 @@
+﻿@model HMS.Models.UserAccount
+@{
+    ViewBag.Title = "Comparehajjpackages";
+    Layout = "~/Views/shared/test.empty.cshtml";
+}
+
+@using (Html.BeginForm("AddEmail", "Home"))
+{
+    <div>
+        <div>
+            <footer style="text-align: right">
+                
+                <div class="row test">
+                     @Html.Partial("_alerts")
+                    <span>Coming soon, the hajj package comparison site that will
+                        <br />
+                        change the way we search and book hajj and umrah trips.<br />
+                        <br />
+                        Want to be notified when the site launches and other cool
+                        <br />
+                        stuff happens here? Fill out the form below.</span>
+                    <div class="form-inline">
+                        <label style="color: #FFF">
+                            Email</label><br />
+                        <input id="email" type="email" name="email" class="form-control" required>
+                        <button type="submit" class="btn">
+                            Notify me</button>
+                        
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+}

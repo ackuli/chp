@@ -1,0 +1,82 @@
+﻿@model HMS.ViewModels.Login
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_CompareHajj.Layout.cshtml";
+}
+<style type="text/css">
+    .signin
+    {
+        border: 1px solid #E5E5E5;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        margin: 0 auto 20px; /*max-width: 300px;*/
+        padding: 19px 29px 29px;
+        line-height: 30px;
+        height: 500px;
+    }
+    .signin input[type="text"], .signin input[type="password"], .signin .input-append span
+    {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+    }
+    .remember
+    {
+        font-weight: bold;
+    }
+    .signin input[type="radio"], input[type="checkbox"]
+    {
+        margin: -2px 0 0;
+    }
+</style>
+@using (Html.BeginForm("LoagIn", "cp"))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="row-fluid">
+        <div class="span6 signin">
+            <h4>
+                New Registration</h4>
+            <hr />
+            t is a long established fact that a reader will be distracted by the readable content
+            of a page when looking at its layout. The point of using Lorem Ipsum is that it
+            has a more-or-less normal distribution of letters, as opposed to using 'Content
+            here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and
+            a search
+            <hr />
+            <button type="submit" class="btn btn-primary">
+                Create a Account</button>
+        </div>
+        <div class="signin span6 pull-right">
+            <h4>
+                Login to your account</h4>
+            <hr />
+             @Html.DisplayFor(model => model.Message)<br/>
+            <div class="input-prepend input-append">
+                <span class="add-on"><i class="icon-user"></i></span>
+                @Html.TextBoxFor(model => model.UserID, new { placeholder = "Enter your userId" })
+                @Html.ValidationMessageFor(model => model.UserID)
+            </div>
+            <br />
+            <div class="input-prepend input-append">
+                <span class="add-on"><i class="icon-lock"></i></span>
+                @Html.PasswordFor(model => model.Password, new { placeholder = "Enter your Password" })
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+            <label for="remember" class="remember">
+                <input type="checkbox" id="remember">Remember me</label>
+            <button type="submit" class="btn btn-primary">
+                Sign in</button>
+            <div class="clearfix">
+            </div>
+            <hr>
+            <h3>
+                Forgot Password?</h3>
+            <p>
+                No problem, <a href="#">click here</a> to get a new password.
+            </p>
+        </div>
+    </div>
+}

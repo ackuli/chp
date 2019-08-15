@@ -1,0 +1,110 @@
+﻿@using System.Web.Optimization
+@model HMS.Entities.Models.Experience
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<script src="~/assets/plugins/form-ckeditor/ckeditor.js"></script>
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Experience</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.City)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.City)
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Year)
+            @Html.ValidationMessageFor(model => model.Year)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+        <div class="panel panel-magenta">
+            <div class="panel-heading">
+                <h4>Narratives</h4>
+            </div>
+            <div class="panel-body collapse in">
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Narratives, new { @class = "ckeditor" })
+
+                    @*<textarea class="ckeditor" rows="20" cols="80" id="description" name="ckeditor" style="visibility: hidden; display: none;">
+
+                    </textarea>*@
+                </div>
+                @Html.ValidationMessageFor(model => model.Narratives)
+            </div>
+        </div>
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.Narratives)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Narratives)
+            @Html.ValidationMessageFor(model => model.Narratives)
+        </div>*@
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsActive)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsActive)
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsShow)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsShow)
+            @Html.ValidationMessageFor(model => model.IsShow)
+        </div>
+
+        
+
+        <p>
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

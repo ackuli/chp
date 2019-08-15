@@ -1,0 +1,114 @@
+﻿@model HMS.Entities.Models.QuestionAnswer
+@using HMS.HtmlHelpers;
+@{
+    ViewBag.Title = "Ask the question";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .text-box.multi-line {
+        width: 48.7179%;
+    }
+
+    .text-box.single-line {
+        width: 90%;
+    }
+
+    .form-control {
+        width: 93%;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    #Question {
+        height: 150px;
+    }
+
+    #askthescholer {
+        background-color: #D95902 !important;
+    }
+
+    #btnaskthescholer {
+        background-color: #D95902 !important;
+    }
+</style>
+
+@Html.Partial("_alertstoastr")
+@Html.Partial("_questionModal")
+@using (Html.BeginForm("CreateFromClient", "QuestionAnswer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    <div class="row-fluid">
+        <div class="container-fluid">
+            <div class="span12">
+                <div class="row-fluid">
+                    <div class="span2">
+                    </div>
+                    <div class="span8" style="margin:12px">
+                        <h4>Submit your Question</h4>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Name)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Name)
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.EmailId)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.EmailId)
+                            @Html.ValidationMessageFor(model => model.EmailId)
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.QuestionType.Id)
+                        </div>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => model.TypeId, new SelectList(Model.kvpQuestionType, "Key", "Value", Model.TypeId), "Select Category", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TypeId)
+                        </div>
+                        <div class="editor-label">
+                            @Html.Label("Question Related Keywords")
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextAreaFor(model => model.KeyWords)
+                            @Html.ValidationMessageFor(model => model.KeyWords)
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Question)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextAreaFor(model => model.Question, new { rows = "6", cols = "20" })
+                            @Html.ValidationMessageFor(model => model.Question)
+                        </div>
+                        <div class="editor-field">
+                            @Html.reCaptcha()
+
+                        </div>
+                    </div>
+                    <div class="span2">
+                    </div>
+
+                </div>
+                <div class="span12">
+                    <div class="row-fluid">
+                        <div class="span2">
+                        </div>
+                        <div class="span8">
+
+                            <input type="submit" value="SUBMIT" class="btn btn-primary" />
+
+                        </div>
+                        <div class="span2">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+<div class="" style="margin-right: 0px; margin-bottom: 10px;width: 99%;margin-left: 6px; margin-top:5px;">
+    @Html.Partial("_question")
+</div>

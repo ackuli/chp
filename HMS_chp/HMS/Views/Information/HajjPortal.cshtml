@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Hajj Portal";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content=" easy guide to how to perform hajj," />
+    <meta name="Keywords" content=" a2z guide to how to perform hajj,  how to perform tawaf, hajj tawaf, umrah tawaf, umra tawaf, Welcome Tawaf, Tawaf-al-Qudoom, Tawaf for Hajj, Tawaf-al-Ifada also known as Tawaf –as-Ziyarah or Tawaf –al-Hajj, Farewell Tawaf, Tawaf-al-Widaa, Nafl Tawaf, number of rounds in tawaf, different types of tawaf" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+<style type="text/css">
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+       .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+}
+
+    table, th, td {
+        width:300px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    th, td {
+    padding: 5px;
+    }
+
+    th {
+    text-align: center;
+   color: white;
+}
+    
+    tr:nth-child(odd){background-color:  #dcdcbc}
+
+    </style>
+
+<ul class="breadcrumb">
+
+    <li calss="breadcrum"><a href="~/Information/Index"><b>Information</b></a><span class="divider" style="color:black"><b>></b></span></li>
+    <li calss="breadcrum"><a href="~/Information/HajjPortal"><b>Hajj Portal</b></a><span class="divider" style="color:black"><b>></b></span></li>
+    <li class="active" style="color:black"><b>@ViewBag.Title</b></li>
+
+</ul>
+<div class="row-fluid">
+    <div class="Footercontent">
+        <h4>Hajj Portal</h4>
+
+        @*<table id="t01">
+            <tr><td><a href="../Footer/Hajjritesataglance">Hajj rites at a glance </a></td><td><a href="../Footer/HajjWoman">Hajj of a woman</a> </td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+            <tr><td><a href="../Footer/StatusAndRewardOfHajjInIslam">Status & reward of hajj </a></td><td><a href="#"> Hajj of a minor person </a></td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+            <tr><td><a href="../Footer/StatusAndRewardOfHajjInIslam/StatusAndRewardOfHajjInIslam#HajjObligation">Upon whom hajj is obligatory? </a></td><td> <a href="#">Hajj on behalf of someone else</a> </td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+            <tr><td><a href="../Footer/PillarandWajibActions">Pillars of Hajj</a></td><td><a href="../Footer/CommonMisconceptions">Common misconceptions about Hajj and ‘Umrah</a></td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+            <tr><td><a href="../Footer/PillarandWajibActions/PillarandWajibActions#WajidActions">Obligatory (wajib) Actions of Hajj</a></td><td><a href="../Footer/CommonMisconceptions/CommonMisconceptions#commonmistakes">Common mistakes people make during Hajj and ‘Umrah</a> </td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+            <tr><td><a href="#">How to get ready for hajj?</a></td><td> <a href="#">Performing Hajj Salah</a></td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+            <tr><td><a href="../Footer/miqat">What is Miqat and Rulings on Miqat?</a></td><td><a href="../Footer/DuaforhajjandUmrah">Du’as for hajj & ‘umrah</a></td><td>Yes, men are required to adopt Idtiba’a.</td></tr>
+        <tr><td><a href="../Footer/WhichTypeHajjChoose">Which type of hajj to choose?</a></td><td><a href="#">How to perform Janaza Prayer</a></td><td></td></tr>
+            <tr><td><a href="../Footer/Ihram">What is Ihram and Rulings on Ihram?</a></td><td><a href="#">Introduction to Madinah</a></td><td></td></tr>
+            <tr><td><a href="../Footer/Niyah">Making Hajj Intention</a></td><td><a href="#">Visiting Prophet’s Mosque</a></td><td></td></tr>
+            <tr><td><a href="../Footer/Talbiyah">Talbiyah</a></td><td><a href="#">Praying at Raudahtul Jannah </a></td><td></td></tr>
+            <tr><td><a href="../Footer/Tawaf">What is Tawaf and How to Perform Tawaf?</a></td><td><a href="#">Etiquette of Visiting Prophet’s Grave</a></td><td></td></tr>
+        <tr><td><a href="#">Zamzam Water</a></td><td><a href="#"> Virtue of the first 10 days of Dhul-hijja</a></td><td></td></tr>
+       <tr><td><a href="../Footer/Sai">What is Sa’i and how to perform sa’i?</a></td><td></td><td></td></tr>
+         <tr><td><a href="#">Throwing Pebbles </a></td><td></td><td></td></tr>
+        <tr><td><a href="#">Animal Sacrifices</a></td><td></td><td></td></tr>
+            <tr><td><a href="../Footer/StepByStepGuideToTammattuHajj">Step by Step Guide to Hajj Tamattu </a></td><td></td><td></td></tr>
+        <tr><td><a href="../Footer/StepbystepguidetoQiranHajj"> Step by step guide to Hajj Qiran</a></td><td></td><td></td></tr>
+        <tr><td><a href="../Footer/StepbystepguidetoIfradHajj">Step by Step Guide to Hajj Ifrad</a></td><td></td><td></td></tr>
+        
+        </table>*@
+        
+
+
+       <div class="span4">
+            <ul id="ulhumore" class="ul">
+                <li><a href="../Footer/Hajjritesataglance">Hajj rites at a glance </a></li>
+                <li><a href="../Footer/StatusAndRewardOfHajjInIslam">Status & reward of hajj </a></li>
+                <li><a href="../Footer/StatusAndRewardOfHajjInIslam/StatusAndRewardOfHajjInIslam#HajjObligation">Upon whom hajj is obligatory? </a></li>
+                <li><a href="../Footer/PillarandWajibActions">Pillars of Hajj</a></li>
+                <li><a href="../Footer/PillarandWajibActions/PillarandWajibActions#WajidActions">Obligatory (wajib) Actions of Hajj</a></li>
+                <li><a href="#">Getting Ready for Hajj</a></li>
+                <li><a href="../Footer/miqat">What is Miqat and Rulings on Miqat?</a></li>
+                <li><a href="../Footer/WhichTypeHajjChoose">Which type of hajj to choose?</a></li>
+                <li><a href="../Footer/Ihram">What is Ihram and Rulings on Ihram?</a></li>
+                <li><a href="../Footer/Niyah">Making Hajj Intention</a></li>
+                <li><a href="../Footer/Talbiyah">Talbiyah</a></li>
+                <li><a href="../Footer/Tawaf">What is Tawaf and How to Perform Tawaf?</a></li>
+                <li><a href="../Footer/Sai">What is Sa’i and how to perform sa’i?</a></li>
+                <li><a href="#">Throwing Pebbles </a></li>
+                
+                
+            </ul>
+        </div>
+        <div class="span4">
+            <ul id="ulhumore" class="ul">
+                <li><a href="#">Animal Sacrifices</a></li>
+                <li><a href="../Footer/Stepbystepguidetohajjrites">Step by step guide to hajj</a></li>
+                <li><a href="../Footer/StepByStepGuideToTammattuHajj">Step by Step Guide to Hajj Tamattu </a></li>
+                <li><a href="../Footer/StepbystepguidetoQiranHajj"> Step by step guide to Qiran Hajj</a></li>
+                <li><a href="../Footer/StepbystepguidetoIfradHajj">Step by Step Guide to Hajj Ifrad</a></li>
+                <li><a href="../Footer/HajjWoman">Hajj of a woman</a></li>
+                <li><a href="../Footer/CommonMisconceptions">Common misconceptions about Hajj and ‘Umrah</a></li>
+                <li><a href="../Footer/CommonMisconceptions/CommonMisconceptions#commonmistakes">Common mistakes people make during Hajj and ‘Umrah</a></li>
+                <li><a href="../Information/IntroductiontoMadinah">Introduction to Madinah</a></li>
+                <li><a href="../Information/VisitingProphetMosque">Visiting Prophet’s Mosque</a></li>
+                <li><a href="../Information/VisitingProphetMosque#Riaduljannah">Praying at Raudahtul Jannah </a></li>
+                <li><a href="../Information/VisitingProphetGrave">Etiquette of Visiting Prophet’s Grave</a></li>
+            </ul>
+        </div>
+        <div class="span3">
+            <ul id="ulhumore" class="ul">
+                
+                <li><a href="#">Frequently Asked Questions about Hajj & Umrah </a></li>
+                <li><a href="#">Performing Hajj Salah</a></li>
+                <li><a href="../Footer/DuaforhajjandUmrah">Du’as for hajj & ‘umrah</a></li>
+                <li><a href="#">Hajj on behalf of someone else</a></li>
+                <li><a href="#">How to perform Janaza Prayer</a></li>
+                <li><a href="../Footer/HajjUmrahGlossary">Hajj and Umrah Glossary</a></li>
+                <li><a href="#">Virtue of the first 10 days of Dhul- hijja</a></li>
+                <li><a href="../Footer/TheLastsermon">The Last Sermon of the Prophet Muhammad (PBUH)</a></li>
+            </ul>
+        </div>
+        </div>
+   
+    </div>
+

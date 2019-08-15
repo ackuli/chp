@@ -1,0 +1,17 @@
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\HMS.Entities.dll.config
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\HMS.Entities.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\HMS.Entities.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\EntityFramework.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\EntityFramework.SqlServer.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\MvcPaging.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\Repository.Pattern.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\Repository.Pattern.Ef6.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\LinqKit.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\Repository.Pattern.Ef6.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\Repository.Pattern.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\EntityFramework.xml
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\bin\Release\EntityFramework.SqlServer.xml
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\obj\Release\HMS.Entities.csprojResolveAssemblyReference.cache
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\obj\Release\HMS.Entities.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Entities\obj\Release\HMS.Entities.pdb

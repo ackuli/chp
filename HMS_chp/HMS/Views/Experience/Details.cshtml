@@ -1,0 +1,72 @@
+﻿@model HMS.Entities.Models.Experience
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Experience</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Year)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Year)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Narratives)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Narratives)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsShow)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsShow)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Setdate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Setdate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

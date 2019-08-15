@@ -1,0 +1,58 @@
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Service.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Service.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Entities.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.utility.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.Ef6.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Service.Pattern.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\EntityFramework.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\LinqKit.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\MvcPaging.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.Ef6.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Service.Pattern.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Entities.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.utility.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\bin\Debug\EntityFramework.xml
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\obj\Debug\HMS.Service.csprojResolveAssemblyReference.cache
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\obj\Debug\HMS.Service.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.Service\obj\Debug\HMS.Service.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Service.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Service.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Entities.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.utility.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.Ef6.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Service.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\EntityFramework.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\LinqKit.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\MvcPaging.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.Ef6.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Repository.Pattern.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\Service.Pattern.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.Entities.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\bin\Debug\HMS.utility.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\obj\Debug\HMS.Service.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\obj\Debug\HMS.Service.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS.Service\obj\Debug\HMS.Service.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\HMS.Service.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\HMS.Service.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\HMS.Entities.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\HMS.utility.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Repository.Pattern.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Repository.Pattern.Ef6.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Service.Pattern.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\EntityFramework.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\LinqKit.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\MvcPaging.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Repository.Pattern.Ef6.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Repository.Pattern.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\Service.Pattern.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\HMS.Entities.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\bin\Debug\HMS.utility.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\obj\Debug\HMS.Service.csprojResolveAssemblyReference.cache
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\obj\Debug\HMS.Service.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS.Service\obj\Debug\HMS.Service.pdb

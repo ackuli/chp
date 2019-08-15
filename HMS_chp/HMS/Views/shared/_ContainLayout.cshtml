@@ -1,0 +1,98 @@
+﻿@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>
+    @*@RenderSection("head", required: false)
+    @Html.Partial("_html5shiv")*@ @* favicons and touch icons go here *@
+    @Scripts.Render("~/js")
+    @RenderSection("Scripts", required: false)
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".alert button").click(function () {
+                $("div.alert").hide();
+            });
+        });
+        function DeleteConfirm() {
+            if (confirm("Are you sure want to delete record?"))
+                return true;
+            else
+                return false;
+        }
+        function EditConfirm() {
+            if (confirm("Are you sure want to edit record?"))
+                return true;
+            else
+                return false;
+        }
+        function AddConfirm() {
+            if (confirm("Are you sure want to add record?"))
+                return true;
+            else
+                return false;
+        }
+        function SendSMSConfirm() {
+            if (confirm("Are you sure want to sent SMS?"))
+                return true;
+            else
+                return false;
+        }
+
+    </script>
+</head>
+<body>
+    <header class="Header">
+        <div class="logo">
+            <img alt="banner"  src="@Url.Content("~/Content/images/logo.jpg")" />
+        </div>
+        <div class="banner">
+            <h3>
+                banyanSMSC</h3>
+            <i>Your SMS portal...</i>
+        </div>
+    </header>
+    <div class="container">
+         
+          @*@Html.Partial("_validationSummary")*@
+        <div class="row-fluid">
+            <div class="span3">
+                <ul class="nav nav-list bs-docs-sidenav ">
+                    <li id="liDashboard" class="active"><a  href = "@Url.Content("~/Home/Dashboard")" ><i
+                        class="icon-chevron-right"></i>Dashboard</a></li>
+                    <li id="liGrpManagement" class=""><a href = "@Url.Content("~/SMSGroup/")"><i class="icon-chevron-right">
+                    </i>Group Management</a></li>
+                    <li id="liSendSMS" class=""><a  href = "@Url.Content("~/SendSMS/")"><i class="icon-chevron-right">
+                    </i>Send SMS</a></li>
+                    @RenderSection("Administration", false)
+                    @*<li id = "liAdministration" class=""><a href="#contents"><i class="icon-chevron-right"></i>Administration</a></li>*@
+                    <li id="liReport" class=""><a href="#html-template"><i class="icon-chevron-right"></i>
+                        SMS Report</a></li>
+                    <li id="liBilling" class=""><a href="#examples"><i class="icon-chevron-right"></i>Billing</a></li>
+                    <li id="liBanyan" class=""><a href="#what-next"><i class="icon-chevron-right"></i>About
+                        Banyan</a></li>
+                    <li id="liLogout" class=""><a href = "@Url.Content("~/Home/Logout")"><i class="icon-chevron-right">
+                    </i>Logout</a></li>
+                </ul>
+            </div>
+            <div class="span9">
+                <div class="row-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="nav nav-pills">
+                <li><a href="https://banyan-technologies.com/View/Index.aspx">Banyan-technologies</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li class="disabled"><a href="#">Copyright &copy; @System.DateTime.Now.ToString("yyyy")
+                    banyan-technologies reserve all right.</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

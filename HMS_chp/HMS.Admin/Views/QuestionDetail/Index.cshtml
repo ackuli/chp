@@ -1,0 +1,131 @@
+﻿@using MvcPaging
+@model  MvcPaging.IPagedList<HMS.Entities.Models.QuestionDetail>
+@{
+    ViewBag.Title = "Question Details List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .form-inline .form-control {
+        width: 100%;
+    }
+
+    .form-inline input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form-inline .form-group {
+        width: 70%;
+    }
+
+    .margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liQuestion").addClass("active");
+    });
+</script>
+
+@section breadcrumb
+{
+    <li><a href="~/Home/index">Dashboard</a></li>
+    <li>Packages</li>
+    <li class="active">@ViewBag.Title</li>
+}
+@section title
+{
+    @ViewBag.Title
+}
+<style type="text/css">
+
+</style>
+
+@using (Html.BeginForm("Index", "Question", FormMethod.Get))
+{
+
+    <div class="row margin">
+
+        <div class="col-md-3">
+            @Html.ActionLink("Create New Question Details", "Create", new { questionId = @Model.FirstOrDefault().QuestionId }, new { @class = "btn btn-success" })
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Back To Question List", "Index", "Question", null, new { @class = "btn btn-info" })
+        </div>
+        <div class="form-inline col-md-6" style="margin-bottom: 20px">
+
+            <div class="form-group">
+                <input type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Search" value="@ViewData["searchItem"]">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+
+    <table class="table">
+
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().QuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().QuestionDetailsText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().IsActive)
+            </th>
+
+            <th></th>
+        </tr>
+        @if (@Model.FirstOrDefault().Id == 0)
+        {
+
+        }
+        else
+        {
+            foreach (var item in Model.ToList())
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuestionId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuestionDetailsText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsActive)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "QuestionDetail", new { id = item.Id }, null)|
+                        @Html.ActionLink("Delete", "Delete", "QuestionDetail", new { id = item.Id }, null)
+
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <hr />
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+                     new Options
+                     {
+                         PageSize = Model.PageSize,
+                         TotalItemCount = Model.TotalItemCount,
+                         CurrentPage = Model.PageNumber,
+                         ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                         ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                         TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                         Size = Size.normal,
+                         Alignment = Alignment.centered,
+                         IsShowControls = true,
+                         IsShowFirstLast = true,
+                         IsShowPages = true
+                     }, null))
+
+    </div>
+}

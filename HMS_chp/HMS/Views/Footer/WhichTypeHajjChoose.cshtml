@@ -1,0 +1,338 @@
+﻿@{
+    ViewBag.Title = "Which Type of Hajj to Choose?";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+     #btninformation {
+        background-color: #D95902 !important;
+    }
+    /*.Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }*/
+
+    h2 {
+        /*font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;*/
+        padding: 0 45px;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+        section.page-container {
+        display: flex;
+        padding: 0 35px;
+    }
+
+    .main-content {
+        flex-basis: 75%;
+        margin: 0 10px 1rem;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th {
+        text-align: center;
+        background-color: #303030;
+        color: white;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    table#t01 {
+        border-collapse: collapse;
+       width: 100%;
+        background-color: #EBEBEB;
+        float: left;
+    }
+
+    .textalinecentre {
+        text-align: center !important;
+    }
+
+    .textalineright {
+        text-align: right !important;
+    }
+
+
+    .hero-banner {
+        margin-bottom: 1rem;
+        height: 350px;
+        width: 100%;
+        background-color:#ecd8c6;
+        display:flex;
+         flex-wrap: wrap;
+    }
+
+        .hero-banner img {
+            display: block;
+        }
+
+        .hero-banner span {
+            display: block;
+            padding: 5px;
+            color: #888888;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+    aside {
+        flex-basis: 30%;
+        background: #f2f2f2;
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        }
+
+  .sidebar-ads {
+        padding-top: 10px;
+        padding-right: 30px;
+        margin-bottom: 1rem;
+        align-items: center;
+      
+    }
+
+     .post-list {
+        display:flex;
+        padding-top:  10px;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+
+      .post-list h4 {
+            color: #252525;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0 0.5rem;
+            border-bottom: 1px solid #aeaeac;
+           }
+
+        .post-list ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .post-list ul li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .post-list ul li a {
+                padding: 0.8rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: #252525;
+                background: #D1D1D1;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid #aeaeac;
+                box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
+            }
+
+                .post-list ul li a:hover {
+                    text-decoration: none;
+                }
+
+                .post-list ul li a img {
+                    border-radius: 10px;
+                    margin-bottom: 0.8rem;
+                    border: 1px solid #aeaeac;
+                }
+
+                .post-list ul li a span {
+                    padding-left: 0.8rem;
+                    flex: 1;
+                }
+      .arabicCSS p {
+        font-size: 25px;
+        font-weight: normal;
+        /*text-align: right;*/
+        line-height: 35px;
+        padding: 30px;
+    }
+
+/*//breadcrumb starts here//*/
+       ul.breadcrumb {
+    padding: 8px 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    content: "/\00a0";
+    }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*//breadcrumb ends//*/
+
+</style>
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/GettingReadyForHajj">Getting Ready for Hajj</a></li>
+    <li><a href="../Footer/HajjAndHajjRites">Hajj and Hajj Rites</a></li>
+    <li>Which Type of Hajj to Choose?</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+
+<h2>Which type of Hajj to choose?</h2>
+<section class="page-container">
+    <div class="main-content">
+        
+
+        <div class="row" style=" background-color: #ecd8c6; margin-left:0;">
+       
+
+            <img src="~/Content/images/types_of_hajj_paths.png" alt="Alternate Text" class="responsive">
+            
+        </div>
+        
+            <p>
+                There are three types of hajj: Ifrad, Qiran and Tamattu.
+            </p>
+            <p><b>Hajj Ifrad:</b> Hajj only, without ‘umrah.</p>
+            <ul>
+                <li>A person performing Ifrad Hajj is called Mufrid</li>
+                <li>In this type of Hajj, Mufrid enter into Ihram with an intention to perform Hajj only</li>
+            </ul>
+
+            <p><b>Hajj Qiran:</b>‘Umrah and Hajj with a single Ihram</p>
+            <ul style="list-style-type:circle">
+                <li>One who performs Qiran is called a Qarin</li>
+                <li>In Qiran Hajj, Qaarin enters into Ihram with an intention to perform ‘umrah and Hajj together, without any break in between</li>
+                <li>Some scholars rule that for this type of Hajj,  it is a prerequisite for the pilgrim (Qaarin) to have the sacrificial animal with them</li>
+            </ul>
+            <p><b>Hajj Tamattu:</b>‘Umrah and Hajj with a break in between (involves two separate Ihrams)</p>
+            <ul style="list-style-type:square">
+                <li>The performer of this Hajj is called a Mutamatti</li>
+                <li>In this type of Hajj, the pilgrims enter into Ihram with an intention to perform ‘umrah first, and then complete all ‘umrah rites with one Ihram before starting of Hajj</li>
+                <li>Thereafter, before leaving for Mina on or before 8th Dhul-hijja , the pilgrims (Mutamatti) enter into Ihram again with an intention to perform Hajj only and complete all Hajj rites</li>
+            </ul>
+
+
+            <h3>Distinctions and commonalities between different types of Hajj</h3>
+            <p>
+
+
+                <div class="table-responsive">
+
+                    <table id="t01">
+                        <tr><th>Topic</th><th>Ifrad</th><th>Qiran</th><th>Tammattu</th></tr>
+                        <tr><td>Miqat</td><td>Adopt Ihram and utter niyah before crossing the miqat boundary.</td><td>Adopt Ihram and utter niyah before crossing the miqat boundary.</td><td>Adopt Ihram and utter niyah before crossing the miqat boundary.</td></tr>
+                        <tr><td>Adopt Ihram</td><td class="textalinecentre">Once </td><td class="textalinecentre">Once </td><td class="textalinecentre">Twice <br>One for ‘umrah and the other for Hajj</td></tr>
+                        <tr><td>Released from Ihram restrictions before Hajj</td><td class="textalinecentre">No </td><td class="textalinecentre">No </td><td class="textalinecentre">Yes<br />After ‘umrah</td></tr>
+                        <tr><td>Wording for Niyah (Intention)</td><td class="textalineright"><h3> لَبَّيْكَ الَّهُمَّ حَجّاً</h3>“Labbayk Allahumma Hajjan” <br />Or<br /><h3> لَبَّيْكَ حَجّاً</h3>“Labbayka Hajjan” “O Allah here I am performing Hajj.”<td class="textalineright"><h3>لَبَّيْكَ الَّهُمَّ عُمْرَةً وَ حَجّاً </h3>“Labbayk Allahumma ‘Umratan wa Hajjan” <br />Or<br /><h3>لَبَّيْكَ عُمْرَةً وَ حَجّاً</h3>“Labbayka ‘Umratan wa Hajjan” “O Allah here I am performing ‘Umrah and Hajj.”</td><td class="textalineright"><u>For ‘Umrah</u>:<h3> لَبَّيْكَ الَّهُمَّ عُمْرَةً </h3>Labbayk Allahumma ‘Umrah <br />Or<br /><h3> لَبَّيْكَ عُمْرَةً  </h3>Labbayka ‘Umrah <br />“O Allah here I am performing ‘Umrah.” <br /><br /><u>For Hajj</u>: <br /><h3> لَبَّيْكَ الَّهُمَّ حَجّاً  </h3>“Labbayk Allahumma Hajjan” <br />Or<br /><h3> لَبَّيْكَ حَجّاً</h3> “Labbayka Hajjan”<br />“O Allah here I am performing Hajj.”</td></tr>
+                        <tr><td>Changing Niyah </td><td class="textalinecentre">Can change Niyah </td><td class="textalinecentre">Can change Niyah </td><td>Conditional</td></tr>
+                        <tr><td>Tawaf</td><td> Perform:<ul><li>Welcome Tawaf (Tawaf al-Qudoom) </li><li>Tawaf al Ifada</li><li>	Tawaf al Wida</li></ul>  </td><td>Perform:<ul><li>Welcome Tawaf (Tawaf al-Qudoom)</li><li>Tawaf al Ifada</li><li>Tawaf al Wida</li></ul>  </td><td>Perform: <ul><li>'Umrah Tawaf </li><li>Tawaf al Ifada</li><li>Tawaf al Wida</li></ul> </td></tr>
+                        <tr><td>Raml during Tawaf (men only)</td><td class="textalinecentre">Yes<br />at 1st Tawaf (Welcome Tawaf)</td><td class="textalinecentre">Yes<br />at 1st Tawaf (Welcome Tawaf)</td><td class="textalinecentre">Yes<br />at 1st Tawaf (‘Umrah Tawaf)</td></tr>
+                        <tr><td>Number of Sa’i</td><td class="textalinecentre">1 <br />for Hajj only</td><td class="textalinecentre">1<br />for Hajj only</td><td class="textalinecentre">2<br />One for ‘umrah and the other for Hajj</td></tr>
+                        <tr><td>Encampment in Mina </td><td class="textalinecentre">Yes<br />On 8th, 10th, 11th, 12th Dul-hijja and 13th (Optional) </td><td class="textalinecentre">Yes<br />On 8th, 10th, 11th, 12th Dhul-hijja and 13th (Optional)</td><td class="textalinecentre">Yes<br />On 8th, 10th, 11th, 12th Dul-hijja and 13th (Optional)</td></tr>
+                        <tr><td>Standing in Arafat</td><td class="textalinecentre">Yes<br />on 9th Dhul-hijja</td><td class="textalinecentre">Yes<br />on 9th Dhul-hijja</td><td class="textalinecentre">Yes<br />on 9th Dhul-hijja</td></tr>
+                        <tr><td>Spending night in Muzdalifa</td><td class="textalinecentre">Yes<br />on 9th Dhul-hijja</td><td class="textalinecentre">Yes<br />on 9th Dhul-hijjah</td><td class="textalinecentre">Yes<br />on 9th Dhul-hijja</td></tr>
+                        <tr><td>Throwing pebbles at Jamarat </td><td class="textalinecentre">Yes<br />On 10th, 11th, 12th Dul-hijja and 13th (Optional)</td><td class="textalinecentre">Yes<br />On 10th, 11th, 12th Dul-hijjah and 13th (Optional)</td><td class="textalinecentre">Yes<br />On 10th, 11th, 12th Dul-hijja and 13th (Optional)</td></tr>
+                        <tr><td>Shave or Hair cut</td><td class="textalinecentre">Once<br />after throwing pebbles at big Jamrah  on 10th Dhul-hijja</td><td class="textalinecentre">Once <br />after throwing pebbles at big Jamrah  on 10th Dhul-hijja</td><td class="textalinecentre">Twice<br />1st time after ‘umrah and the 2nd time after throwing pebbles at big Jamrah  on 10th Dhul-hijja</td></tr>
+                        <tr><td>Perform Hady (sacrifice) </td><td class="textalinecentre">Optional</td><td class="textalinecentre">Yes</td><td class="textalinecentre">Yes</td></tr>
+
+                    </table>
+                </div>
+
+                <br>
+            </p>
+            <h3>Which type of Hajj is the best?</h3>
+            <p>There is disagreement among scholars about this. Some hold opinion that Tammattu is better while others think it is Ifrad. A third group of scholars are in favour of Qiran.</p>
+            <p>The Prophet (peace be upon him) did perform Qiran Hajj, however, he recommended his companions to do Tammattu. When the Prophet (peace and blessings be upon him) arrived in Makkah and did the Tawaf on arrival, he told his companions to complete their `’umrah and release themselves from ihram. They wondered at that and questioned him, specially as they saw that he himself did not do what he told them to do. The Prophet (pbuh) replied and said: “You know that I fear Allah the most, and that I am the most truthful, and the most pious amongst you. If I had not brought my sacrificial animals with me, I also would have terminated my state of Ihram. If I were to come (to Makkah) again, I shall not bring the sacrificial animals with me. So terminate your state of Ihram.” The companions listened and obeyed the Prophet (pbuh). (Sahih Al-Bukhari 26:713) </p>
+
+        </div>
+
+    <aside>
+        <div class="sidebar-ads">
+            @*<img src="http://via.placeholder.com/400x750" alt="Alternate Text" />*@
+
+
+            <img src="~/content/images/Add3NewsEvent.jpg" att="Alternate Text" align="right" class="img-responsive" />
+
+        </div>
+
+        <div class="post-list">
+            <h4>Most searched</h4>
+
+
+            <ul>
+                <li>
+                    <a href="../Question/quiz">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Hajj and 'Umrah Quiz.</strong> Test yourself to see how much prepared you are for hajj and 'umrah. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Footer/miqat">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Path.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="miqat diagram" />
+                        <span style="color: #004d66"><strong>  What is miqat and rulings on miqat? </strong> The literal meaning of miqat is “a stated time or place.”  </span>
+
+                    </a>
+
+
+
+
+                </li>
+                <li>
+                    <a href="../Footer/StepByStepGuideToTammattuHajj">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Step by step guide to Tammattu Hajj</strong> Tammattu Hajj consists of both ‘Umrah and Hajj.</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+
+    </aside>
+    
+</section>
+   

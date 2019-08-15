@@ -1,0 +1,87 @@
+﻿@model HMS.Entities.Models.Question
+@{
+    ViewBag.Title = "Hajj and 'Umrah Quiz - How much are you prepared for Hajj and 'Umrah?";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content=" Test your hajj & 'umrah knowledge and see what you already know and don't know. The test contains 10 questions and there is no time limit. If you repeat this test again, you may encounter different sets of questions. " />
+    <meta name="Keywords" content="hajj quiz questions and answers, Umrah Quiz, Quiz Test, Hajj Quiz " />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+    .backgroundcolor {
+        background: rgba(128, 128, 128, 0.23);
+        margin-bottom: 14px;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    text {
+        font-size: 16px;
+    }
+</style>
+<div style="width: 100%;margin-left: auto;margin-right: auto;">
+    <div class="row-fluid">
+        <div class="container-fluid">
+            <div class="span12 backgroundcolor">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <div class="span9">
+                                <div class="span12 mobileview" style="margin:13px">
+                                    <div class="row-fluid">
+
+                                        <h3 style="text-align:left">Hajj and Umrah  Quiz</h3>
+                                        <p>Test what you know about Hajj and 'Umrah. As part of your preparations,  perhaps, you have attended hajj and 'umrah seminars, read guides and watched a few videos, now it is time for you to assess as to how much information you are able to retain from what you have learnt.  </p>
+                                        <p>Hajj and 'Umrah Quiz has been particularly designed to help you to understand how much you are prepared to embark on this spiritual journey. </p>
+                                        <h4>The Quiz</h4>
+                                        
+                                        <p> The test contains 10 questions and there is no time limit. If you repeat this test again, you may encounter different sets of questions. </p>
+
+                                        <p>This test is a way to see how much you already know, or don't know about hajj and ‘umrah or what else you need to learn before going there.</p>
+
+                                        <h4>Count Your Score</h4>
+                                        <p>You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 10 points.</p>
+                                        <h4>Bismillah</h4>
+
+
+                                    </div>
+                                </div>
+                                <div class="span12" style="text-align:right">
+                                    <div style="text-align: left; margin-top: 5px;">
+                                        <a class="btn-danger btn-large" id="btnlink" href="~/Question/quiztest">Start the Quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <br />
+                            <div class="span3">
+                                <img alt="quiz test"   src="~/Content/images/hajj-quiz-image.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+    });
+</script>
+
+
+
+

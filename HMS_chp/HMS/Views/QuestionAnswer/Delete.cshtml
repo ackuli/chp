@@ -1,0 +1,69 @@
+﻿@model HMS.Entities.Models.QuestionAnswer
+
+@{
+    ViewBag.Title = "Delete Question & Answer";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+
+
+
+</script>
+<style type="text/css">
+    input, select, textarea {
+        max-width: 100%;
+    }
+
+    .backTolist {
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+        .backTolist:hover {
+            text-decoration: none;
+        }
+</style>
+
+
+
+<p>
+    @Html.ActionLink("Back To Question List", "Index", "QuestionAnswer", new { @class = "btn btn-success btn-lg active", @role = "button" })
+</p>
+<hr />
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

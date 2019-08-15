@@ -1,0 +1,298 @@
+﻿@model HMS.Entities.Models.Advertis
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Create</h2>
+<h4>Create Advertis</h4>
+
+<p>@Html.ActionLink("Back to List", "PositionWiseAdvertiseList", new { id = Model.AdvertisePositionsId }, null)</p>
+
+
+<hr />
+@using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(x=>x.AdvertisePositionsId);
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.LabelFor(model => model.AdvertiseTypeId, new { @class = "col-md-2 control-label " })
+            <div class="col-md-6">
+                @Html.DropDownList("AdvertiseTypeId", null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AdvertiseTypeId)
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            @Html.Label("Advertise Content", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextAreaFor(model => model.AdvertiseContent, new { @class = "form-control", cols = 30, rows = 5 })
+
+            </div>
+            </div>
+            @*<div class="form-group">
+                @Html.Label("AdvertiseContent1", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextArea("AdvertiseContent1", new { @class = "form-control", cols = 30, rows = 5 })
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.Label("AdvertiseContent2", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextArea("AdvertiseContent2", new { @class = "form-control", cols = 30, rows = 5 })
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.Label("AdvertiseContent3", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextArea("AdvertiseContent3", new { @class = "form-control", cols = 30, rows = 5 })
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.Label("AdvertiseContent4", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextArea("AdvertiseContent4", new { @class = "form-control", cols = 30, rows = 5 })
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                @Html.Label("AdvertiseContent5", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextArea("AdvertiseContent5", new { @class = "form-control", cols = 30, rows = 5 })
+
+                </div>
+
+            </div>*@
+            <br>
+            <div class="form-group">
+                <label for="checkbox" class="col-sm-3 control-label"></label>
+                <div class="col-sm-6">
+                    <div class="checkbox block">
+                        <label>
+                            @Html.CheckBoxFor(model => model.IsActive) @Html.LabelFor(model => model.IsActive)
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.Label("Image1 ", new { @class = "col-md-2 control-label " })
+                <div class="col-sm-6">
+                    @*<input type="file" multiple="" name="file1" id="file1" />*@
+                    <input type="file" multiple="multiple" name="files[0]" id="files_1" />
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.Label("Image2", new { @class = "col-md-2 control-label " })
+                <div class="col-sm-6">
+                    @*<input type="file" multiple="" name="file2" id="file2" />*@
+                    <input type="file" multiple="multiple" name="files[1]" id="files_2" />
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.Label("Image3", new { @class = "col-md-2 control-label " })
+                <div class="col-sm-6">
+                    @*<input type="file" multiple=""  name="file3" id="file3" />*@
+                    <input type="file" multiple="multiple" name="files[2]" id="files_3" />
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.Label("Image4", new { @class = "col-md-2 control-label " })
+                <div class="col-sm-6">
+                    @*<input type="file" multiple=""  name="file4" id="file4" />*@
+                    <input type="file" multiple="multiple" name="files[3]" id="files_4" />
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.StartDate)
+                </div>
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EndDate, new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(model => model.EndDate, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EndDate)
+                </div>
+
+            </div>
+            <br>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ClientId, new { @class = "col-md-2 control-label " })
+                <div class="col-md-6">
+                    @Html.DropDownList("ClientId", null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ClientId)
+                </div>
+            </div>
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Extension, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Extension, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Extension, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AdvertiseContent, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AdvertiseContent, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AdvertiseContent, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AdvertisePositionsId, "AdvertisePositionsId", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("AdvertisePositionsId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.AdvertisePositionsId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.IsActive)
+                        @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ClientId, "ClientId", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("ClientId", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsDefault, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.IsDefault)
+                        @Html.ValidationMessageFor(model => model.IsDefault, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SetBy, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SetBy, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SetBy, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SetDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SetDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SetDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Img, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Img, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Img, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastUpdatedTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastUpdatedTime, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastUpdatedTime, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PriorityLevel, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PriorityLevel, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PriorityLevel, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>*@
+        </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-sm-offset-3">
+            <div class="form-group">
+                <div class="btn-toolbar">
+
+                    <input type="submit" value="Save" class="btn-primary btn" />
+
+                </div>
+                </div>
+            </div>
+    </div>
+
+
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

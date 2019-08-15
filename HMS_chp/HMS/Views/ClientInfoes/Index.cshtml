@@ -1,0 +1,129 @@
+﻿
+@using MvcPaging
+@model IPagedList<HMS.Entities.Models.ClientInfo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "ClientInfoes", FormMethod.Get))
+{
+    <div class="row-fluid">
+        <div class="span6 pull-left">
+            <div class="input-append">
+                <input type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Client Name" value="@ViewData["searchItem"]">
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>&nbsp;Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Country.CountryName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CurrencyType1.CurrencyName)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().UserAccount.Password)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().ClientIdentityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().ClientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Amount)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().EmailAddress)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Img)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().IsActive)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country.CountryName)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.CurrencyType1.CurrencyName)
+                </td>*@
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.UserAccount.Password)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClientIdentityId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClientName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Img)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ClientId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ClientId })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                IsShowPages = true
+            }, new { searchItem = ViewData["searchItem"] }))
+    </div>
+
+}

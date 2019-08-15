@@ -1,0 +1,144 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS", "HMS\HMS.csproj", "{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks", "Frameworks", "{B05965A4-E018-4AAD-9137-1E906BD5BE0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Pattern", "..\Source\Repository.Pattern\Repository.Pattern.csproj", "{6E682A14-C872-4813-B620-76E108DEA683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Pattern", "..\Source\Service.Pattern\Service.Pattern.csproj", "{86F86650-EE3C-4372-8FEC-40C2FE015022}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7AF47F75-5D69-4F5C-B637-E6F01524C0C3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS.Entities", "HMS.Entities\HMS.Entities.csproj", "{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS.Service", "HMS.Service\HMS.Service.csproj", "{9B06857D-4AF1-4565-A35B-8F1365D8592D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS.utility", "HMS.utility\HMS.utility.csproj", "{CADA0EE8-3632-4362-A054-F68CD2128E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMSAdmin.Tests", "HMSAdmin.Tests\HMSAdmin.Tests.csproj", "{BB482373-01AF-49C5-B018-123B4187FA3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS.Admin", "HMS.Admin\HMS.Admin.csproj", "{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Pattern.Ef6", "..\Source\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj", "{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D74FA55-7DEE-4113-A03A-0E15CE5F091F}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|x86.ActiveCfg = Debug|x86
+		{6E682A14-C872-4813-B620-76E108DEA683}.Debug|x86.Build.0 = Debug|x86
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|x86.ActiveCfg = Release|x86
+		{6E682A14-C872-4813-B620-76E108DEA683}.Release|x86.Build.0 = Release|x86
+		{86F86650-EE3C-4372-8FEC-40C2FE015022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F86650-EE3C-4372-8FEC-40C2FE015022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F86650-EE3C-4372-8FEC-40C2FE015022}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{86F86650-EE3C-4372-8FEC-40C2FE015022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F86650-EE3C-4372-8FEC-40C2FE015022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F86650-EE3C-4372-8FEC-40C2FE015022}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6EAE2E4-A9F1-4487-80E5-846A8D8EB827}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B06857D-4AF1-4565-A35B-8F1365D8592D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B06857D-4AF1-4565-A35B-8F1365D8592D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B06857D-4AF1-4565-A35B-8F1365D8592D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B06857D-4AF1-4565-A35B-8F1365D8592D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B06857D-4AF1-4565-A35B-8F1365D8592D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B06857D-4AF1-4565-A35B-8F1365D8592D}.Release|x86.ActiveCfg = Release|Any CPU
+		{CADA0EE8-3632-4362-A054-F68CD2128E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADA0EE8-3632-4362-A054-F68CD2128E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADA0EE8-3632-4362-A054-F68CD2128E64}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CADA0EE8-3632-4362-A054-F68CD2128E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADA0EE8-3632-4362-A054-F68CD2128E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADA0EE8-3632-4362-A054-F68CD2128E64}.Release|x86.ActiveCfg = Release|Any CPU
+		{BB482373-01AF-49C5-B018-123B4187FA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB482373-01AF-49C5-B018-123B4187FA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB482373-01AF-49C5-B018-123B4187FA3B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB482373-01AF-49C5-B018-123B4187FA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB482373-01AF-49C5-B018-123B4187FA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB482373-01AF-49C5-B018-123B4187FA3B}.Release|x86.ActiveCfg = Release|Any CPU
+		{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Debug|x86.Build.0 = Debug|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E682A14-C872-4813-B620-76E108DEA683} = {B05965A4-E018-4AAD-9137-1E906BD5BE0E}
+		{86F86650-EE3C-4372-8FEC-40C2FE015022} = {B05965A4-E018-4AAD-9137-1E906BD5BE0E}
+		{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C} = {B05965A4-E018-4AAD-9137-1E906BD5BE0E}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://comparehajjpackages.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HMS\\HMS.csproj
+		SccProjectName1 = HMS
+		SccLocalPath1 = HMS
+		SccProjectUniqueName2 = ..\\Source\\Repository.Pattern\\Repository.Pattern.csproj
+		SccProjectTopLevelParentUniqueName2 = HMS.sln
+		SccProjectName2 = ../Source/Repository.Pattern
+		SccLocalPath2 = ..\\Source\\Repository.Pattern
+		SccProjectUniqueName3 = ..\\Source\\Service.Pattern\\Service.Pattern.csproj
+		SccProjectTopLevelParentUniqueName3 = HMS.sln
+		SccProjectName3 = ../Source/Service.Pattern
+		SccLocalPath3 = ..\\Source\\Service.Pattern
+		SccProjectUniqueName4 = HMS.Entities\\HMS.Entities.csproj
+		SccProjectName4 = HMS.Entities
+		SccLocalPath4 = HMS.Entities
+		SccProjectUniqueName5 = HMS.Service\\HMS.Service.csproj
+		SccProjectName5 = HMS.Service
+		SccLocalPath5 = HMS.Service
+		SccProjectUniqueName6 = HMS.utility\\HMS.utility.csproj
+		SccProjectName6 = HMS.utility
+		SccLocalPath6 = HMS.utility
+		SccProjectUniqueName7 = HMSAdmin.Tests\\HMSAdmin.Tests.csproj
+		SccProjectName7 = HMSAdmin.Tests
+		SccLocalPath7 = HMSAdmin.Tests
+		SccProjectUniqueName8 = HMS.Admin\\HMS.Admin.csproj
+		SccProjectName8 = HMS.Admin
+		SccLocalPath8 = HMS.Admin
+		SccProjectUniqueName9 = ..\\Source\\Repository.Pattern.Ef6\\Repository.Pattern.Ef6.csproj
+		SccProjectTopLevelParentUniqueName9 = HMS.sln
+		SccProjectName9 = ../Source/Repository.Pattern.Ef6
+		SccLocalPath9 = ..\\Source\\Repository.Pattern.Ef6
+	EndGlobalSection
+EndGlobal

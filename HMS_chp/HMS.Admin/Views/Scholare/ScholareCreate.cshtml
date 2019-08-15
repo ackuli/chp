@@ -1,0 +1,92 @@
+﻿@model HMS.Entities.Models.Scholare
+@{
+    ViewBag.Title = "Create Scholar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section breadcrumb
+{
+    <li><a href="~/Home/index">Dashboard</a></li>
+    @*<li><a href="~/User/">Package</a></li>*@
+    <li class="active">@ViewBag.Title</li>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liAdmin").addClass("active open");
+        $('#liAdmin .acc-menu').css('display', 'block');
+        $('#liAdmin .acc-menu').collapse('show');
+    });
+</script>
+
+@section title
+{
+    @ViewBag.Title
+}
+
+@if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(27)))
+{
+    @Html.ActionLink("Back to List", "ScholareList")
+}
+<hr />
+@using (Html.BeginForm("ScholareCreate", "Scholare", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.ScholarName, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.ScholarName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ScholarName)
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Scholarbiography, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                <textarea id="Scholarbiography" name="Scholarbiography" class="form-control"></textarea>
+                <script type="text/javascript">
+                    CKEDITOR.replace('Scholarbiography');
+                </script>
+            </div>
+
+        </div>     
+        <div class="form-group">
+            @Html.Label("Photo", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">              
+                <input type="file" class="form-control" name="file" id="file" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Status</label>
+            <div class="col-sm-6">
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(model => model.IsActive)
+                        Active
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="btn-toolbar">
+                <input type="submit" value="Create" class="btn-primary btn" onclick=" return AddConfirm()" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

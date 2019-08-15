@@ -1,0 +1,64 @@
+﻿@model HMS.Entities.Models.AnswerChoice
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section breadcrumb
+{
+    <li><a href="~/Dashboard/index">Dashboard</a></li>
+    <li>Question</li>
+    <li class="active">Answer Choice Delete</li>
+}
+
+
+
+
+<p> @Html.ActionLink("Go Answer Choice List", "Index", new { questionId = @Model.QuestionId }, new { @class = "btn btn-success" })</p>
+<hr />
+<hr />
+<div>
+
+
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Question.QuestionText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Question.QuestionText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Choices)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Choices)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />           
+        </div>
+    }   
+</div>

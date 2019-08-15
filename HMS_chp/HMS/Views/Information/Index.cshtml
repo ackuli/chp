@@ -1,0 +1,904 @@
+﻿@{
+    ViewBag.Title = "Hajj & 'Umrah Information";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="General information and guide to hajj and ‘umrah" />
+    <meta name="Keywords" content=" haj, hajj, pilgrimage to mecca, Hajj guide, how to perform umrah,, how to do umrah, information about umrah, umrah visas, Saudi airlines, what are hajj days" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+    #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    .video_background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1000;
+    }
+
+    .infSliderBak {
+        background: url("../../Content/images/infSliderbackground.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+        /* background: url("../../Content/images/infSliderbackground.png") no-repeat center center fixed; */
+        min-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+        background-color: #000;
+        background-size: 96% 400px;
+        background-position: center;
+    }
+
+    #ulhumore li {
+        border-right: 1px solid #eee;
+        font-weight: normal;
+        list-style: outside none none;
+        margin-right: 10px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .borderRight {
+        border-right: 1px solid #DDD;
+    }
+
+    .hajjRouteBG {
+        background-color: rgb(233, 231, 232);
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .imgHajjRoute {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        width: 75%;
+    }
+
+    .infomore {
+        color: #ff8c00;
+    }
+
+    .travelGuide {
+        text-align: left;
+        margin-left: 10px;
+        margin-right: auto;
+        /*width: 70%;*/
+    }
+
+    .informationgd {
+        width: 96%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+
+    .infSliderBak .carousel-inner > .item {
+        /*margin-left: 10%;
+        margin-right: 13%;
+        margin-top: 40px;*/
+        width: 80%;
+        font-size: 1.3em;
+        font-family: "Comic Sans MS";
+        line-height: 1.5;
+        color: #FFF;
+        opacity: 0;
+        transition: all 0.5s linear;
+    }
+
+        .infSliderBak .carousel-inner > .item.active {
+            opacity: 1;
+        }
+
+    .rightmargin10 {
+        margin-right: 10px;
+    }
+
+    .infSliderBak .carousel-inner h6 {
+        text-align: right;
+    }
+
+    .divider {
+        border: 2px solid #20b2aa;
+    }
+
+    .infoImag {
+        width: 40%;
+    }
+
+    .modal {
+        width: 55%;
+        margin-left: -400px;
+    }
+
+    .modal-body {
+        background-image: url('../../Content/images/modal-top-bottom.png');
+        background-repeat: repeat-x;
+        margin-top: auto;
+    }
+
+    #mhumore li, #ssfmore li, #tvgmore li p {
+        text-align: left;
+    }
+
+    .borderRight li, #mhumore li, #ssfmore li, #tvgmore li {
+        list-style: none;
+        margin-right: 10px;
+    }
+
+    footer footer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ul  {
+        margin: 0 0 10px;
+        
+    }
+
+    .ul a {
+        margin: 0 0 10px;
+        text-decoration:none;
+    }
+
+    .HajjVedioimgSize {
+        height: 130px;
+    }
+
+    .height500 {
+        min-height: 500px !important;
+    }
+
+    .height320 {
+        height: 320px;
+    }
+
+   #divhumore ul li a, #mhumore ul li a, #ssfmore ul li a, #tvgmore ul li a {
+        color: inherit;
+        line-height: 30px;
+    }
+
+        #divhumore ul li a:hover, #mhumore ul li a:hover, #ssfmore ul li a:hover, #tvgmore ul li a:hover {
+            text-decoration: none;
+        }
+
+        #divhumore ul li a:hover, #mhumore ul li a:hover, #ssfmore ul li a:hover, #tvgmore ul li a:hover {
+            color: #DDD;
+        }
+
+
+    .infSliderBak {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .infSliderBak .carousel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .infSliderBak .carousel .carousel-inner {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-primary,
+            .btn-primary:hover,
+            .btn-primary:active,
+            .btn-primary:visited,
+            .btn-primary:focus {
+                background-image: linear-gradient(to bottom, #b30047, #b30047);
+                background-color:#b30047;
+            }
+</style>
+<div class="infSliderBak">
+    <div class="carousel slide " id="InfoSlide">
+        <ol class="carousel-indicators">
+            <li class="" data-slide-to="0" data-target="#InfoSlide"></li>
+            <li data-slide-to="1" data-target="#InfoSlide" class="active"></li>
+            <li data-slide-to="2" data-target="#InfoSlide" class=""></li>
+            <li data-slide-to="3" data-target="#InfoSlide" class=""></li>
+            <li data-slide-to="4" data-target="#InfoSlide" class=""></li>
+            <li data-slide-to="5" data-target="#InfoSlide" class=""></li>
+        </ol>
+        <div class="carousel-inner" style="text-align:center">
+            <div class="item active">
+                <span>
+                    "They will come to you on foot and on every lean camel, they will come from every
+                    deep and distant (wide) mountain highway (to perform Hajj). That they may witness
+                    things that are of benefit to them”
+                    <h6>
+                        The Holy Qur’an [Al- Hajj: 27-28]
+                    </h6>
+                </span>
+            </div>
+            <div class="item">
+                <span>
+                    Verily, the first House (of worship) appointed for mankind was that at Bakkah
+                    (Makkah), full of blessing, and a guidance for Al-'Alamîn (the mankind and jinn).
+                    In it are manifest signs (for example), the Maqâm (place) of Ibrâhim (Abraham);
+                    whosoever enters it, he attains security. And Hajj (pilgrimage to Makkah) to the
+                    House (Ka'bah) is a duty that mankind owes to Allâh, those who can afford the expenses
+                    (for one's conveyance, provision and residence); and whoever disbelieves [i.e. denies
+                    Hajj (pilgrimage to Makkah), then he is a disbeliever of Allâh], then Allâh stands
+                    not in need of any of the 'Alamîn (mankind and jinn and all that exists).
+                    <h6>
+                        The Holy Qura’an [Al-Imran: 96-97]
+                    </h6>
+                </span>
+            </div>
+            <div class="item">
+                <span>
+                    The pilgrimage is (in) the well-known months, and whoever is minded to perform
+                    the pilgrimage therein (let him remember that) there is (to be) no lewdness nor
+                    abuse nor angry conversation on the pilgrimage. And whatsoever good ye do Allah
+                    knoweth it. So make provision for yourselves (Hereafter); for the best provision
+                    is to ward off evil. Therefore keep your duty unto Me, O men of understanding.
+                    <h6>
+                        The Holy Qur’an [Al-Baqarah: 197]
+                    </h6>
+                </span>
+            </div>
+            <div class="item">
+                <span>
+
+                    <b>Narrated Abu Huraira:</b>
+                    The Prophet (pbuh) said, "Whoever performs Hajj for Allah's pleasure and does not
+                    have sexual relations with his wife, and does not do evil or sins then he will return
+                    (after Hajj free from all sins) as if he were born a new."
+                    <h6>
+                        Sahih al-Bukhari 1521
+                    </h6>
+                </span>
+            </div>
+            <div class="item">
+                <span>
+                    <b>
+                        Narrated `Aisha:
+                    </b>
+                    (the mother of the faithful believers) I said, "O Allah's Messenger (pbuh)! We consider
+                    Jihad as the best deed." The Prophet (pbuh) said, "The best Jihad (for women) is
+                    Hajj Mabrur."
+                    <h6>
+                        Sahih al-Bukhari 1520
+                    </h6>
+                </span>
+            </div>
+            <div class="item">
+                <span>
+                    <b>
+                        Narrated Ibn `Abbas:
+                    </b>
+                    The Prophet (pbuh) fixed Dhul-Hulaifa as the Miqat for the people of Medina, Al-Juhfa,
+                    for the people of Sham, Yalamlam for the people of Yemen, and Qarn for the people
+                    of Najd. And these Mawaqit are for those living at those very places, and besides
+                    them for those who come through those places with the intention of performing Hajj
+                    and Umra; and whoever is living inside these places can assume lhram from his own
+                    dwelling place, and the people of Mecca can assume lhram from Mecca.
+                    <h6>
+                        Sahih al-Bukhari 1529
+                    </h6>
+                </span>
+            </div>
+            @*<div class="item">
+                <span>
+                    <h4>
+                        Narrated `Aisha:</h4>
+                    We set out with the Prophet (pbuh) with the intention of performing Hajj only. The
+                    Prophet (pbuh) reached Mecca and performed Tawaf of the Ka`ba and between Safa and
+                    Marwa and did not finish the Ihram, because he had the Hadi with him. His companions
+                    and his wives performed Tawaf (of the Ka`ba and between Safa and Marwa), and those
+                    who had no Hadi with them finished their Ihram. I got the menses and performed all
+                    the ceremonies of Hajj. So, when the Night of Hasba (night of departure) came, I
+                    said, "O Allah's Messenger (pbuh)! All your companions are returning with Hajj and
+                    `Umra except me." He asked me, "Didn't you perform Tawaf of the Ka`ba (Umra) when
+                    you reached Mecca?" I said, "No." He said, "Go to Tan`im with your brother `Abdur-Rahman,
+                    and assume Ihram for `Umra and I will wait for you at such and such a place." So
+                    I went with `Abdur-Rahman to Tan`im and assumed Ihram for `Umra. Then Safiya bint
+                    Huyay got menses. The Prophet (pbuh) said, " 'Aqra Halqa! You will detain us! Didn't
+                    you perform Tawaf-al-Ifada on the Day of Nahr (slaughtering)?" She said, "Yes, I
+                    did." He said, "Then there is no harm, depart." So I met the Prophet (pbuh) when
+                    he was ascending the heights towards Mecca and I was descending, or vice-versa.
+                    <h6>
+                        Sahih al-Bukhari 1762
+                    </h6>
+                </span>*@
+        </div>
+    </div>
+    @*<a data-slide="prev" href="#HajjSlide" class="left carousel-control">‹</a> <a data-slide="next"
+        href="#HajjSlide" class="right carousel-control">›</a>*@
+</div>
+<div class="informationgd">
+    <div class="row-fluid">
+        <div class="span3 borderRight height500">
+            <h4>
+                HAJJ AND UMRAH PORTAL
+            </h4>
+            <a href="http://video.nationalgeographic.com/video/saudiarabia_mecca" target="_blank">
+                <img src="../../Content/images/hajjvideo.jpg" />
+            </a>
+
+            <ul class="ul">
+
+                <li>
+                    <h4>
+                        <a href="http://video.nationalgeographic.com/video/saudiarabia_mecca" target="_blank">
+                            The greatest trip on earth
+                        </a>
+                    </h4>
+                    <p>
+                        Makkah sits in the western mountain of Saudi Arabia in a sanctuary roughly one hundred miles square.
+
+                    </p>
+                </li>
+
+                <li>
+                    <h4>
+                        <a href="../Footer/StatusAndRewardOfHajjInIslam">Status & reward of hajj in Islam</a>
+                    </h4>
+                    <p>
+                        Hajj is the fifth of Islam after declaration of faith, five daily prayers, Zakat, obligatory fasting during month of Ramadan. @*There is no dispute among jurist about the obligation of hajj on Muslims (male and female) as attested by the Qur’an to undertake the journey to Makkah to perform Hajj.*@
+
+                    </p>
+                </li>
+                <li>
+                    <h4>
+                        <a href="../Footer/WhichTypeHajjChoose">
+                            Which type of Hajj to choose?
+                        </a>
+                    </h4>
+                    <p>
+                        There are three types of Hajj: Ifrad, Qiran and Tamattu.
+                    </p>
+                </li>
+                <li>
+                    <h4>
+                        <a href="https://youtu.be/5LrVrU6_MyE" target="_blank">  Hajj Route</a>
+                    </h4>
+                    <a href="https://youtu.be/5LrVrU6_MyE" target="_blank">
+                        <img src="~/Content/images/hajj-route-animation.gif" class="HajjVedioimgSize" />
+                        @* <img src="~/HajjVdeio/hajjvideo.png" class="HajjVedioimgSize" />*@
+                    </a>
+
+                </li>
+                <li>
+                    <p>
+                        A pictorial guide on Hajj route depicting places that are required to visit by pilgrims as part of Hajj rites.
+                    </p>
+                </li>
+            </ul>
+            @*<ul id="ulhumore" style="display: none" class="ul">
+                    <li><a href="#">What is Miqat and what are the rulings on Miqat?</a></li>
+                    <li><a href="#">What is Ihram and what actions are allowed and prohibited during Ihram?</a></li>
+                    <li><a href="#">How to perform Tawaf and what are the rulings on Tawaf?</a></li>
+                    <li><a href="#">What is Sa’i and how to perform sa’i?</a></li>
+                    <li><a href="#">How to perform Hajj?</a></li>
+                    <li><a href="#">How to perform Umrah?</a></li>
+                    <li><a href="#">Zamzam water</a></li>
+                    <li><a href="#">Hajj of a woman</a></li>
+                    <li><a href="#">Making the most of your journey</a></li>
+                    <li><a href="#">Common misconceptions about Hajj and Umrah</a></li>
+                    <li><a href="#">Common mistakes people make during Hajj and Umrah</a></li>
+                    <li><a href="#">Frequently Asked Questions about Hajj & Umrah</a></li>
+                    <li><a href="#">Performing Hajj Salah</a></li>
+                    <li><a href="#">Selected Du’as</a></li>
+                    <li><a href="#">Hajj of a elderly person</a></li>
+                    <li><a href="#">Hajj of a minor person</a></li>
+                    <li><a href="#">Hajj of a sick person</a></li>
+                    <li><a href="#">Doing Hajj on behalf of someone else</a></li>
+                    <li><a href="#">Umrah in Ramadan</a></li>
+                    <li><a href="#">Hajj and Umrah Glossary</a></li>
+                    <li><a href="#">A word on difference of opinion</a></li>
+                    <li><a href="#">10 Days of Dhul-hijjah: Practices for people who are not in Hajj</a></li>
+                    <li><a href="#">
+                            <h5 class="infomore">
+                                After returning from Hajj</h5>
+                        </a></li>
+                    <li><a href="#">When to seek medical help</a></li>
+                    <li><a href="#">The 'haji-saab' culture</a></li>
+                    <li><a href="#">Is your Hajj accepted?</a></li>
+                    <li><a href="#">Retaining your achievements</a></li>
+                </ul>*@
+            @*<h5 id="humore" class="infomore">
+                + MORE TOPICS</h5>*@
+
+
+            @*<a href="#mhumore" role="button" class="infomore" data-toggle="modal">+ MORE TOPICS</a>*@
+            <button onclick="window.location.href = '/Footer/GettingReadyForHajj'" class="btn-primary btn">+ MORE HAJJ</button>
+            <button onclick="window.location.href = '/Footer/UmrahhajjGuide'" class="btn-primary btn">+ MORE UMRAH</button>
+
+        </div>
+        <div class="span3 borderRight height500">
+            <h4>
+                SAFETY SECURITY & FRAUD
+            </h4>
+            <div class="hajjRouteBG">
+
+                <img src="../../Content/images/SafetySecurityFraud.jpg" />
+                <div class="travelGuide">
+                    <ul class="ul">
+                        <li>
+                            <h4>
+                                <a href="../Footer/HajjMarket">The Hajj Market</a>
+                            </h4>
+                            <p>
+                                Millions of Muslims from all over the world travel to Mecca every year to perform Hajj and Umrah. Hajj is time specific.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="../footer/understandingpackages">Understand a hajj package </a>
+
+                            </h4>
+                            <p>
+                                How to understand a hajj package? Over the years the Hajj and Umrah market have grown very rapidly in many folds. More people now undertake pilgrimage to Makkah (Mecca) than before.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="../footer/shiftingpackages">What is a ‘Shifting package?’</a>
+                            </h4>
+                            <p>
+                                Sometime you may notice that some agents advertise their package as shifting. What is a shifting package?
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="../footer/choosingagent">How to choose an agent? </a>
+                            </h4>
+                            <p>
+                                Choosing an agent is a vital part of Hajj and Umrah preparations. The Ministry of Hajj of Kingdom of Saudi Arabia provides guideline as to what to look for when choosing an agent.
+                            </p>
+                        </li>
+                    </ul>
+                    @*<a href="#ssfmore" role="button" class="infomore" data-toggle="modal">+ MORE TOPICS</a>*@
+
+                    <button onclick="window.location.href = '/Footer/SafetySecurity'" class="btn-primary btn">+ MORE TOPICS</button>
+                </div>
+            </div>
+        </div>
+        <div class="span3 borderRight height500">
+            <h4>
+                TRAVEL GUIDE SAUDI ARABIA
+            </h4>
+
+            <div class="hajjRouteBG">
+                <img class="imgHajjRoute" src="../../Content/images/Saudi-Arabia-globe.png" />
+                <div class="travelGuide">
+                    <ul class="ul">
+
+                        <li>
+                            <h4>
+                                <a href="../footer/factsaboutsaudiarabia"> Saudi Arabia country facts </a>
+                            </h4>
+
+
+                            <p>
+                                Saudi Arabia is the largest Arab state by land area (approximately 2,150,000 km2 (830,000 sq mi)), constituting the bulk of the Arabian Peninsula.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="../Footer/SaudiArabiaSocietyCulture"> Saudi Arabia – Society, Culture, Customs and Etiquette</a>
+                            </h4>
+                            <p>
+                                Islam is practised by most people in Saudi Arabia and governs their personal, political, economic and legal lives.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>
+                                <a href="../footer/hajjumrahvisas">How Hajj and 'Umrah visas are processed?</a>
+                            </h4>
+                            <p>
+                                The procedure to obtain a Hajj or Umrah visa is different than any other types of visas such as visit or tourist visa that are generally issued by any countries in the world.
+                            </p>
+                        </li>
+
+                    </ul>
+
+                    @*<a href="#tvgmore" role="button" class="infomore" data-toggle="modal">+ MORE TOPICS</a>*@
+                    <button onclick="window.location.href = '/Footer/TravelGuidesaudiArabia'" class="btn-primary btn">+ MORE TOPICS</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="span2 pull-left">
+
+            @*<a href="http://www.kqzyfj.com/click-7755904-10647297" target="_top">
+                    <img style="height: 600px" src="http://imagesrv.adition.com/banners/268/files/00/07/3d/26/000000474406.gif" width="120" height="600" alt="Quality Web Hosting at the Best Price" border="0" />
+                </a>*@
+
+            @*<div>
+                <a href="http://www.uwt.org"><img src="http://www.uwt.org/site/images/UWT-120x240.gif" /></a>
+                
+            </div>*@
+            <br />
+            <div>
+            @*<a href="http://www.uwt.org"><img src="http://www.uwt.org/site/images/UWT-250x250.gif" /></a>*@ 
+            
+                <img src="~/content/images/Add3NewsEvent.jpg" att="Alternate Text" align="right" class="img-responsive" />
+            </div>
+
+
+            <br />
+            <div>
+               @*<a href="http://www.uwt.org"><img src="http://www.uwt.org/site/images/UWT_Banner_Four.gif" /></a>*@
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <hr class="divider" />
+    <div class="row-fluid">
+        <div class="span3 borderRight">
+            <div class="rightmargin10">
+                <h4 class="text-center">
+                    <u>Before You Book</u>
+                </h4>
+                <h4 class="text-center">
+                    Check if your trip is ATOL protected?
+                </h4>
+                <p class="text-left">
+                    By law, every UK travel company which sells air holidays and flights is required to hold an ATOL Licence. You can check on-line if your agent holds an ATOL licence by clicking the link below.
+                </p>
+            </div>
+            <div class="text-center">
+                <a target="_blank" href="http://publicapps.caa.co.uk/modalapplication.aspx?appid=2">
+                    <img class="infoImag" src="../../Content/images/atol_new.gif" />
+                </a>
+            </div>
+        </div>
+        <div class="span3 borderRight">
+            <div class="rightmargin10">
+                <h4 class="text-center">
+                    <u>Saudi Ministry of Hajj</u>
+                </h4>
+                <h4 class="text-center">
+                    Is your agent approved by the Ministry of Hajj?
+                </h4>
+                <p class="text-left">
+                    An approved agent has four digit license number issued by Saudi Ministry of Hajj.
+                    Pilgrims can check if an agent is approved or not by the Ministry of Hajj by visiting
+                    ministry’s Hajj Portal at <a href="http://www.haj.gov.sa">www.haj.gov.sa </a>
+                </p>
+            </div>
+            <div class="text-center">
+                <a target="_blank" href="http://www.haj.gov.sa">
+                    <img class="infoImag" src="../../Content/images/SaudiMinistryofHajj.png" />
+                </a>
+            </div>
+        </div>
+        <div class="span3 borderRight">
+            <div class="rightmargin10">
+                <h4 class="text-center">
+                    <u>Health Check</u>
+                </h4>
+                <h4 class="text-center">
+                    Find out health information and advice here
+                </h4>
+                <p class="text-left">
+                    TravelHealthPro website comprise the travel health resources of the National Travel Health Network and Centre (NaTHNaC). The site provides up-to-date health information. For the latest travel health advice, visit the TravelHealthPro website.
+                </p>
+            </div>
+            <div class="text-center">
+                <a target=" _blank" href="http://travelhealthpro.org.uk/country/191/saudi-arabia">
+                    @*<a target="_blank" href="http://www.nathnac.org/ds/c_pages/country_page_SA.htm">*@
+                    <img class="infoImag" src="../../Content/images/TravelHealthPro.png" />
+                    @*<img class="infoImag" src="../../Content/images/HealthCheck.jpeg" />*@
+                </a>
+            </div>
+        </div>
+        <div class="span3 borderRight">
+            <div class="rightmargin10">
+                <h4 class="text-center">
+                    <u>Before You Travel</u>
+                </h4>
+                <h4 class="text-center">
+                    Check travel alert
+                </h4>
+                <p class="text-left">
+                    The Foreign & Commonwealth Office (FCO) provides country specific Foreign Travel
+                    Advice. Check their website before travelling whether there is any travel alert.
+                    Your flight may be via another country. Make sure you check update of that intermediary
+                    county as well.
+                </p>
+            </div>
+            <div class="text-center">
+            </div>
+            <div class="text-center">
+                <a target="_blank" href="https://www.gov.uk/foreign-travel-advice/saudi-arabia">
+                    <img class="infoImag" src="../../Content/images/FCO.png" />
+                    @*<img class="infoImag" src="../../Content/images/commonwealth.jpg" />*@
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div id="mhumore" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">HAJJ AND UMRAH PORTAL</h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="row-fluid">
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+                    <li><a href="../Footer/StatusAndRewardOfHajjInIslam">Status & reward of hajj </a></li>
+                    <li><a href="../Footer/StatusAndRewardOfHajjInIslam/StatusAndRewardOfHajjInIslam#HajjObligation">Upon whom hajj is obligatory? </a></li>
+                    <li><a href="../Footer/PillarandWajibActions">Pillars of Hajj</a></li>
+                    <li><a href="../Footer/PillarandWajibActions/PillarandWajibActions#WajidActions">Obligatory (wajib) Actions of Hajj</a></li>
+                    <li><a href="#">Getting Ready for Hajj</a></li>
+                    @*<li><a href="../Footer/Niyah">Getting Ready for Hajj</a></li>*@
+                    <li><a href="../Footer/miqat">What is Miqat and Rulings on Miqat?</a></li>
+                    <li><a href="../Footer/WhichTypeHajjChoose">Which type of hajj to choose?</a></li>
+                    <li><a href="../Footer/Ihram">What is Ihram and Rulings on Ihram?</a></li>
+                    <li><a href="../Footer/Niyah">Making Hajj Intention</a></li>
+                    <li><a href="../Footer/Talbiyah">Talbiyah</a></li>
+                    <li><a href="../Footer/Tawaf">What is Tawaf and How to Perform Tawaf?</a></li>
+
+                </ul>
+            </div>
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+                    <li><a href="../Footer/Sai">What is Sa’i and how to perform sa’i?</a></li>
+                    <li><a href="#">Throwing Pebbles </a></li>
+
+                    <li><a href="#">Animal Sacrifices</a></li>
+                    <li><a href="../Footer/Hajjritesataglance">Hajj rites at a glance </a></li>
+                    <li><a href="../Footer/Stepbystepguidetohajjrites">Step by step guide to hajj</a></li>
+                    <li><a href="../Footer/StepByStepGuideToTammattuHajj">Step by Step Guide to Hajj Tamattu </a></li>
+                    <li><a href="../Footer/StepbystepguidetoQiranHajj"> Step by step guide to Qiran Hajj</a></li>
+                    <li><a href="../Footer/StepbystepguidetoIfradHajj">Step by Step Guide to Hajj Ifrad</a></li>
+                    <li><a href="../Footer/HajjWoman">Hajj of a woman</a></li>
+                    <li><a href="../Footer/CommonMisconceptions">Common misconceptions about Hajj and ‘Umrah</a></li>
+                    <li><a href="../Footer/CommonMisconceptions/CommonMisconceptions#commonmistakes">Common mistakes people make during Hajj and ‘Umrah</a></li>
+
+
+                </ul>
+            </div>
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+                    <li><a href="#">Frequently Asked Questions about Hajj & Umrah </a></li>
+                    <li><a href="~/Views/Footer/UmrahRitesAtAGlance">'Umrah Hajj at a glance </a></li>
+                    <li><a href="../Footer/StepByStepGuideToUmrahHajj"> Stey by step guide to 'Umrah Hajj </a></li>
+                    <li><a href="#">Performing Hajj Salah</a></li>
+                    <li><a href="../Footer/DuaforhajjandUmrah">Du’as for hajj & ‘umrah</a></li>
+                    <li><a href="#">Hajj on behalf of someone else</a></li>
+                    <li><a href="#">How to perform Janaza Prayer</a></li>
+                    <li><a href="../Footer/HajjUmrahGlossary">Hajj and Umrah Glossary</a></li>
+                    <li><a href="../Footer/TheLastsermon">The Last Sermon of the Prophet Muhammad (PBUH)</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+    </div>
+</div>
+
+<div id="ssfmore" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">SAFTY SECURITY AND FRAUD</h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="row-fluid">
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+
+                    <li>
+
+                        <a href="http://www.fitfortravel.nhs.uk/destinations/middle-east/saudi-arabia.aspx" target="_blank">Travel Health Information </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+
+                    <li>
+
+                        <a target="_blank" href="https://www.gov.uk/foreign-travel-advice/saudi-arabia"> Travel alerts on FCO website </a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="http://www.legislation.gov.uk/uksi/1992/3288/contents/made" target="_blank">Know your rights</a>
+                        <br />
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+
+                    <li>
+
+                        <a href="#">Hajj fraud - National awareness campaign</a>
+                        <br />
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+    </div>
+</div>
+
+<div id="tvgmore" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">SAUDI ARABIA - TRAVEL GUIDE</h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="row-fluid">
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+                    <li>
+
+                        <a href="../Footer/HajjUmrahVisas">Hajj & ‘Umrah Visas</a>
+
+                    </li>
+                    <li>
+
+                        <a href="#">Means of Travel</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="../Footer/HealthConsiderations">Health Considerations</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="../Footer/TravelItemRecommandations">Recommended Travel Items</a>
+                        <br />
+                    </li>
+
+                </ul>
+            </div>
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+
+                    <li>
+
+                        <a href="#">Currency</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="../Footer/Accommodation">Accommodation</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="#">Weather</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="#">Bargaining</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="#">Beggar </a>
+                        <br />
+                    </li>
+
+                </ul>
+            </div>
+            <div class="span4">
+                <ul id="ulhumore" class="ul">
+
+                    <li>
+
+                        <a href="#">Historic sites of Makkah</a>
+                        <br />
+                    </li>
+                    <li>
+
+                        <a href="#">Historic sites of Madinah</a>
+                        <br />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$('#mhumore').modal();
+        $("#information").addClass("");
+        $('#InfoSlide').carousel({ interval: 3000 }).carousel('cycle');
+        var count = 0;
+        $("#humore").click(function () {
+            $("#humore").dialog("open");
+            count++;
+            $("#ulhumore").toggle(function () {
+                if (count % 2 === 1) {
+                    $("#humore").html("HIDE TOPICS");
+                } else {
+                    $("#humore").html("MORE TOPICS");
+                }
+
+            });
+        });
+
+    })
+    //videojs("hajjroutev", {}, function () {
+    //    // Player (this) is initialized and ready.
+    //});
+    //videojs.options.flash.swf = "http://example.com/path/to/video-js.swf"
+
+
+    //var myVideo = '';
+    //$(document).ready(function () {
+    //    myVideo = document.getElementById("hajjroutev");
+    //})
+
+
+    //function playPause() {
+    //    if (myVideo.paused)
+    //        myVideo.play();
+    //    else
+    //        myVideo.pause();
+    //}
+
+    //function makeBig() {
+    //    myVideo.width = 800;
+    //}
+
+    //function makeSmall() {
+    //    myVideo.width = 320;
+    //}
+
+    //function makeNormal() {
+    //    myVideo.width = 420;
+    //}
+</script>

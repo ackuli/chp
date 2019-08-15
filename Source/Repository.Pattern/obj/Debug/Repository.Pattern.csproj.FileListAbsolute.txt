@@ -1,0 +1,18 @@
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+P:\CHP\Chp_git\chp\Source\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+P:\CHP\Chp_git\chp\Source\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+P:\CHP\Chp_git\chp\Source\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+P:\CHP\Chp_git\chp\Source\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+P:\CHP\Chp_git\chp\Source\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+P:\CHP\Chp_git\chp\Source\Repository.Pattern\obj\Debug\Repository.Pattern.pdb

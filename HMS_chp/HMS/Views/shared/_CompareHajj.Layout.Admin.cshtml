@@ -1,0 +1,252 @@
+﻿@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet" />
+    @RenderSection("head", required: false) @Html.Partial("_html5shiv")
+    @* favicons and touch icons go here *@
+    <style type="text/css">
+        .user-details {
+            margin-left: 5px; /*
+            margin-bottom: 3px;
+            margin-top: 10px;
+            */
+        }
+
+            .user-details img {
+                float: left;
+                margin-top: 5px;
+                width: 40px;
+            }
+
+        .welcome-text {
+            border: 1px solid #DDDDDD;
+            color: #428BCA;
+            font-size: 1em;
+            padding-right: 10px;
+            text-align: right;
+            height: 45px;
+        }
+
+
+        #manu-top > ul > li {
+            background: none repeat scroll 0 0 #FAFAFA;
+            border-radius: 2px 2px 0 0;
+            float: left;
+            margin-right: 1px;
+            transition: all 0.2s ease 0s;
+        }
+
+        #manu-top ul li a {
+            color: #404040;
+            display: block;
+            font-size: 1em;
+            line-height: 18px;
+            padding: 8px 7px;
+            text-align: left;
+        }
+
+        .containerLeftMargin {
+            margin-left: 5px !important;
+           
+        }
+
+        .container {
+            width: 95%;
+            height:auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        @Html.Partial("_header")
+
+        <div class="clearfix">
+        </div>
+        <div class="row-fluid" style="margin-top: 5px;">
+            <div class="span3">
+                <div class="row-fluid">
+                    <div class="user-details">
+                        <img src="../../Content/images/user-avatar.png" />
+                    </div>
+                    <div class="welcome-text">
+                        <span>Welcome</span>
+                        <p>
+                            @RenderSection("UserId", false)
+                        </p>
+                    </div>
+                </div>
+                <div class="row-fluid menuLeft">
+
+                    <ul class="nav nav-pills nav-stacked well">
+                        <li class="navbar-header">Menu</li>
+                        <li class="active"><a href="~/cPanel/Dashboard">Home</a></li>
+
+                        <li class="navbar-header">Administration</li>
+                        <li><a href="~/Countries/index">Country</a></li>
+                        <li><a href="~/EventsTypes/index">Events Type</a></li>
+                        <li><a href="~/UserAccounts/index">User</a></li>
+                        <li><a href="~/Events/index">Events</a></li>
+                        <li><a href="~/News/index">News</a></li>
+                        <li><a href="~/QuestionAnswer/Index"> Question Answer</a></li>
+                        <li><a href="~/Subscribe">Subscribe Info</a></li>
+                        <li><a href="~/Package/index">All Packages</a></li>
+                        <li><a href="~/Experience/Index">  Experience</a></li>
+                        <li><a href="~/Advertise/SetAdvertise/index">Set Adverticement</a></li>
+                        <li><a href="~/ClientInfoes/index">Client</a></li>
+                        <li><a href="~/AdvertisePositions/Index"> Advertise Positions</a></li>
+                     
+                        <li class="divider">Adapter</li>
+                        <li><a href="~/Package/AlHadiaPackages/index">Al-Hadia</a></li>
+                        <li><a href="~/Package/ZamZamPackages/index">Zam Zam</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="span9 containerLeftMargin">
+                <div class="row-fluid">
+                    <div id="manu-top">
+                        <ul class="nav nav-pills" style="margin-bottom: 8px">
+                            <li class="selected"><a href="#">Dashboard</a> </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Site
+                                    Mangt. <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-original-title="">Website Summary</a> </li>
+                                    <li><a href="#" data-original-title="">Website Properties</a> </li>
+                                    <li><a href="#" data-original-title="">Website Backup</a> </li>
+                                    <li><a href="#" data-original-title="">Content Management</a> </li>
+                                    <li><a href="#" data-original-title="">Email Templates</a> </li>
+                                    <li><a href="#" data-original-title="">Payment Preferences</a> </li>
+                                    <li><a href="#" data-original-title="">Administrator Users</a> </li>
+                                    <li><a href="#" data-original-title="">Database Management</a> </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Advertisement
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-original-title="">Manage Adv.</a> </li>
+                                </ul>
+                            </li>
+                            <li class="selected"><a href="#">Affiliate</a> </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Approval
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-original-title="">Approve Listings </a></li>
+                                    <li><a href="#" data-original-title="">Approve Photos</a> </li>
+                                    <li><a href="#" data-original-title="">Approve Videos</a> </li>
+                                    <li><a href="#" data-original-title="">Approve Documents</a> </li>
+                                    <li><a href="#" data-original-title="">Approve Reviews</a> </li>
+                                    <li><a href="#" data-original-title="">Approve Banner Ads</a> </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Report
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-original-title="">Visitor Statistics</a> </li>
+                                    <li><a href="#" data-original-title="">Email Statistics </a></li>
+                                    <li><a href="#" data-original-title="">Page Statistics </a></li>
+                                    <li>
+                                        <a href="#" data-original-title="">Clickthrough rate for every Merchants</a>
+                                    </li>
+                                    <li><a href="#" data-original-title="">CPM Rate </a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Finance
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-original-title="">Invoice List</a> </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Security
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-original-title="">Rejected IP Addresses</a> </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <span aria-hidden="true" class="glyphicon glyphicon-user"></span>@Session["UserName"].ToString() <span class="caret"></span>
+                                </a>
+                                   
+                                
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("User Info", "Details", "UserAccounts", new { id = Session["UserId"].ToString() }, null)</li>
+                                   
+                                    <li>@Html.ActionLink("Logout", "LogOut", "cPanel", new { id = Session["UserId"].ToString() }, null)</li>
+                                </ul>
+                            </li>
+                         
+                                @*<li class="dropdown hideBorder">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span aria-hidden="true" class="glyphicon glyphicon-user"></span>@Session["UserName"].ToString() <span class="caret"></span></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li>@Html.ActionLink("User Info", "Details", "UserAccounts", new { id = Session["UserId"].ToString() }, null)</li>
+                                        <li class="divider"></li>
+                                        <li>
+                                        <li>@Html.ActionLink("Logout", "LogOut", "cPanel", new { id = Session["UserId"].ToString() }, null)</li>
+                                    </ul>
+                                </li>*@
+                            
+                        </ul>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    @Scripts.Render("~/js")
+                    @RenderSection("Scripts", required: false)
+
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            @Html.Partial("_footer")
+        </footer>
+    </div>
+
+    <!-- container -->
+</body>
+@*<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c438cf42ad4b0d"></script>
+    <script type="text/javascript">
+        addthis.layers({
+            'theme': 'transparent',
+            'share': {
+                'position': 'left',
+                'numPreferredServices': 5
+            },
+            'follow': {
+                'services': []
+            }
+        });
+    </script>*@
+<!-- AddThis Smart Layers END -->
+<!-- AddThis Follow END -->
+<!-- AddThis Follow BEGIN -->
+<!-- AddThis Follow END -->
+</html>

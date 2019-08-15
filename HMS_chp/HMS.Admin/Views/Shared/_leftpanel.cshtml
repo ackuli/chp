@@ -1,0 +1,165 @@
+﻿<nav id="page-leftbar" role="navigation">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul class="acc-menu" id="sidebar" style="top: 40px;">
+        <li id="search">
+            <a href="javascript:;"><i class="fa fa-search opacity-control"></i></a>
+            <form>
+                <input type="text" readonly class="search-query" placeholder="">
+                <button type="submit">
+                    @*<i class="fa fa-search"></i>*@
+                </button>
+            </form>
+        </li>
+        @*@if (GolbalSession.gblSession != null)
+            {*@
+        <li class="divider"></li>
+        <li class="active" id="liDashBoard"><a href="~/Home/index"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+
+
+
+
+        <li id="liInbox"><a href="#"><i class="fa fa-home"></i> <span>Inbox</span><span class="badge badge-indigo">@*@GolbalSession.gblSession.inboxcnt*@</span></a></li>
+
+        <li id="liOutbox"><a href="#"><i class="fa fa-home"></i> <span>Outbox</span><span class="badge badge-indigo">@*@GolbalSession.gblSession.outboxcnt*@</span></a></li>
+
+
+        @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(1)))
+        {
+            <li id="liAdmin" class="hasChild">
+                <a href="javascript:;"><i class="fa fa-th"></i> <span>Administration</span> </a>
+                <ul class="acc-menu">
+                    <li><a href="~/Countries/index">Country</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/EventsTypes/index">Events Type</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/UserAccounts/index">User</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/Events/index">Events</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/News/index">News</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/QuestionAnswer/Index"> Question Answer</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/Subscribe">Subscribe Info</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/Package/index">All Packages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/Experience/Index">  Experience</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/Advertise/SetAdvertise/index">Set Adverticement</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/ClientInfoes/index">Client</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/AdvertisePositions/Index"> Advertise Positions</a></li>
+                    <li class="divider"></li>
+
+                    <li class="divider">Adapter</li>
+                    <li><a href="~/Package/AlHadiaPackages/index">Al-Hadia</a></li>
+                    <li class="divider"></li>
+                    <li><a href="~/Package/ZamZamPackages/index">Zam Zam</a></li>
+                    <li class="divider"></li>
+                    <li>@Html.ActionLink("Scholars", "ScholareList", "Scholare")</li>
+                </ul>
+            </li>
+        }
+        <li id="liStock" class="hasChild">
+            <a href="javascript:;"><i class="fa fa-th"></i> <span>Agent</span> </a>
+            <ul class="acc-menu">
+
+                @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(16)))
+                {
+                    <li>@Html.ActionLink("Agent Profile", "Editclient", "Client", new { id = HMS.Admin.MvcApplication.GolbalSession.gblSession.ClientId }, null)</li>
+                }
+                @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(28)))
+                {
+
+
+                    <li>@Html.ActionLink("Agent List", "ClientList", "Client")</li>
+                }
+                @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(20)))
+                {
+                    <li>@Html.ActionLink("Users", "Index", "User")</li>
+
+                }
+            </ul>
+        </li>
+
+        @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(15)))
+        {
+            <li id="liPackages" class="hasChild">
+                <a href="javascript:;"><i class="fa fa-th"></i> <span>Packages</span> </a>
+                <ul class="acc-menu">
+
+                    @*@if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(16)))
+                        {
+                            <li>@Html.ActionLink("Agent Profile", "Editclient", "Client", new { id = HMS.Admin.MvcApplication.GolbalSession.gblSession.ClientId },null)</li>
+                        }
+                        @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(28)))
+                        {
+
+
+                            <li>@Html.ActionLink("Agent List", "ClientList", "Client")</li>
+                        }*@
+                    @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(20)))
+                    {
+
+                        <li>@Html.ActionLink("Create Package", "PackagesInfoCreate", "PackagesInfo")</li>
+                    }
+
+                    @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(17)))
+                    {
+                        <li class="divider"></li>
+                        <li><a href="#">Approved Packages</a></li>
+                    }
+                    @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(18)))
+                    {
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Package List", "PackagesInfoList", "PackagesInfo")</li>
+                    }
+                    @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(19)))
+                    {
+                        <li class="divider"></li>
+                        <li><a href="#">Transaction List</a></li>
+                    }
+
+                </ul>
+            </li>
+        }
+        @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(1)))
+        {
+            <li id="liQuestion" class="hasChild">
+                <a href="javascript:;"><i class="fa fa-th"></i> <span>Question</span> </a>
+                <ul class="acc-menu">
+
+
+
+
+                    <li>@Html.ActionLink("Question List", "Index", "Question")</li>
+
+
+
+                </ul>
+            </li>
+        }
+        @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(24)))
+        {
+            <li id="liReport" class="hasChild">
+                <a href="javascript:;"><i class="fa fa-th"></i> <span>Reports</span> </a>
+                <ul class="acc-menu">
+                    @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(25)))
+                    {
+                        <li><a href="#">Packages List</a></li>
+                    }
+                    @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(26)))
+                    {
+                        <li class="divider"></li>
+                        <li><a href="#">Transaction List</a></li>
+                    }
+
+                </ul>
+            </li>
+        }
+
+
+    </ul>
+</nav>

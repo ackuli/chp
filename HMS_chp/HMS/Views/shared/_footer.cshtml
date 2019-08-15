@@ -1,0 +1,252 @@
+﻿<style type="text/css">
+    .FooterBgColor
+    {
+        color: #FFF;
+        background: #000;
+        padding: 3vh 0;
+        background: linear-gradient(to right,#564406, #B2A570);
+    }
+    
+    .FootercontentBG
+    {
+        background-color: #060606;
+        padding: 10px;
+    }
+
+    /*.oval
+    {
+        background-image: url("../../Content/images/whtBG.png");
+        background-position: left top 100px, center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        border-radius: 35% 75% !important;
+        background-position: center bottom;
+    }*/
+    .ovalbtn
+    {
+        margin-top: 200px;
+    }
+
+    .intsite .row-fluid
+    {
+        margin-bottom: 15px;
+    }
+    .intsite img {
+        margin-right: 5px;
+    }
+    .footer-link-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        padding: 0 5px;
+    }
+    .footer-link-section {
+        flex-basis: calc(25% - 26px);
+        flex-grow: 1;
+        padding: 0 0.5rem;
+        margin: 0 5px;
+        margin-bottom: 1rem;
+        background: #000;
+        border-radius: 10px;
+    }
+    .footer-link-section h5 {
+        text-align: left;
+        padding: 1rem;
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #FFF;
+        position: relative;
+        overflow: hidden;
+    }
+    .footer-link-section h5:before {
+        position: absolute;
+        bottom: 5px;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, #e6ac00 0%, #000 80%);
+    }
+    .footer-link-section ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .footer-link-section ul li {}
+    .footer-link-section ul li a {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+        line-height: 1.3;
+        color: #FFF;
+        transition: all 0.3s ease;
+    }
+    .footer-link-section ul li a:hover {
+        color: #e6ac00;
+        text-decoration: none;
+    }
+    .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .copyright {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .social-links-wrapper {
+        margin-left: auto;
+        padding: 0 0.5rem;
+    }
+</style>
+<footer>
+    <div class="FooterBgColor">
+        @*<h2 style="color: #f9edbd;text-shadow: 1px 1px #f9edbd;">
+            Comparehajjpackages.com</h2>*@
+        <div class="footer-link-container">
+            <div class="footer-link-section">
+                <h5>GENERAL</h5>
+                <ul>
+                    <li><a href="~/Footer/AboutUs">About Us</a></li>
+                    <li><a href="~/Footer/ms">Mobile site(Responsive)</a></li>
+                    <li><a href="#">Site FAQ</a></li>
+                    @*<li><a href="../Footer/faq">Site FAQ</a></li>*@
+                    <li>
+                        @Html.ActionLink("Site Map", "SiteMap", "Home", new { }, null)
+                    </li>
+                    @*<li><a href="../Footer/sitemap">Site Map</a></li>*@
+                    <li>@Html.ActionLink("Contact us", "Create", "ContactUs", new { }, null)</li>
+                    <li><a href="~/Footer/advertise">Advertise </a></li>
+                    <li><a href="~/Footer/accessibility">Accessibility</a></li>
+                    <li><a href="~/Footer/pcp">Privacy & Cookies Policy </a></li>
+                    <li><a href="~/Footer/tac">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-link-section">
+                <h5>HAJJ & UMRAH PORTAL</h5>
+                <ul>
+
+                    <li>@Html.ActionLink("Status & reward of hajj", "StatusAndRewardOfHajjInIslam", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("Which type of hajj to choose", "WhichTypeHajjChoose", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("Hajj rites at a glance", "Hajjritesataglance", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("'Umrah rites at a glance", "UmrahRitesAtAGlance", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("What is miqat?", "miqat", "Footer", new { }, null)</li>
+                    <li><a href="~/Footer/Ihram/Ihram#Prohibitions">Prohibitions while in Ihram</a></li>
+
+                    <li>@Html.ActionLink("How to perform tawaf?", "Tawaf", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("How to perform sa’i?", "Sai", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("Step by step guide to hajj", "Stepbystepguidetohajjrites", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("Step by step guide to ‘Umrah", "StepByStepGuideToUmrahHajj", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("Hajj of a woman", "HajjWoman", "Footer", new { }, null)</li>
+
+                    <li>@Html.ActionLink("Hajj and 'Umrah glossary", "HajjUmrahGlossary", "Footer", new { }, null)</li>
+
+                    @*<li><a href="../Footer/WhichTypeHajjChoose">Which type of Hajj to choose</a></li>
+                    <li><a href="~/Footer/Ihram/Ihram#Permissibleactions">Permissible actions</a></li>
+                    <li><a href="../Footer/Niyah">Hajj Niyah</a></li>
+                    <li><a href="../Footer/PerformingHajjglance">Performing Hajj at a glance</a></li>
+                    <li><a href="../Footer/PerformingUnrahglance">Performing Umrah at a glance</a></li>
+                    <li><a href="../Footer/AllowedprohibitedDuringIhram">Allowed & prohibited during Ihram</a></li>
+                    <li><a href="../Footer/MakingThemostYourJourney">Making the most of your journey </a></li>
+                    <li><a href="../Footer/HajjUmrahFAQ">Hajj & Umrah FAQ </a></li>
+                    <li><a href="../Footer/PerformingHajjSalah">Performing Hajj Salah</a></li>
+                    <li><a href="../Footer/SelectedDuas">Du’a for hajj and ‘Umrah</a></li>
+
+                    <li><a href="../Footer/DoingHajjbehalfSomeoneElse">Hajj on behalf of someone else</a></li>
+                    <li><a href="../Footer/Talbiyah">Talbiyah</a></li>*@
+
+                </ul>
+            </div>
+            <div class="footer-link-section">
+                <h5>INFORMATION</h5>
+                <ul>
+
+                    <li>@Html.ActionLink("Choosing an agent", "ChoosingAgent", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("How to understand a hajj package?", "UnderstandingPackages", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("What is a shifting package?", "ShiftingPackages", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("How Hajj & 'Umrah visas are processed?", "HajjUmrahVisas", "Footer", new { }, null)</li>
+
+
+                    <li><a href="#">Means of Travel</a></li>
+
+                    <li>@Html.ActionLink("Hajj & 'Umrah vacccination", "HealthConsiderations", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("Recommended travel items", "TravelItemRecommandations", "Footer", new { }, null)</li>
+
+
+                    <li>@Html.ActionLink("Accommodation", "Accommodation", "Footer", new { }, null)</li>
+
+                    <li><a href="#">Weather</a></li>
+
+
+                    <li>@Html.ActionLink("Facts about Saudi Arabia", "FactsAboutSaudiArabia", "Footer", new { }, null)</li>
+                </ul>
+            </div>
+            <div class="footer-link-section">
+                <h5>USEFUL LINKS</h5>
+                <ul>
+                    <li><a href="http://www.caa.co.uk/application.aspx?catid=490&pagetype=65&appid=2" target="_blank">ATOL</a></li>
+                    <li><a href="http://www.iata.org/Pages/default.aspx" target="_blank">IATA</a></li>
+                    <li><a href="http://www.legislation.gov.uk/uksi/1992/3288/contents/made" target="_blank">Legislation.gov.uk</a></li>
+
+                    <li><a href="https://www.gov.uk/foreign-travel-advice/saudi-arabia" target="_blank">Foreign Travel Advice</a></li>
+                    <li><a href="http://www.haj.gov.sa/english/Pages/default.aspx" target="_blank">Ministry of Haj and Umra</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; @System.DateTime.Now.ToString("yyyy") Comparehajjpackages.com all rights reserved
+            </div>
+            <div class="social-links-wrapper">
+                <ul class="social-links">
+                    <li>
+                        <a class="facebook" target="_blank" title="follow me on facebook" href="https://www.facebook.com/Compare-HAJJ-Packages-1340663379282921/?ref=settings">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="twitter" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="linkedin" target="_blank" rel="nofollow" href="https://www.linkedin.com/company/10649804?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A2172969401465312534228%2CVSRPtargetId%3A10649804%2CVSRPcmpt%3Aprimary" title="Share on Linkedin">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gplus" target="_blank" title="follow me on google plus" href="https://plus.google.com/PLACEHOLDER">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="youtube" target="_blank" title="follow me on youtube" href="http://www.youtube.com/PLACEHOLDER">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+</footer>
+

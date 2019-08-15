@@ -1,0 +1,286 @@
+﻿@using MvcPaging
+@model IPagedList<HMS.Entities.Models.Event>
+@{
+    ViewBag.Title = "Past Events";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+    .container {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .carousel-control {
+        top: 50%;
+    }
+
+    #btnnewsevent {
+        background-color: #D95902 !important;
+    }
+
+    .pre {
+        /*background-color: rgb(245, 245, 245);*/
+        padding-top: 10px;
+        display: block;
+        font-size: 13px;
+        line-height: 20px;
+        margin: 0 0 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .yourevent {
+        background-color: #FFFFFF;
+        border: 1px solid #81B7D9;
+        margin-bottom: 10px;
+    }
+
+        .yourevent p {
+            text-align: justify;
+            margin: 10px;
+        }
+
+    .eventposition {
+        margin-top: 50px;
+    }
+
+    .buttonwithimage {
+        border: 0 none;
+        border-radius: 10px;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+
+    .control-group {
+        margin-bottom: 0px;
+    }
+
+    .controls input[type="text"] {
+        width: 120px;
+        font-size: 13px;
+    }
+
+    input[type="text"] {
+        font-size: 13px;
+    }
+
+    select {
+        width: 135px;
+        font-size: 13px;
+    }
+
+    .Eventtype {
+        font-weight: bold;
+    }
+
+    .btnsearch {
+        border: 0 none;
+        padding: 0;
+        margin-right: 5px;
+    }
+
+    .buttomAdd {
+        height: 60px;
+        border: 1px solid #DDD;
+    }
+
+    .AddEvent {
+        margin-top: 10px;
+    }
+
+        .AddEvent img {
+            height: 120px;
+            width: 99%;
+            border: 1px solid rgb(221, 221, 221);
+        }
+
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        width: 100%;
+    }
+
+    .subscribe {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    .AddEvent p {
+        margin-right: 15px;
+    }
+
+    .media {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+
+    .eventobject {
+        margin-bottom: 10px;
+        padding-top: 0px;
+    }
+
+    .news img {
+        height: 100px;
+        width: 80px;
+    }
+
+    .addspace {
+        width: 100%;
+        height: 150px;
+    }
+
+    .events {
+        margin-left: 5px;
+    }
+
+    .eventborder {
+        border: 1px solid #DDD;
+        margin-left: 20px;
+        padding: 10px;
+    }
+
+    .eventHead {
+        background-color: rgb(90, 90, 90);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 5px;
+    }
+
+    .stepPosition {
+        position: absolute;
+        margin-left: 0px;
+        color: yellow;
+        left: 10px;
+        /* z-index: 10000; */
+        top: 10px;
+    }
+
+    .calendar-small {
+        float: left;
+        display: block;
+        margin-right: 15px;
+        width: 65px;
+        height: 65px;
+        background-color: #f3f3f3;
+    }
+
+        .calendar-small .s-month {
+            display: block;
+            width: 100%;
+            height: 22px;
+            line-height: 22px;
+            font-weight: 600;
+            text-align: center;
+            background-color: #86a97e;
+            color: #fff;
+        }
+
+        .calendar-small .s-date {
+            font-size: 16px;
+            font-weight: 700;
+            width: 100%;
+            height: 25px;
+            line-height: 28px;
+            text-align: center;
+            display: block;
+            color: #666666;
+            background-color: #B0C4DE;
+        }
+
+        .calendar-small .s-year {
+            display: block;
+            width: 100%;
+            height: 20px;
+            line-height: 22px;
+            font-weight: 600;
+            text-align: center;
+            background-color: #86a97e;
+            color: #fff;
+        }
+
+    #PastEvents .s-month {
+        background-color: #005C00;
+    }
+
+    #latestevents .s-month {
+        background-color: #5C0000;
+    }
+
+    #latestevents {
+        background-color: rgb(245, 245, 245);
+        /*position:relative;*/
+    }
+
+    #PastEvents {
+        background-color: rgb(245, 245, 245);
+    }
+
+    .pager {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+</style>
+
+<ul class="breadcrumb">
+
+    <li class="breadcrum"><a href="~/newsAndEvents/Index"><b>News Events & Blogs</b></a><span class="divider" style="color:black"><b>></b></span></li>
+
+    <li class="active" style="color:black"><b>@ViewBag.Title</b></li>
+
+</ul>
+<div style="width: 98%; margin-top: 10px; margin-left: 2%">
+    <div class="row-fluid">
+        <div class="span10">
+            <div class="row-fluid pre">
+                <h5>
+                    <span style="margin-left: 20px; color: #1605C6"> PAST EVENTS</span>
+                </h5>
+
+                <div class="eventborder">
+                    @foreach (var item in Model.ToList())
+                    {
+                        <div class="row-fluid eventobject" id="latestevents">
+                            <div class="span2" style="width:50px">
+                                <div id="fb-root"></div>
+
+                                <div class="calendar-small">
+                                    <span class="s-month">@item.EventsDate.ToString("MMM")</span>
+                                    <span class="s-date">@item.EventsDate.Day</span>
+                                    <span class="s-year">@item.EventsDate.Year</span>
+                                </div>
+                            </div>
+                            <div class="span8">
+                                @Html.ActionLink(@item.EventsTitle, "Details", "Events", new { id = item.EventsId }, null)<br />
+                                @item.Venue<br />
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+                <div class="pager" id="pager1">
+                    @Html.Raw(Html.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                IsShowPages = true
+            }, new { employee_name = ViewData["employee_name"] }))
+                </div>
+            </div>
+        </div>
+
+        <div class="span2" style="margin-top:40px;margin-bottom:20px;">
+            <img style="width: 93%" src="../../Content/images/Add3NewsEvent.jpg" />
+        </div>
+    </div>
+</div>

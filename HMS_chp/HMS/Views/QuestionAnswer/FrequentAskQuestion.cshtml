@@ -1,0 +1,245 @@
+﻿@using MvcPaging
+@model IPagedList<HMS.Entities.Models.QuestionAnswer>
+
+@{
+    ViewBag.Title = "Ask The Scholer";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    #askthescholer {
+        background-color: #D95902 !important;
+    }
+
+    #btnaskthescholer {
+        background-color: #D95902 !important;
+    }
+
+    .panel {
+        height: 150px;
+    }
+
+    .panesize {
+        width: 276px;
+    }
+
+    .imgScholarFooter h4 {
+        color: rgb(51, 51, 51);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .imgScholarFooter a p {
+        font-size: 0.9em;
+        font-style: normal;
+        padding: 20px;
+    }
+
+    .imgScholarFooter a.a {
+        background: url("../content/images/ats.png") no-repeat scroll 205px 117px rgb(255, 255, 255);
+    }
+
+    .imgScholarFooter a {
+        border: 1px solid rgb(237, 237, 237);
+        color: rgb(111, 111, 111);
+        display: block;
+        float: left;
+        outline: medium none;
+        overflow: hidden;
+        width: 100%;
+        text-decoration: none;
+    }
+
+        .imgScholarFooter a:hover {
+            background: none repeat scroll 0 0 #996600;
+            color: rgb(255, 255, 255) !important;
+            transition: background-color 1s ease-out 0s;
+        }
+
+    .imgScholarFooterBlack a:hover {
+        background: none repeat scroll 0 0 #000000;
+        color: rgb(255, 255, 255) !important;
+        transition: background-color 1s ease-out 0s;
+    }
+
+    .imgScholarFooterBlack a {
+        border: 1px solid rgb(237, 237, 237);
+        color: rgb(111, 111, 111);
+        display: block;
+        float: left;
+        outline: medium none;
+        overflow: hidden;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .imgScholarFooterBlack h4 {
+        color: rgb(51, 51, 51);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .imgScholarFooterBlack a p {
+        font-size: 0.9em;
+        font-style: normal;
+        padding: 20px;
+    }
+
+    .imgScholarFooter a.a:hover {
+        background: url("../content/images/ats.png") no-repeat scroll 205px 117px #996600;
+    }
+
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+    .backgroundcolor {
+        background: #F8F8F8;
+        margin-right: 20px;
+    }
+
+    .hr1 {
+        border: 1px solid #0c0101;
+    }
+
+    .hr3 {
+        border: 1px solid #0c0101;
+        margin-right: 20px;
+    }
+
+    .hr2 {
+        border: 1px solid #820000;
+    }
+
+    .footerbutton {
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 8px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        shape-rendering: optimizeQuality;
+        border-style: dotted;
+        background-color: #0c0101;
+        font: 11;
+        color: #ffd800;
+    }
+
+    #btnaskthescholer {
+        background-color: #D95902 !important;
+    }
+
+    .list-group-item {
+        background-color: #fff;
+        border: 1px solid #f5efe0;
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    li.list-group-item:hover {
+        background: #7b3212 none repeat scroll 0 0 !important;
+    }
+
+    .background-fff9e8, .background-fff9e8 a.list-group-item {
+        background-color: #fff9e8;
+    }
+
+    a.list-group-item:hover, a.list-group-item:focus {
+        background-color: #996600 !important;
+        color: #fff !important;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 0 1px 1px #000000;
+    }
+
+    a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+        background-color: #428bca;
+        border-color: #428bca;
+        color: #fff;
+        z-index: 2;
+    }
+
+    a.list-group-item {
+        color: #996600;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s linear 0s;
+    }
+
+        a.list-group-item:hover {
+            color: #f8eed2 !important;
+            text-decoration: none;
+            text-shadow: 0 1px 1px #000000;
+        }
+
+    .list-group {
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+
+    .pager {
+        /*text-align:right;*/
+        margin: 4px 0;
+    }
+</style>
+@Html.Partial("_questionModal")
+<div class="FAQ">
+    <div class="row-fluid">
+        <div class="backgroundcolor">
+            <hr class="hr1">
+            <h4>
+                Hajj & Umrah – Frequently Asked Questions
+            </h4>
+            <div style="margin-left:6px">
+                <div class="eventborder" style="margin-top: 5px">
+                    @foreach (var item in Model)
+                    {
+                        <a class="list-group-item" href="/QuestionAnswer/QuestionDetails/@item.Id">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                            @item.Question
+                        </a>
+                    }
+
+                </div>
+
+            </div>
+            <div class="pager">
+                @Html.Raw(Html.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                IsShowPages = true
+            }, new { employee_name = ViewData["employee_name"] }))
+            </div>
+            <hr class="hr2">
+            <div class="" style="margin-right: 0px; margin-bottom: 10px;width: 99%;margin-left: 6px;">
+                @Html.Partial("_question")
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="hr3">
+
+

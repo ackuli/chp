@@ -1,0 +1,5 @@
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\bin\Release\HMS.utility.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\bin\Release\HMS.utility.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\obj\Release\HMS.utility.dll
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\obj\Release\HMS.utility.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS.utility\obj\Release\HMS.utility.csprojResolveAssemblyReference.cache

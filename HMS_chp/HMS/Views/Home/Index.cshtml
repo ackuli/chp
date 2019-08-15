@@ -1,0 +1,351 @@
+﻿@*@model IEnumerable<HMS.Models.Event>*@
+@using System.Web.Optimization
+@using MvcPaging
+@model IPagedList<HMS.Entities.Models.Event>
+@{
+    ViewBag.Title = "Comparehajjpackages";
+    Layout = "~/Views/shared/_LayoutEvent.cshtml";
+}
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="Coming Soon, the most comprehensive hajj and umrah website that will change the way people search and book haj and ‘umrah packages" />
+    <meta name="Keywords" content="haj, hajj, pilgrimage to mecca, hajj 2016,hajj packages, umrah package, umrah packages, hajj 2015, haji" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+    .container
+    {
+        background-color: rgb(255, 255, 255);
+    }
+    .carousel-control
+    {
+        top: 50%;
+    }
+    #btnhome
+    {
+        background-color: #D95902 !important;
+    }
+    .pre
+    {
+        background-color: rgb(245, 245, 245);
+        padding-top: 10px;
+        display: block;
+        font-size: 13px;
+        line-height: 20px;
+        margin: 0 0 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    .yourevent
+    {
+        background-color: #FFFFFF;
+        border: 1px solid #81B7D9;
+        margin-bottom: 10px;
+    }
+    .yourevent p
+    {
+        text-align: justify;
+        margin: 10px;
+    }
+    .eventposition
+    {
+        margin-top: 50px;
+    }
+    .buttonwithimage
+    {
+        border: 0 none;
+        border-radius: 10px;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+    .control-group
+    {
+        margin-bottom: 0px;
+    }
+    .controls input[type="text"]
+    {
+        width: 120px;
+        font-size: 13px;
+    }
+    input[type="text"]
+    {
+        font-size: 13px;
+    }
+    select
+    {
+        width: 135px;
+        font-size: 13px;
+    }
+    .controls span
+    {
+    }
+    .Eventtype
+    {
+        font-weight: bold;
+    }
+    .btnsearch
+    {
+        border: 0 none;
+        padding: 0;
+    }
+    .buttomAdd
+    {
+        height: 60px;
+        border: 1px solid #DDD;
+    }
+    .AddEvent
+    {
+        margin-top: 10px;
+    }
+    .AddEvent img
+    {
+        height: 120px;
+        width: 95%;
+        border: 1px solid rgb(221, 221, 221);
+    }
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img
+    {
+        width: 100%;
+    }
+    .subscribe
+    {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+    .AddEvent p
+    {
+        margin-right: 15px;
+    }
+    .eventimg
+    {
+        height: 50px;
+        margin-left: 20px;
+        width: 50px;
+    }
+    .eventborder
+    {
+        border-left: 1px solid rgb(221, 221, 221);
+        border-right: 1px solid rgb(221, 221, 221);
+    }
+    .eventHead
+    {
+        background-color: rgb(90, 90, 90);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 5px;
+    }
+</style>
+<div class="clearfix">
+</div>
+<div class="row-fluid navSlid">
+    <div>
+        <div class="carousel slide" id="HajjSlide">
+            <ol class="carousel-indicators">
+                <li class="" data-slide-to="0" data-target="#HajjSlide"></li>
+                <li data-slide-to="1" data-target="#HajjSlide" class="active"></li>
+                <li data-slide-to="2" data-target="#HajjSlide" class=""></li>
+                <li data-slide-to="3" data-target="#HajjSlide" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img alt="" src="../../IndexTest/slide1.jpg" />
+                    @*<div class="carousel-caption">
+                            <h4>
+                                First Thumbnail label</h4>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>*@
+                </div>
+                <div class="item">
+                    <img alt="" src="../../IndexTest/slide2.jpg" />
+                    @*<div class="carousel-caption">
+                            <h4>
+                                Second Thumbnail label</h4>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>*@
+                </div>
+                <div class="item">
+                    <img src="../../IndexTest/slide3.jpg" />
+                    @*<div class="carousel-caption">
+                            <h4>
+                                Third Thumbnail label</h4>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>*@
+                </div>
+                <div class="item">
+                    <img src="../../IndexTest/slide4.jpg" />
+                    @*<div class="carousel-caption">
+                            <h4>
+                                Third Thumbnail label</h4>
+                            <p>
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>*@
+                </div>
+            </div>
+            <a data-slide="prev" href="#HajjSlide" class="left carousel-control">‹</a> <a data-slide="next"
+                href="#HajjSlide" class="right carousel-control">›</a>
+        </div>
+    </div>
+</div>
+<div class="row-fluid" style="margin-top: 10px">
+    <div class="span2 borderRight">
+        <img style="width: 100%" src="../../IndexTest/makka.jpg" />
+    </div>
+    <div class="span8">
+        <h3 class="eventHead">
+            <span style="color: #F4F009; margin-left: 25px">HAJJ AND UMRAH</span> <span style="color: #FFFFFF">
+                EVENTS</span></h3>
+        <div class="eventborder">
+            @foreach (var item in Model)
+            {
+                <div class="row-fluid" style="margin-bottom: 20px; padding-top: 20px">
+                    <div class="span2">
+                        <img src="~/binaryObjects/GetBinaryObjectById?id=@item.Logo.ToString()&objectTypeId=6">                        
+                    </div>
+                    <div class="span10">
+                        Title: @Html.ActionLink(@item.EventsTitle, "Details", "Events", new { id = item.EventsId }, null)<br />
+                        Event Date: @item.EventsDate.ToString("dd-MMM-yyyy"),@item.Venue<br />
+                    </div>
+                </div>
+            }
+            <div class="pager">
+                @Html.Raw(Html.Pager(
+                    new Options
+                        {
+                            PageSize = Model.PageSize,
+                            TotalItemCount = Model.TotalItemCount,
+                            CurrentPage = Model.PageNumber,
+                            ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                            ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                            TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                            Size = Size.normal,
+                            Alignment = Alignment.centered,
+                            IsShowControls = true,
+                            IsShowFirstLast = true,
+                            IsShowPages = true
+                        }, new
+                               {
+                                   typeId = ViewData["typeId"]
+
+                               }))
+            </div>
+            <div class="row-fluid pre">
+                <div class="span5">
+                    @using (Html.BeginForm("SearchEvent", "Events", FormMethod.Get))
+                    {
+                        <div class="row-fluid">
+                            <div class="span11 pull-right">
+                                <p class="Eventtype">
+                                    Search events near your area</p>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type:</span>
+                                        @Html.DropDownList("Type", new SelectList(ViewBag.EventType, "Key", "Value"), "--- Select ---", new { id = "Type", Class = "dropdoenlist" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <span>Postal Code:</span>
+                                        <input type="text" id="txtPostalCode" name="PostCode" placeholder="Postal Code">
+                                    </div>
+                                </div>
+                                <p class="text-center">
+                                    <button type="submit" class="btnsearch">
+                                        <img class="imagesearch" src="../../IndexTest/search-button.jpg" /></button>
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="span6">
+                    <div class="row-fluid yourevent">
+                        <div class="span3">
+                            <img class="eventimg eventposition" src="../../IndexTest/calender.jpg" />
+                        </div>
+                        <div class="span9 ">
+                            <h5 style="color: #4C8DD7">
+                                Your event</h5>
+                            <p style="text-align: left">
+                                List your forthcoming events on comparehajjpackages.com for the best responses.
+                                Listing service is absolutely free.
+                            </p>
+                            <button class="buttonwithimage">
+                                <img alt="List your event" style="border-radius: 10px" src="../../IndexTest/list-your-event-button.jpg" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid" style="height: 90px; background-color: #FFF">
+                <p class="subscribe">
+                    Want to be notified when the site launches and other cool stuff happens here? Fill
+                    out the form below and click notify me button.</p>
+            </div>
+            @using (Html.BeginForm("AddEmail", "Home"))
+            {
+                
+                <div class="row-fluid text-center" style="background-color: #E5E5E5">
+                    <div class="input-append" style="margin-top: 5px; margin-bottom: 5px;">
+                        <input type="text" name="email" required placeholder="Enter your email">
+                        <button type="submit" class="btn">
+                            Notify me</button>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="span2" style="margin-left: 10px;">
+        <img style="width: 93%" src="../../IndexTest/featureAdd.jpg" />
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span8 offset2 AddEvent">
+        <div class="span4">
+            <a href="http://www.caa.co.uk/default.aspx?catid=1080&pagetype=90" target="_blank">
+                <img src="../../IndexTest/atol.jpg" />
+            </a>
+            <br />
+            <p style="text-align: justify">
+                Check whether your trip is ATOL protected or not? An ATOL ensures that your prepayments
+                are protected.
+            </p>
+        </div>
+        <div class="span4">
+            <a href="http://www.cityoflondon.police.uk/news-and-appeals/campaigns-and-initiatives/hajj/Pages/default.aspx"
+                target="_blank">
+                <img src="../../IndexTest/CityOfLondonPolice.jpg" />
+            </a>
+            <br />
+            <p style="text-align: justify">
+                <h6>
+                    Beware of Hajj and Umrah Fraud.</h6>
+            </p>
+        </div>
+        <div class="span4">
+            <a href="https://www.gov.uk/foreign-travel-advice/saudi-arabia" target="_blank">
+                <img src="../../IndexTest/commonwealth.jpg" />
+            </a>
+            <p style="text-align: justify; margin-right: 10px;">
+                Check this website before travelling whether there is any travel alert.
+            </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#HajjSlide').carousel({
+            interval: 2000
+        }).carousel('cycle');
+    })
+</script>

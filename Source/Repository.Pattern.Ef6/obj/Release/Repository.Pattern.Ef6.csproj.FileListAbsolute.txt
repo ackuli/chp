@@ -1,0 +1,15 @@
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\Repository.Pattern.Ef6.dll.config
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\Repository.Pattern.Ef6.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\Repository.Pattern.Ef6.pdb
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\EntityFramework.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\EntityFramework.SqlServer.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\LinqKit.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\Repository.Pattern.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\System.Net.Http.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\Repository.Pattern.pdb
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\EntityFramework.xml
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Release\EntityFramework.SqlServer.xml
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\obj\Release\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\obj\Release\Repository.Pattern.Ef6.dll
+D:\CHP\visual studio\Hajj\Source\Repository.Pattern.Ef6\obj\Release\Repository.Pattern.Ef6.pdb

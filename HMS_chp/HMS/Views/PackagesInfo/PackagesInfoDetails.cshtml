@@ -1,0 +1,122 @@
+﻿@model HMS.Entities.Models.PackagesInfo
+@{
+    ViewBag.Title = "Packages Details";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .ImgSize {
+        width: 120px;
+        height: 70px;
+    }
+    .imgLeft{
+          width: 220px;
+        height: 350px;
+    }
+    .nspImage{
+         width: 200px;
+        height: 90px;
+    }
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    .container {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .Title {
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .display-field {
+        line-height: 20px;
+    }
+
+    legend {
+        margin-bottom: 0px;
+    }
+
+    .Eventlogo {
+    }
+
+    .header {
+        border-bottom: 1px solid rgb(221, 221, 221);
+        margin-top: 10px;
+        border-left: 0px;
+    }
+
+    #gkComponentWrap .nsp {
+        width: 400px;
+    }
+     .divNarrative {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        margin-top: 10px;
+    }
+    #btnnewsevent {
+        background-color: #D95902 !important;
+    }
+</style>
+<div class="row-fluid divNarrative">
+    @*<h3>Packages Details</h3>*@
+    <div class="row-fluid">
+        <div class="span3">
+
+            <img class="imgLeft media-object img-responsive" src="~/Content/images/PhoneonlypicDetails.jpg" />
+        </div>
+        <div id="gkComponentWrap" class="gkMain">
+            <div class="box nsp color1">
+                <div>
+                    <h4 style="margin-left: 15px;"><span> @Model.Client.ClientName</span></h4>
+                    <div class="content">
+                        <div class="nspMain nspFs100 activated" id="nsp-nsp_236" style="width:100%;">
+                            <div class="nspArts right" style="width:100%;">
+                                <div style="width: 400px; overflow: hidden;" class="nspArtScroll1">
+
+                                    <div style="width: 400px; float: left;" class="nspArtPage">
+                                        <div class="nspArt" style="width:100%;">
+                                            <div style="padding:0 0 30px">
+                                                <img class="nspImage tleft fleft"  width:35px; height: 25px src="~/binaryObjects/GetBinaryObjectById?id=@Model.ClientId&objectTypeId=9" alt="5* Hajj Package 2016 - 2 Weeks (NON-Shifting)" style="margin:0 0 12px;" title="5* Hajj Package 2016 - 2 Weeks (NON-Shifting)">
+                                                <h4 class="nspHeader tleft fnone">
+                                                    <strong>@Html.DisplayName("Telephone number") : @Html.DisplayFor(model => model.Client.TelMobile)</strong>
+                                                </h4>
+                                                <span class="nspHeader tleft fnone">
+                                                    <span><b>We are ready to answer your call.</b></span><br />
+                                                    <span>Sometime better deals are available on the phone. So, go on, lift the phone and call us on the number above. You can to talk to us directly about package details and make booking.  </span>                                                  
+                                                </span>
+                                                <br/>
+                                                <br />
+                                                <span class="pricetag_note" style="font-size: 13px;">
+                                                    <strong>Address:</strong> <b>@Html.DisplayFor(model => model.Client.Address)</b>
+
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+
+    </div>
+    <br />
+    
+</div>

@@ -1,0 +1,347 @@
+﻿@{
+    ViewBag.Title = "Umrah Hajj Guide";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+     
+     #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    .Footercontent p {
+        text-align: left;
+        line-height: 25px;
+        font-size: 1.1em;
+    }
+
+    .Footercontent li {
+        text-align: left;
+        line-height: 25px;
+        font-size: 1.1em;
+    }
+
+    .arabicCSS p {
+        font-size: 20px;
+        font-weight: normal;
+        text-align: right;
+        line-height: 35px;
+    }
+
+    .imgsize {
+        height: 200px;
+        width: 200px;
+    }
+    /*.button--primary--More {
+        color: #996600;
+    }*/
+    .button--primary--More {
+        background: #A37519;
+        border-color: #005689;
+        color: #fff;
+        border-radius: 20px;
+        width: 82px;
+        height: 27px;
+    }
+
+    .textPosition1 {
+        position: absolute;
+        margin-left: 0;
+        color: red;
+        left: 70px;
+        margin-top: 34px;
+        text-align: center;
+    }
+
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+    .footerbutton {
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 8px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .divSize {
+        height: 130px;
+        width: 100px;
+        /*margin: 20px;*/
+        border-radius: 20px;
+        /*width: 95%;*/
+        margin-bottom: 10px;
+        margin-top: 10px;
+        background-color: #ccecff;
+    }
+
+
+     .divSize a {
+          text-decoration: none;
+     }
+       .divSize :hover {
+                   background-color:  #00a2ff;
+                    display: block;
+                     border-radius: 10px;
+                }
+
+    .Footercontent {
+        margin-bottom: 10px;
+        /*background-image: url('../Content/images/hajj_rites_background.jpg');*/
+        background-color:  #003333;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
+
+
+    /*//breadcrumb starts here//*/
+       ul.breadcrumb {
+    padding: 8px 10px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    content: "/\00a0";
+    }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*//breadcrumb ends//*/
+</style>
+
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+     <li>Umrah Hajj Guide</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+
+<div class="row-fluid">
+
+    <h2 style="margin-left:50px; ">'Umrah Hajj Guide</h2>
+
+    <h3 style="margin-left:50px; ">What is 'Umrah Hajj?</h3>
+
+    <p style="font-size:1.1em; margin-left:50px; margin-right:50px;">
+        The 'Umrah Haj is sometimes called the 'minor pilgrimage' or 'lesser pilgrimage', the Hajj being the 'major' pilgrimage. The Hajj is compulsory for every able-bodied Muslim who can afford it while  the Umrah is not but highly recommended. The ʿUmrah Hajj can be performed at any time of the year, in contrast to the Hajj. 
+    </p>
+    <p style="font-size:1.1em; margin-left:50px; margin-right:50px;"> The 'Umrah is derived from al-i'timar which means a visit. Here it means paying a visit to Ka'ba, performing tawaf around it, walking  Safa and Marwah seven times, and then shaving one's head or cutting one's hair short. <a href="../Footer/WhatisUmrahHajj"> Read more</a></p>
+
+
+    </div>
+    <div class="container-fluid Footercontent">
+
+
+        <div class="row-fluid">
+
+            <div class="span12" style="">
+                <div class="row-fluid">
+                    <div class="span3 divSize" id="" style="">
+
+
+                        <a href="../Footer/UmrahRitesAtAGlance" id="mylink4">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 45px">
+                                'Umrah hajj at a glance
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+                        <a href="../Footer/WhatisUmrahHajj" id="mylink5">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 52px">
+                                What is 'Umrah? 
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+
+                        <a href="../Footer/UmrahinRamadhan" id="mylink4">
+                            <p style="font-size:17px;text-align: center; color: black; padding: 48px">
+                                ‘Umrah in Ramadan
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+                        <a href="../Footer/HowtomakeUmrahIntention" id="mylink5">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 45px">
+                                How to make 'Umrah Hajj intention?
+                            </p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+
+
+        <div class="row-fluid">
+
+            <div class="span12" style="">
+                <div class="row-fluid">
+                    <div class="span3 divSize" id="" style="">
+
+
+                        <a href="../Information/UmrahandMiqat" id="mylink4">
+                            <p style="font-size:17px;text-align: center; color: black; padding: 45px">
+                                What is Miqat and rulings on Miqat?
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+                        <a href="../Information/UmrahandIhram" id="mylink5">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 45px">
+                                What is Ihram and rulings on Ihram?
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+
+                        <a href="../Footer/UmrahandTalbiyah" id="mylink4">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 48px">
+                                'Umrah and Talbiyah?
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+                        <a href="../Footer/UmrahHajjandTawaf" id="mylink5">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 44px">
+                                'Umrah Hajj and Tawaf
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+
+            <div class="span12" style="">
+                <div class="row-fluid">
+                    <div class="span3 divSize" id="" style="">
+
+
+                        <a href="#" id="mylink4">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 45px">
+                                Drinking Zamzam Water
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+                        <a href="../Information/UmrahandSai" id="mylink5">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 43px">
+                                What is Sa’i and how to perform Sa’i?
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+
+                        <a href="../Footer/StepByStepGuideToUmrahHajj" id="mylink4">
+                            <p style="font-size:17px; text-align: center; color:#e60073; padding: 40px">
+                               <strong>Step By Step Guide to ‘Umrah Hajj</strong>
+                            </p>
+                        </a>
+
+                    </div>
+                    <div class="span3 divSize" id="" style="">
+
+                        <a href="../Footer/HajjUmrahGlossary" id="mylink5">
+                            <p style="font-size:17px; text-align: center; color: black; padding: 45px">
+                                Hajj & ‘Umrah Glossary
+                            </p>
+                        </a>
+
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+                    <div class="row-fluid">
+
+                        <div class="span12" style="">
+                            <div class="row-fluid">
+                                <div class="span3 divSize" id="" style="">
+
+
+                                    <a href="../Information/IntroductiontoMadinah" id="mylink4">
+                                        <p style="font-size:17px; text-align: center; color: black; padding: 48px">
+                                            Madinah visit
+                                        </p>
+                                    </a>
+
+                                </div>
+                                <div class="span3 divSize" id="" style="">
+
+                                    <a href="../Information/VisitingProphetMosque" id="mylink5">
+                                        <p style="font-size:17px; text-align: center; color: black; padding: 43px">
+                                            Visiting Prophet’s Mosque
+                                        </p>
+                                    </a>
+
+                                </div>
+                                <div class="span3 divSize" id="" style="">
+
+
+                                    <a href="../Information/VisitingProphetMosque#Riaduljannah" id="mylink4">
+                                        <p style="font-size:17px; text-align: center; color: black; padding:43px">
+                                            Praying at Raudahtul Jannah
+                                        </p>
+                                    </a>
+
+                                </div>
+                                <div class="span3 divSize" id="" style="">
+
+                                    <a href="../Information/VisitingProphetGrave" id="mylink5">
+                                        <p style="font-size:17px; text-align: center; color: black; padding: 40px">
+                                            Etiquette of Visiting Prophet’s Grave
+                                        </p>
+                                    </a>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+  
+

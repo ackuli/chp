@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HMS.Entities.Models.Content>
+@{
+    ViewBag.Title = "FindContent";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayName("Content URL ")
+                </th>
+                <th>
+                    @Html.DisplayName("Content Details ")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ToList())
+            {
+                <tr>
+
+                    <td>
+                        <a href="@Html.DisplayFor(modelItem => item.ContentURL)"> @item.ContentSubHeader </a>
+                    </td>
+                    <td>
+                        @item.TextContent
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+</table>
+        
+    

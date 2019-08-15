@@ -1,0 +1,90 @@
+﻿
+
+@if (ViewBag.Success != null)
+{
+    if (ViewBag.Success)
+    {  
+        
+<link href="~/Content/toastr.css" rel="stylesheet" />
+<script src="~/Scripts/toastr.js"></script>    
+<script src="~/Scripts/toastr.min.js"></script>
+    <script type="text/javascript">
+    //  alert("sdsa");
+    //1.	toast-top-right
+    //2.	toast-top-left
+    //3.	toast-bottom-right
+    //4.	toast-bottom-left
+    //5.	toast-top-full-width
+    //6.	toast-bottom-full-width
+
+
+    //    toastr.optionsOverride = 'positionclass = "toast-bottom-full-width"';
+    //   toastr.options.positionClass = 'toast-top-full-width';
+
+    // toastr.optionsOverride = 'positionclass = "toast-top-center"';
+    // toastr.options.positionClass = 'toast-top-center';
+    //show when the button is clicked
+    //   toastr.success('@ViewBag.Message');
+    // toastr.success('@ViewBag.Message')
+
+        toastr.options = {
+            positionClass: 'toast-top-left'
+        };
+
+        toastr.success('@ViewBag.Message');
+
+        var $notifyContainer = $('#toast-container').closest('.toast-top-left');
+        if ($notifyContainer) {
+            // align center
+            var windowHeight = $(window).height() - 60;
+            $notifyContainer.css("margin-top", windowHeight / 4);
+
+            var windowwidth = $(window).width() - 20;
+            $notifyContainer.css("margin-left", windowwidth / 2);
+        }
+
+</script>
+    }
+    else
+    {
+        <link href="~/Content/toastr.css" rel="stylesheet" />
+        <script src="~/Scripts/toastr.js"></script>
+        <script src="~/Scripts/toastr.min.js"></script>
+        <script type="text/javascript">
+            //  alert("sdsa");
+            //1.	toast-top-right
+            //2.	toast-top-left
+            //3.	toast-bottom-right
+            //4.	toast-bottom-left
+            //5.	toast-top-full-width
+            //6.	toast-bottom-full-width
+
+
+            //    toastr.optionsOverride = 'positionclass = "toast-bottom-full-width"';
+            //   toastr.options.positionClass = 'toast-top-full-width';
+
+            // toastr.optionsOverride = 'positionclass = "toast-top-center"';
+            // toastr.options.positionClass = 'toast-top-center';
+            //show when the button is clicked
+            //   toastr.success('@ViewBag.Message');
+    // toastr.success('@ViewBag.Message')
+
+            toastr.options = {
+                positionClass: 'toast-top-left'
+            };
+
+            toastr.warning('@ViewBag.Message');
+
+            var $notifyContainer = $('#toast-container').closest('.toast-top-left');
+            if ($notifyContainer) {
+                // align center
+                var windowHeight = $(window).height() - 60;
+                $notifyContainer.css("margin-top", windowHeight / 4);
+
+                var windowwidth = $(window).width() - 20;
+                $notifyContainer.css("margin-left", windowwidth / 2);
+            }
+
+        </script>
+    }
+}

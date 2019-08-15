@@ -1,0 +1,65 @@
+@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>
+
+    <style type="text/css">
+        html
+        {
+            background: url("../Content/images/CompareHajjManagement.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover; /*background-size: cover;*/
+            background-size: cover;
+        }
+        .test
+        {
+            background-color: #000000;
+            float: right;
+            line-height: 30px;
+            opacity: 0.7;
+            padding-bottom: 35px;
+            padding-left: 40px;
+            padding-top: 20px;
+            text-align: left;
+            width: 600px;
+        }
+        .test span
+        {
+            color: #FFF;
+            font-size: 20px;
+        }
+        footer
+        {
+            height: 200px;
+            bottom: 60px;
+            position: fixed;
+            width: 100%;
+        }
+        body
+        {
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    @RenderBody()
+
+     @Scripts.Render("~/js")
+     @RenderSection("Scripts", required: false)
+     <script type="text/javascript">
+        $(document).ready(function () {
+            $(".alert button").click(function () {
+                $("div.alert").hide();
+            });
+        });
+       </script>
+</body>
+</html>

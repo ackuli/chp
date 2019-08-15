@@ -1,0 +1,195 @@
+﻿@model HMS.Entities.Models.Client
+@{
+    ViewBag.Title = "Edit Agent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section breadcrumb
+{
+    <li><a href="~/Home/index">Dashboard</a></li>
+    @*<li><a href="~/Client/ClientList">Agent</a></li>*@
+    <li class="active">@ViewBag.Title</li>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liAdmin").addClass("active open");
+        $('#liAdmin .acc-menu').css('display', 'block');
+        $('#liAdmin .acc-menu').collapse('show');
+    });
+</script>
+<style type="text/css">
+    .ImgSize {
+        width: 50px;
+        height: 50px;
+    }
+</style>
+@section title
+{
+    @ViewBag.Title
+}
+@Html.ActionLink("Back to List", "ClientList")
+<hr />
+
+@using (Html.BeginForm("Editclient", "Client", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.ClientId)
+    <div class="row">
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClientName, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.ClientName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ClientName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Uploaded Logo", new { @class = "col-sm-3 control-label" })
+            <img class="form-control ImgSize" src="~/binaryObjects/GetBinaryObjectById?id=@Model.ClientId&objectTypeId=9">
+        </div>
+        <div class="form-group">
+            @Html.Label("Logo", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @*@Html.TextBoxFor(model => model.ClientName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ClientName)*@
+                <input type="file" class="form-control" name="file" id="file" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tellandline, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.Tellandline, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Tellandline)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.TelMobile, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.TelMobile, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TelMobile)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Website, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.Website, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Website)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextAreaFor(model => model.Address, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Address)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.YearEstablished, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.YearEstablished, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.YearEstablished)
+            </div>
+        </div>
+        @*<div class="form-group">
+                <label for="checkbox" class="col-sm-3 control-label"></label>
+                <div class="col-sm-6">
+                    <div class="checkbox block">
+                        <label>
+                            @Html.CheckBoxFor(model => model.IsApprovedbySaudiHajjMinistry) @Html.LabelFor(model => model.IsApprovedbySaudiHajjMinistry)
+                        </label>
+                    </div>
+                </div>
+            </div>*@
+        <div class="form-group">
+            <label for="checkbox" class="col-sm-3 control-label"></label>
+            <div class="col-sm-6">
+                <div class="checkbox block">
+                    <label>
+                        @Html.CheckBoxFor(model => model.IsHajjApproval) @Html.Label("Hajj")
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Hajj Approval Licience Number No", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.HajjApprovalLicienceNumberNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.HajjApprovalLicienceNumberNo)
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="checkbox" class="col-sm-3 control-label"></label>
+            <div class="col-sm-6">
+                <div class="checkbox block">
+                    <label>
+                        @Html.CheckBoxFor(model => model.IsUmarhApproval) @Html.Label("Umrah")
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Umarh Approval Licience Number No", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.UmarhApprovalLicienceNumberNo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UmarhApprovalLicienceNumberNo)
+            </div>
+        </div>
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.MinistryApprovalNumber, new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-6">
+                    @Html.TextBoxFor(model => model.MinistryApprovalNumber, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.MinistryApprovalNumber)
+                </div>
+            </div>*@
+        <div class="form-group">
+            <label for="checkbox" class="col-sm-3 control-label"></label>
+            <div class="col-sm-6">
+                <div class="checkbox block">
+                    <label>
+                        @Html.CheckBoxFor(model => model.ATOLApproved) @Html.LabelFor(model => model.ATOLApproved)
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ATOLLicense, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.ATOLLicense, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ATOLLicense)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.IATANo, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.IATANo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IATANo)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyRegistrationNumber, new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.CompanyRegistrationNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CompanyRegistrationNumber)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="btn-toolbar">
+                <input type="submit" value="Create" class="btn-primary btn" onclick=" return AddConfirm()" />
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+}

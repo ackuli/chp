@@ -1,0 +1,109 @@
+﻿
+@using MvcPaging
+@model IPagedList<HMS.Entities.Models.UserAccount>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "UserAccounts", FormMethod.Get))
+{
+    <div class="row-fluid">
+        <div class="span6 pull-left">
+            <div class="input-append">
+                <input type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Events Title Name" value="@ViewData["searchItem"]">
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>&nbsp;Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Country.CountryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Role.RoleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().UserDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().SetDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().SetBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PhoneNo)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country.CountryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role.RoleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SetDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SetBy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UserAccountsId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.UserAccountsId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UserAccountsId })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                IsShowPages = true
+            }, new { searchItem = ViewData["searchItem"] }))
+    </div>
+
+}

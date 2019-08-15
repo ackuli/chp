@@ -1,0 +1,178 @@
+﻿<style type="text/css">
+    .imgScholarFooter h4 {
+        color: rgb(51, 51, 51);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .imgScholarFooter a p {
+        font-size: 0.9em;
+        font-style: normal;
+        padding: 20px;
+    }
+
+    .imgScholarFooter a.a {
+        background: url("../content/images/ats.png") no-repeat scroll 205px 117px rgb(255, 255, 255);
+    }
+
+    .imgScholarFooter a {
+        border: 1px solid rgb(237, 237, 237);
+        color: rgb(111, 111, 111);
+        display: block;
+        float: left;
+        outline: medium none;
+        overflow: hidden;
+        width: 100%;
+        text-decoration: none;
+    }
+
+        .imgScholarFooter a:hover {
+            background: none repeat scroll 0 0 #996600;
+            color: rgb(255, 255, 255) !important;
+            transition: background-color 1s ease-out 0s;
+        }
+
+    .imgScholarFooterBlack a:hover {
+        background: none repeat scroll 0 0 #000000;
+        color: rgb(255, 255, 255) !important;
+        transition: background-color 1s ease-out 0s;
+    }
+
+    .imgScholarFooterBlack a {
+        border: 1px solid rgb(237, 237, 237);
+        color: rgb(111, 111, 111);
+        display: block;
+        float: left;
+        outline: medium none;
+        overflow: hidden;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .imgScholarFooterBlack h4 {
+        color: rgb(51, 51, 51);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .imgScholarFooterBlack a p {
+        font-size: 0.9em;
+        font-style: normal;
+        padding: 20px;
+    }
+
+    .imgScholarFooter a.a:hover {
+        background: url("../content/images/ats.png") no-repeat scroll 205px 117px #996600;
+    }
+
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+
+
+    .footerbutton {
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 8px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        shape-rendering: optimizeQuality;
+        border-style: dotted;
+        background-color: #0c0101;
+        font: 11;
+        color: #ffd800;
+    }
+
+
+
+    .list-group-item {
+        background-color: #fff;
+        border: 1px solid #f5efe0;
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    li.list-group-item:hover {
+        background: #7b3212 none repeat scroll 0 0 !important;
+    }
+
+    .background-fff9e8, .background-fff9e8 a.list-group-item {
+        background-color: #fff9e8;
+    }
+
+    a.list-group-item:hover, a.list-group-item:focus {
+        background-color: #996600 !important;
+        color: #fff !important;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 0 1px 1px #000000;
+    }
+
+    a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+        background-color: #428bca;
+        border-color: #428bca;
+        color: #fff;
+        z-index: 2;
+    }
+
+</style>
+
+<div class="row-fluid">
+    <div class="span4 eventborder imgScholarFooter">
+        <a href="#SearchByKeyWords" role="button" class="pane a" style="width:276px" data-toggle="modal">
+            <div class="footerbutton" style="background-color:#000000">
+                <p style="color:#FFFFFF;text-align:center">
+                    <br>
+                    <b> Search Question by Keywords</b>
+                </p>
+            </div>
+        </a>
+
+    </div>
+    <div class="span4 eventborder imgScholarFooterBlack">
+        <a class="pane a" style="width:276px" role="button" href="#SearchQuestionbyCategory" data-toggle="modal">
+            <div class="footerbutton" style="background-color:#996600">
+                <p style="color:#FFFFFF;text-align:center">
+                    <br>
+                    <b> Search Question by Category</b>
+                </p>
+            </div>
+        </a>
+    </div>
+    @*<div class="span4 eventborder imgScholarFooter">
+        <a class="pane a" style="width:276px" role="button" href="#SubmitAQuestion" data-toggle="modal">
+            <div class="footerbutton" style="background-color:#000000">
+                <p style="color:#FFFFFF;text-align:center">
+                    <br>
+                    <b> Submit A Question</b>
+                </p>
+            </div>
+        </a>
+    </div>*@
+
+    <div class="span4 eventborder imgScholarFooter">
+        <a class="pane a" style="width:276px" role="button" href="~/QuestionAnswer/CreateForClient" data-toggle="modal">
+            <div class="footerbutton" style="background-color:#000000">
+                <p style="color:#FFFFFF;text-align:center">
+                    <br>
+                    <b> Submit A Question</b>
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

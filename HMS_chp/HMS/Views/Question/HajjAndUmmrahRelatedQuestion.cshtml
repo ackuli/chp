@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "HajjAndUmmrahRelatedQuestion";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style>
+    h1 {
+        font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+
+    section.page-container {
+        display: flex;
+        padding: 0 5px;
+    }
+
+    .main-content {
+        flex-basis: 77%;
+        margin: 0 10px 1rem;
+    }
+    .question {
+        position: relative;
+        font-size: 1.4rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    .question:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 3px;
+        background: #FF5722;
+        left: 0;
+    }
+    .answer {
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .rl-question {
+        padding: 1rem;
+        background: rgb(245, 220, 206);
+        border: 1px solid #ecc7b1;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+    .rl-question h5 {
+        margin-top: 0;
+        padding-bottom: 0.5rem;
+        font-size: 1.4rem;
+        color: #545454;
+        font-weight: 600;
+        border-bottom: 1px solid #f3ceba;
+    }
+    .rl-question a {
+        display: block;
+        font-size: 1.1rem;
+        color: #7b4e3c;
+        margin-bottom: 0.5rem;
+    }
+    .rl-question a:last-child {
+        margin: 0;
+    }
+    .buttons-set {
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+    }
+    .buttons-set a {
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        background: #000;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s linear;
+    }
+    .buttons-set a:hover {
+        text-decoration: none;
+        color: #000;
+        background: #f1bc6d;
+    }
+    aside {
+        flex-basis: 33%;
+        margin: 0 10px 1rem;
+        background: #eaeaea;
+        padding: 1rem;
+    }
+
+
+    .category-list {
+        padding: 1rem;
+        border: 2px solid #c5c5c5;
+        border-radius: 5px;
+        background: #dedede;
+    }
+
+        .category-list h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #5f5f5f;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0 0.5rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .category-list ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+
+        .category-list ul li a {
+            padding: 0.5rem;
+            display: block;
+            color: #444;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+</style>
+
+<h1>Hajj And Ummrah Related Question</h1>
+
+<section class="page-container">
+    <div class="main-content">
+        <h4 class="question">Question: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s?</h4>
+        <div class="answer">
+            <p>Answer: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="rl-question">
+            <h5>Related question</h5>
+            <a href="#">Question: What is the ruling on plucking the hair between the eyebrows?</a>
+        </div>
+
+        <div class="buttons-set">
+            <a href="#">Search question by keywords</a>
+            <a href="#">Search question by category</a>
+            <a href="#">Submit a question</a>
+        </div>
+    </div>
+    <aside>
+
+        <div class="category-list">
+            <h4>Categories</h4>
+
+            <ul>
+                <li>
+                    <a href="#">Hajj</a>
+                </li>
+                <li>
+                    <a href="#">Umrah</a>
+                </li>
+                <li>
+                    <a href="#">Miqat</a>
+                </li>
+                <li>
+                    <a href="#">Sai</a>
+                </li>
+                <li>
+                    <a href="#">Mahram</a>
+                </li>
+                <li>
+                    <a href="#">Debt</a>
+                </li>
+                <li>
+                    <a href="#">Elderly</a>
+                </li>
+            </ul>
+
+        </div>
+    </aside>
+</section>
+

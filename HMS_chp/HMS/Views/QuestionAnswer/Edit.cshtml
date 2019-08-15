@@ -1,0 +1,126 @@
+﻿@using System.Web.Optimization
+@model HMS.Entities.Models.QuestionAnswer
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<script src="~/assets/plugins/form-ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.input-append.date.Date').datepicker({
+            format: "dd/M/yyyy",
+            //daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+
+        $('.input-append.date.EndDate').datepicker({
+            format: "dd/M/yyyy",
+            //daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $("#News_Date").val("");
+
+        $("#News_EndDate").val("");
+    });
+</script>
+<h4>Question to Answer Edit</h4>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@using (Html.BeginForm("Edit", "QuestionAnswer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Id)
+    
+    <fieldset>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailId)
+            @Html.ValidationMessageFor(model => model.EmailId)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question)
+        </div>
+      
+        <div class="editor-label">
+            @Html.TextAreaFor(model => model.Question)
+            @Html.ValidationMessageFor(model => model.Question)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TypeId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.TypeId, new SelectList(Model.kvpQuestionType, "Key", "Value", Model.TypeId), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TypeId)
+        </div>
+       
+        <div class="panel panel-magenta">
+            <div class="panel-heading">
+                <h4>Answer</h4>
+            </div>
+            <div class="panel-body collapse in">
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Answer, new { @class = "ckeditor" })
+                </div>
+                @Html.ValidationMessageFor(model => model.Answer)
+            </div>
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsSelfInitiative)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsSelfInitiative)
+            @Html.ValidationMessageFor(model => model.IsSelfInitiative)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsFrequentAsk)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsFrequentAsk)
+            @Html.ValidationMessageFor(model => model.IsFrequentAsk)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsVisible)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsVisible)
+            @Html.ValidationMessageFor(model => model.IsVisible)
+        </div>
+
+      
+
+        <div class="editor-field">
+            <div class="editor-field">
+                <div class="input-append date Date">
+                    @Html.EditorFor(model => model.AnswerDate)
+                    <span class="add-on"><i class="icon-th"></i></span>
+                    @Html.ValidationMessageFor(model => model.AnswerDate)
+                </div>
+            </div>
+        </div>      
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+
+
+

@@ -1,0 +1,45 @@
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll.config
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.pdb
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\EntityFramework.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\EntityFramework.SqlServer.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\LinqKit.EntityFramework.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\System.Net.Http.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.pdb
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\EntityFramework.xml
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\EntityFramework.SqlServer.xml
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\LinqKit.EntityFramework.xml
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.dll
+E:\MPMS NEW\Manpower Management System(MMS)\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.pdb
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll.config
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.pdb
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.dll
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\System.Net.Http.dll
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.pdb
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.dll
+E:\HMS\Hajj\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.pdb
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll.config
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.pdb
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\System.Net.Http.dll
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.pdb
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.dll
+P:\CHP\visual studio\visual studio\Hajj\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.pdb
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll.config
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.dll
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.Ef6.pdb
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.dll
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\bin\Debug\System.Net.Http.dll
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\bin\Debug\Repository.Pattern.pdb
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.csprojResolveAssemblyReference.cache
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.dll
+P:\CHP\Chp_git\chp\Source\Repository.Pattern.Ef6\obj\Debug\Repository.Pattern.Ef6.pdb

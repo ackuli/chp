@@ -1,0 +1,230 @@
+﻿@model HMS.Entities.Models.Question
+@{
+    ViewBag.Title = "Question All View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .form-inline .form-control {
+        width: 100%;
+    }
+
+    .form-inline input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form-inline .form-group {
+        width: 70%;
+    }
+
+    .margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liAdmin").addClass("active");
+    });
+</script>
+
+@section breadcrumb
+{
+    <li><a href="~/Home/index">Dashboard</a></li>
+    <li>Question</li>
+    <li class="active">@ViewBag.Title</li>
+}
+@section title
+{
+    @ViewBag.Title
+}
+<style type="text/css">
+    .ImgSize {
+        width: 40px;
+        height: 30px;
+    }
+</style>
+
+<p> @Html.ActionLink("Go Question Details List", "Index", new { questionId = @Model.QuestionId }, new { @class = "btn btn-success" })</p>
+<hr />
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Question
+
+    </div>
+    <table class="table">
+
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+
+            <th></th>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(item => item.QuestionId)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.QuestionText)
+            </td>
+            <td>
+                @Html.DisplayFor(item => item.IsActive)
+            </td>
+
+        </tr>
+
+    </table>
+</div>
+<hr />
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Question Details
+
+    </div>
+    <table class="table">
+
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionDetails.FirstOrDefault().QuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionDetails.FirstOrDefault().QuestionDetailsText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionDetails.FirstOrDefault().IsActive)
+            </th>
+
+            <th></th>
+        </tr>
+
+
+        @foreach (var item in Model.QuestionDetails.ToList())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionDetailsText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
+<hr />
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Question Answer Choices List
+
+    </div>
+    <table class="table">
+
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerChoices.FirstOrDefault().QuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerChoices.FirstOrDefault().Choices)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerChoices.FirstOrDefault().WhyAnswerCorrect)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerChoices.FirstOrDefault().IsAnswer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerChoices.FirstOrDefault().IsActive)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.AnswerChoices.ToList())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Question.QuestionText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Choices)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WhyAnswerCorrect)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.IsAnswer)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<hr />
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Question Answer
+
+    </div>
+    <table class="table">
+
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.QuizQuestionAnswers.FirstOrDefault().QuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuizQuestionAnswers.FirstOrDefault().AnswerChoiceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuizQuestionAnswers.FirstOrDefault().IsActive)
+            </th>
+
+            <th></th>
+        </tr>
+
+
+        @foreach (var item in Model.QuizQuestionAnswers.ToList())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnswerChoice.Choices)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+
+
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,97 @@
+﻿@using MvcPaging
+@model IPagedList<HMS.Entities.Models.News>
+
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "News", FormMethod.Get))
+{    
+    <div class="row-fluid">
+        <div class="span6 pull-left">
+            <div class="input-append">
+                <input type="text" class="form-control " id="searchItem" name="searchItem" placeholder="News Title Name" value="@ViewData["searchItem"]">
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>&nbsp;Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().NewsTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().IsVisible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().IsDefault)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PublishDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().SourceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().IsArchive)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NewsTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsVisible)
+                 
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDefault)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublishDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SourceDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsArchive)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NewsId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.NewsId }) 
+                    @*|
+                    @Html.ActionLink("Delete", "Delete", new { id = item.NewsId })*@
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                IsShowPages = true
+            }, new { searchItem = ViewData["searchItem"] }))
+    </div>
+}

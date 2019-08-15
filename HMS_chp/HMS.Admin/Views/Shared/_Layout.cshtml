@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <link href="~/Content/images/favicon-hajj.jpg" rel="shortcut icon" type="image/x-icon" />
+
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        .imageprofile {
+            width: 100px;
+        }
+
+        .container {
+            height: 2500px;
+            margin-Top: -30px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+        }
+
+        body.loading {
+            overflow: hidden;
+        }
+
+            /* Anytime the body has the loading class, our
+        modal element will be visible */
+            body.loading .modal {
+                display: block;
+            }
+    </style>
+</head>
+
+<body>
+    @Html.Partial("_header")
+
+    <div id="page-container">
+        <!-- BEGIN SIDEBAR -->
+        @Html.Partial("_leftpanel")
+
+        <div id="page-content">
+            <div id="wrap">
+                <div id="page-heading">
+                    <ol class="breadcrumb">
+                        @*<li class="active"><a href="index.htm">Dashboard</a></li>*@
+                        @RenderSection("breadcrumb", required: false)
+                    </ol>
+
+                    <h1>@RenderSection("title", required: false)</h1>
+                    <div class="options">
+                        <div class="btn-toolbar">
+                            <button class="btn btn-default" id="daterangepicker2">
+                                <i class="fa fa-calendar-o"></i>
+                                @*<span class="hidden-xs hidden-sm">December 9, 2013 - January 8, 2014</span> <b class="caret"></b>*@
+                                <span class="hidden-xs hidden-sm">comparehajjpackages</span> @*<b class="caret"></b>*@
+                            </button>
+                            @*<button class="label-grape" id="daterangepicker2">
+                                    <div class="" style="width:200px">
+
+                                    <span class="hidden-xs hidden-sm">PSU Dashboard</span>
+                                        </div>
+                                </button>
+                                @*<div class="btn-group hidden-xs">
+                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cloud-download"></i><span class="hidden-xs hidden-sm hidden-md"> Export as</span> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Text File (*.txt)</a></li>
+                                        <li><a href="#">Excel File (*.xlsx)</a></li>
+                                        <li><a href="#">PDF File (*.pdf)</a></li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="btn btn-default hidden-xs"><i class="fa fa-cog"></i></a>*@
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+
+                                @Scripts.Render("~/bundles/jquery")
+                                @Scripts.Render("~/bundles/bootstrap")
+
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- container -->
+            </div> <!--wrap -->
+        </div>
+
+        <footer role="contentinfo">
+            <div class="clearfix">
+                <ul class="list-unstyled list-inline pull-left">
+                    <li>
+                        @*PSUDashboard is Powered by ICT*@
+                        &copy;@System.DateTime.Now.ToString("yyyy") Comparehajjpackages.com all rights reserved
+                    </li>
+                </ul>
+                <button class="pull-right btn btn-inverse-alt btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
+            </div>
+        </footer>
+        <div id="ajaxLoader" class="modal">
+            <p>Please Wait</p>
+        </div>
+    </div>
+    @Html.Partial("_footer")
+    @*<script src="~/assets/js/application.js"></script>
+        <script src="~/assets/demo/demo.js"></script>*@
+    @RenderSection("scripts", required: false)
+    @*<script type="text/javascript">
+        $("#document").ready(function () {
+        $("dl.dl-horizontal dd").each(function (index, value) {
+        if (value.innerHTML.trim() == '') {
+        $(this).html("NILL");
+        }
+        });
+        });
+        </script>*@
+</body>
+</html>

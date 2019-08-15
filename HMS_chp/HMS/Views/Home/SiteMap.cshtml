@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Site Map";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .divNarrative {
+        width: auto;
+        margin-left: 50px;
+        margin-right: auto;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+</style>
+
+
+<div class="row-fluid divNarrative">
+    <h4>Site map</h4>
+    @Html.MvcSiteMap().Menu(false, true, true)
+    
+    @Html.MvcSiteMap().SiteMapPath()
+
+    </div>

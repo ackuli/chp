@@ -1,0 +1,238 @@
+﻿@model HMS.Entities.Models.ContactU
+@using HMS.HtmlHelpers;
+@{
+    ViewBag.Title = "Contact Us";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.collapse').on('show.bs.collapse', function () {
+            var id = $(this).attr('id');
+            $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
+            $('a[href="#' + id + '"] .panel-title span').html('<i class="fa fa-chevron-down"></i>');
+        });
+        $('.collapse').on('hide.bs.collapse', function () {
+            var id = $(this).attr('id');
+            $('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
+            $('a[href="#' + id + '"] .panel-title span').html('<i class="fa fa-chevron-right"></i>');
+        });
+
+        location.hash && $(location.hash + '.collapse').collapse('show') && window.scrollBy(0, 0);
+    });
+</script>
+<style type="text/css">
+    .text-box.multi-line {
+        width: 48.7179%;
+    }
+
+    #Question {
+        height: 150px;
+    }
+
+    /*#askthescholer {
+        background-color: #D95902 !important;
+    }*/
+
+    /*#btnaskthescholer {
+        background-color: #D95902 !important;
+    }*/
+
+    #FAQ .panel-default {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border: 0 none;
+        box-shadow: none;
+        margin: 0 0 15px;
+    }
+
+    .fa {
+        display: inline-block;
+        font-family: FontAwesome;
+        font-feature-settings: normal;
+        font-kerning: auto;
+        font-language-override: normal;
+        font-size: inherit;
+        font-size-adjust: none;
+        font-stretch: normal;
+        font-style: normal;
+        font-synthesis: weight style;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 1;
+        text-rendering: auto;
+    }
+
+    .panel {
+        background-color: #F5F5DC;
+        border-radius: 4px;
+        color: black;
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .eventborder {
+        border: 1px solid #bbb;
+        padding: 20px;
+    }
+    .center-cntx {
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .panel-body {
+        font-size: small;
+        text-align: justify;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    a.accordion-toggle {
+        text-decoration: none;
+    }
+</style>
+
+@Html.Partial("_alertstoastr")
+@using (Html.BeginForm("Create", "ContactUs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+        <div class="row-fluid" style="margin-left:20px">
+        <h3> Have a question? We are happy to help.</h3>
+    </div>
+
+    <div class="row-fluid">
+        <div class="center-cntx">
+            <div class="span6 eventborder" id="FaqForContactUs">
+                <h4>FREQUENTLY ASKED QUESTIONS</h4>
+                @*<h6 class="first">Please read our FAQ before sending us a message.</h6>*@
+
+            <p>Please read our FAQ before sending us a message.</p>
+                
+                
+                
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                What is comparehajjpackages.com?
+                            </a>
+                        </div>
+                        <div></div>
+                        <div id="collapseOne" class="accordion-body in collapse" style="height: auto;">
+                            <div class="accordion-inner">
+                                Comparehajjpackages.com is a web-based search engine facilitating pilgrims to compare and book Hajj and ‘Umrah packages. We compare hundreds of packages to find you the best deal to match your requirements.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                Do I have to sign up to browse the site?  
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse" style="height: 0px;">
+                            <div class="accordion-inner">
+                                The use of Comparehajjpackages.com site is absolutely free. We do not ask the users to register or sign up to use the site unless you are registered to receive future deals or to download materials when we ask you to fill a form. When you find a package, we link you through directly to the advertisers.  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                How can I advertise on the site?
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                Advertising on the site is very easy and simple. If you are thinking of a commercial advertisement, please email us at advert@comparehajjpackages.com.  Alternatively you may contact us using our ‘Contact Us’ form, and select 'Advertisement Enquiry’ in the message type section. Commercial advert depends on subject to availability of space, advertisement policy and conditions.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                                What is the cost of advertising on the site?
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                It varies and depends on where you would like your advertise to appear on. For information about the advertisement cost please send an email at advert@comparehajjpackages.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                                How can we appear on Comparehajjpackages’ search results?
+                            </a>
+                        </div>
+                        <div id="collapseFive" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                If you are a travel agent, airline or hotel accommodation provider and wish to be considered to appear on Comparehajjpackages’ search results, please contact us using our contact us form and select 'Listing Enquiry' in the message type section.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                                How do I book my Hajj or ‘Umrah package?
+                            </a>
+                        </div>
+                        <div id="collapseSix" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                Comparehajjpackages.com is a web-based search engine facilitating pilgrims to compare and book Hajj and ‘Umrah packages. We do not take bookings or payments of any kind. Once you have found what you are looking for on our site, we simply transfer you to the travel agent, the airline or accommodation provider to complete your booking. This means your booking is with them, not with Comparehajjpackages.com. We do not hold any of your details related to any bookings you may have made.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+            <div class="span6 eventborder">
+                <h4>CONTACT US</h4>
+                <span>Still need help? Can't find what you're looking for?</span>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Email)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Subject)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Subject)
+                    @Html.ValidationMessageFor(model => model.Subject)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Message)
+                </div>
+               
+                <div class="editor-field">
+                    @Html.TextAreaFor(model => model.Message, new { rows = "6", cols = "20" })
+                    @Html.ValidationMessageFor(model => model.Message)
+                </div>
+                <div class="editor-field">
+                  @Html.reCaptcha()
+                  
+                </div>
+                @*<div class="g-recaptcha" data-sitekey="6Len9BQTAAAAAKX-5q_5HBjufbmnKq8-bQInUtb6"></div>*@
+                <p>
+                    <input type="submit" value="SEND" class="btn btn-primary" />
+                </p>
+            </div>
+        </div>
+    </div>
+}
+
+
+@*<script src='https://www.google.com/recaptcha/api.js'></script>*@

@@ -1,0 +1,103 @@
+﻿@model HMS.Entities.Models.Question
+@{
+    ViewBag.Title = "Quiz Test";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="Frequently asked questions about hajj and umrah" />
+    <meta name="Keywords" content="Quiz Test,Hajj Quiz " />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+    .backgroundcolor {
+        background: rgba(128, 128, 128, 0.23);
+        margin-bottom: 14px;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    text {
+        font-size: 16px;
+    }
+</style>
+
+@using (Html.BeginForm("quiztest", "Question", FormMethod.Post, new { }))
+{
+    @Html.HiddenFor(x => x.QuestionId)
+    @Html.HiddenFor(x => x.QuestionSLNo)
+    @Html.HiddenFor(x => x.QuizId)
+    <div style="width: 100%;margin-left: auto;margin-right: auto;">
+        <div class="row-fluid">
+            <div class="container-fluid">
+                <div class="span12 backgroundcolor">
+
+
+                    <div class="row-fluid">
+
+
+                        <div class="span12">
+                            <div class="row-fluid">
+
+
+                                <div class="span12 mobileview" style="margin:13px">
+                                    <div class="row-fluid">
+
+                                        <h4>@Model.QuestionSLNo<text>. </text> @Model.QuestionText</h4>
+
+                                        @if (Model.QuestionDetails.Count != 0)
+                                        {
+                                            <ol type="a">
+                                                @foreach (var item in Model.QuestionDetails)
+                                                {
+                                                    <li style="font-size:14px"><p>@item.QuestionDetailsText</p></li>
+                                                }
+                                            </ol>
+                                        }
+
+
+                                        @foreach (var choice in Model.AnswerChoices)
+                                        {
+                                            <ul>
+                                                <label class="radio">
+                                                  
+                                                    @Html.RadioButton("Answer", @choice.Choices) @choice.Choices
+                                                  
+                                                </label>
+                                            </ul>                                            
+                                        }
+
+                                        <div style="text-align:left">
+                                            <div style="text-align: left; margin-top: 5px;">
+                                                <input type="submit" class="btn-danger btn-large" value="Next" id="submitButton" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#QuestionId").val('@Model.QuestionId')
+        $("#QuizId").val('@Model.QuizId')
+        $("#QuestionSLNo").val('@Model.QuestionSLNo')
+    });
+</script>
+
+

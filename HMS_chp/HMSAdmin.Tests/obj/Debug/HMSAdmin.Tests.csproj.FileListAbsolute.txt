@@ -1,0 +1,56 @@
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\HMSAdmin.Tests.dll.config
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\HMSAdmin.Tests.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\HMSAdmin.Tests.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\Newtonsoft.Json.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Net.Http.Formatting.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Helpers.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Http.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Http.WebHost.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Mvc.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Razor.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\Newtonsoft.Json.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Net.Http.Formatting.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Helpers.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Http.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Http.WebHost.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Mvc.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.Razor.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\obj\Debug\HMSAdmin.Tests.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\obj\Debug\HMSAdmin.Tests.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMSAdmin.Tests\obj\Debug\HMSAdmin.Tests.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\HMSAdmin.Tests.dll.config
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\HMSAdmin.Tests.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\HMSAdmin.Tests.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\Newtonsoft.Json.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Net.Http.Formatting.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Helpers.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Http.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Http.WebHost.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Mvc.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Razor.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\Newtonsoft.Json.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Net.Http.Formatting.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Helpers.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Http.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Http.WebHost.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Mvc.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.Razor.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\obj\Debug\HMSAdmin.Tests.csprojResolveAssemblyReference.cache
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\obj\Debug\HMSAdmin.Tests.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMSAdmin.Tests\obj\Debug\HMSAdmin.Tests.pdb

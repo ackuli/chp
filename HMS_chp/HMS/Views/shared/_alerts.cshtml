@@ -1,0 +1,22 @@
+@using BootstrapSupport
+
+
+
+@if (TempData.ContainsKey(Alerts.ATTENTION))
+{
+    <div class="alert alert-block">
+        <a class="close"  href="#">x</a>
+        <h4 class="alert-heading">Attention!</h4>
+        @TempData[Alerts.ATTENTION]
+    </div>
+}
+@foreach(string key in Alerts.ALL.Except(new[] {Alerts.ATTENTION}))
+    {
+        if (TempData.ContainsKey(key))
+         {
+             <div class="alert alert-@key">
+                 <button type="button" class="close">x</button>
+                 @TempData[key]
+             </div>
+         }
+    }

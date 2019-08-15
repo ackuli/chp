@@ -1,0 +1,117 @@
+﻿@*@model HMS.Entities.ViewModels.VmSchQuesAns*@
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = '@Url.Content("~/QuestionAnswer/GetQuestionCategory")';
+        $("#TypeId").append($('<option/>', {
+            value: "",
+            text: "Please Select Question Category"
+        }));
+        $.ajax({
+            cache: false,
+            url: url,
+            type: "GET",
+            beforeSend: function () {
+            },
+            complete: function () {
+            },
+            success: function (data) {
+
+                $.each(data, function (index, itemData) {
+
+                    $("#TypeId").append($('<option />', {
+                        value: data[index]["Key"],
+                        text: data[index]["Value"]
+                    }));
+                });
+
+
+            },
+            error: function (x, e) {
+                //alert('error');
+            }
+        }); //end ajax call
+    });
+</script>
+
+
+<style type="text/css">
+    #searchItem {
+        width: 400px;
+    }
+</style>
+
+
+@using (Html.BeginForm("SearchByKeyWords", "QuestionAnswer"))
+{
+    <div id="SearchByKeyWords" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Search Question by Keywords</h3>
+        </div>
+        <div class="modal-body">
+
+
+            <div class="input-append">
+                <input required type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Search Question by Keywords" value="@ViewData[" searchitem"]">
+
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>&nbsp;Search
+                </button>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            @*<button class="btn btn-primary">Search</button>*@
+        </div>
+    </div>
+}
+@using (Html.BeginForm("CreateSearchCategoryForClient", "QuestionAnswer"))
+{
+    <div id="SearchQuestionbyCategory" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Search Question by Category</h3>
+        </div>
+        <div class="modal-body">
+            <div class="span12">
+                <div class="input-append">
+                    <select class="form-control" id="TypeId" name="TypeId" style="width:400px" required></select>
+                    <button type="submit" class="btn">
+                        <i class="icon-search"></i>&nbsp;Search
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            @*<button class="btn btn-primary">Search</button>*@
+        </div>
+    </div>
+}
+
+@using (Html.BeginForm("CreateForClient", "QuestionAnswer"))
+{
+    <div id="SubmitAQuestion" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Submit A Question</h3>
+        </div>
+        <div class="modal-body">
+
+           
+            <div class="input-append">
+                <input required type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Submit A Question" value="@ViewData["searchitem"]">
+
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>&nbsp;Search
+                </button>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </div>
+}

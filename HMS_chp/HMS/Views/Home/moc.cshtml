@@ -1,0 +1,659 @@
+﻿@model HMS.Entities.ViewModels.HomePageViewModel
+@{
+    ViewBag.Title = "Compare Hajj Packages";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="Coming Soon, the most comprehensive hajj and umrah website that will change the way people search and book haj and ‘umrah packages" />
+    <meta name="Keywords" content="haj, hajj, pilgrimage to mecca, hajj 2016,hajj packages, umrah package, umrah packages, hajj 2015, haji" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$("select").find("option[value='']").remove();
+        //$('.carousel').carousel({
+        //    interval: 1200
+        //});
+        //document.getElementById("red").checked = true;
+        $("#information").addClass("");
+        $('.InfoSlide').carousel({ interval: 3000 }).carousel('cycle');
+        var count = 0;
+        $("#humore").click(function () {
+            count++;
+            $("#ulhumore").toggle(function () {
+                if (count % 2 === 1) {
+                    $("#humore").html("HIDE TOPICS");
+                } else {
+                    $("#humore").html("MORE TOPICS");
+                }
+
+            });
+        });
+
+
+    })
+</script>
+
+<style type="text/css">
+    /*.infSliderBak {
+        background: url("../../Content/images/infSliderbackground.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+        min-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+        background-color: #000;
+        background-size: 96% 400px;
+        background-position: center;
+    }*/
+    #InfoSlide2 {
+        height: 20px;
+    }
+
+    .AdvertImg > a > img {
+        height: 200px;
+    }
+
+    #position2 img {
+        height: 350px;
+    }
+
+    #ulhumore li {
+        border-right: 1px solid #eee;
+        font-weight: bold;
+        list-style: outside none none;
+        margin-right: 10px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .borderRight {
+        border-right: 1px solid #DDD;
+    }
+
+    .hajjRouteBG {
+        background-color: rgb(233, 231, 232);
+        width: 100%;
+        text-align: center;
+    }
+
+    .imgHajjRoute {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        width: 75%;
+    }
+
+    .infomore {
+        color: #ff8c00;
+    }
+
+    .travelGuide {
+        text-align: left;
+        margin-left: 10px;
+        margin-right: auto;
+        /*width: 70%;*/
+    }
+
+    .Search .span8 {
+        background-image: linear-gradient(to bottom, #896821, #DFC878);
+    }
+
+    .position1 {
+        background-color: #948D73;
+    }
+
+        .position1 img {
+            padding: 1em;
+            width: 90%;
+            height: 230px;
+        }
+
+    .coomingsoonsearch {
+        padding: 1em;
+        width: 95%;
+    }
+    /*.position1 {
+        padding: 1em;
+        width: 50%;
+    }*/
+
+    .imgheight {
+        height: 280px;
+    }
+
+    .form {
+        margin: 0px;
+    }
+
+    .span4.position1 {
+        margin-left: 0px !important;
+    }
+    /*.row-fluid .Imgborder{
+        border:1px solid;
+    }*/
+    #btnhome {
+        background-color: #D95902 !important;
+    }
+
+    #divposition2 .item.AddClass.active {
+        height: 450px;
+    }
+
+    .registeryourinterest {
+        background-color: #896821;
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 95% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .registeryourinterest div {
+            background-color: #000000;
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-size: 1.6em;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            padding: 20px;
+            width: 90%;
+            text-align: center;
+        }
+
+    .divNarrative {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .thikborder {
+        border: 3px solid #ccc;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 280px;
+    }
+
+    .bordersemithik {
+        border-right: 2px solid #ccc;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 275px;
+    }
+
+    .fontcolorblue {
+        color: #2c66a8;
+    }
+
+    .carousel {
+        line-height: 1.5;
+    }
+</style>
+<div style="width: 98%;margin-left: auto;margin-right: auto;">
+    <div class="row-fluid Search">
+        <div class="span8">
+            @*<img class="coomingsoonsearch img-responsive" style="height:255px" src="~/Content/images/Home-hajj-search.gif" />*@
+            @using (Html.BeginForm("PackagesInfoList", "PackagesInfo", FormMethod.Post, new { @class = "form" }))
+            {
+                @Html.ValidationSummary(true)
+                <div class="row-fluid type">
+                    <label class="checkbox inline">
+                        Select Package Type :
+                    </label>
+                    <label class="checkbox inline">
+                        @*<input type="radio" name="PackageType" id="IsHajj" value="IsHajj">*@
+                        @Html.RadioButton("IsHajjUmrah", "1", true)
+                        Hajj
+                    </label>
+                    <label class="checkbox inline">
+                        @*<input type="radio" name="PackageType" id="IsUmrah" value="IsUmrah">*@
+                        @Html.RadioButton("IsHajjUmrah", "2")
+
+                        Umrah
+                    </label>
+                </div>
+                <br>
+                <div class="row-fluid marginLeft">
+                    <div class="span6">
+                        <label>
+                            From
+                        </label>
+                        @Html.TextBoxFor(model => model.From, null, new { placeholder = "Select your destination", Value = "United Kingdom-all airports", @readonly = "readonly" })
+
+                    </div>
+                    <div class="span5">
+                        <label>
+                            Duration
+                        </label>
+                        @Html.DropDownListFor(model => model.DurationId, new SelectList(Model.kvplistDurations, "Key", "Value", Model.DurationId), "Any", new { })
+                        @*@Html.ValidationMessageFor(model => model.DurationId)*@
+
+                    </div>
+                </div>
+                <br />
+                <div class="row-fluid marginLeft">
+                    <div class=" span12">
+                        <div class="span6">
+                            <label>
+                                People per room
+                            </label>
+                            @*required = "required"*@
+                            @Html.DropDownListFor(model => model.PeoplePerRoomsId, new SelectList(Model.kvplistPeoplePerRoom, "Key", "Value", Model.PeoplePerRoomsId), "Any", new { })
+                            @*@Html.ValidationMessageFor(model => model.PeoplePerRoomsId)*@
+
+                        </div>
+                        <div class="span3">
+                            <label>
+                                Hotel class
+                            </label>
+                            @Html.DropDownListFor(model => model.HotelclassId, new SelectList(Model.kvplistHotelClass, "Key", "Value", Model.HotelclassId), "Any", new { })
+                            @*@Html.ValidationMessageFor(model => model.HotelclassId)*@
+
+                        </div>
+                        <div class="span2">
+                            <label>
+                                Shifting
+                            </label>
+                            @Html.DropDownListFor(model => model.ShiftingId, new SelectList(Model.kvplistShifting, "Key", "Value", Model.ShiftingId), "Any", new { })
+                            @*@Html.ValidationMessageFor(model => model.ShiftingId)*@
+
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <button><img class="RecentSearchIMG" src="../../Content/images/recentseacrh_btn.png" />Recent Search</button>
+                        <button type="submit" class="btn-large btn-danger pull-right" style="margin-right: 30px">
+                            Search<i class="icon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="span4 Imgborder" id="position1">
+            @foreach (var item in Model.advertisePosition.ToList())
+            {
+                if (item.TargetId == "position1")
+                {
+
+                    <div class="infSliderBak">
+                        <div class="carousel slide InfoSlide" id="InfoSlide1">
+                            <ol class="carousel-indicators">
+                                <li class="" data-slide-to="0" data-target=".InfoSlide"></li>
+                                <li data-slide-to="1" data-target=".InfoSlide" class="active"></li>
+                                <li data-slide-to="2" data-target=".InfoSlide" class=""></li>
+                                <li data-slide-to="3" data-target=".InfoSlide" class=""></li>
+                                <li data-slide-to="4" data-target=".InfoSlide" class=""></li>
+                                <li data-slide-to="5" data-target=".InfoSlide" class=""></li>
+                            </ol>
+                            <div class="carousel-inner" style="text-align: justify">
+                                @{bool flag1 = false;
+                                foreach (var item1 in item.Advertises.ToList())
+                                {
+                                    foreach (var binaryObject in item1.binaryObjectList)
+                                    {
+                                        if (!flag1)
+                                        {
+                                            <div class="item active">
+
+                                                <img class="position1 imgheight img-responsive" src="~/binaryObjects/GetBinaryObject?BinaryObjectsId=@binaryObject.BinaryObjectsId &RefObjectKey=@binaryObject.RefObjectKey &objectTypeId=@binaryObject.RefObjectTypeId">
+
+                                            </div>
+                                            flag1 = true;
+                                        }
+                                        else
+                                        {
+                                            <div class="item">
+                                                <img class="position1 imgheight" src="~/binaryObjects/GetBinaryObject?BinaryObjectsId=@binaryObject.BinaryObjectsId &RefObjectKey=@binaryObject.RefObjectKey &objectTypeId=@binaryObject.RefObjectTypeId">
+                                            </div>
+                                        }
+                                    }
+
+                                }
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                }
+            }
+
+        </div>
+
+    </div>
+    <div class="row-fluid packege" style="margin-bottom: 10px">
+        <h4 style="margin-left: 10px;color: #3c4a14">
+            Featured Packages
+        </h4>
+        <hr />
+        <div class="row-fluid divNarrative">
+            <div class="span10">
+                <div class="autoplay">
+                    @{
+                        int i = 0;
+
+                        foreach (var featuredPackages in @Model.lstFeaturedPackages)
+                        {
+
+                            <div id="gkComponentWrap" class="gkMain">
+                                <div class="box nsp color1">
+                                    <div>
+                                        <h4 style="margin-left: 15px;"><span><img style="display: inline ;width:35px; height: 25px; overflow: hidden;" class="nspImage tleft fleft" src="~/binaryObjects/GetBinaryObjectById?id=@featuredPackages.ClientId&objectTypeId=9" /> @featuredPackages.Client.ClientName</span></h4>
+                                        <div class="content">
+                                            <div class="nspMain nspFs100 activated" id="nsp-nsp_236" style="width:100%;">
+                                                <div class="nspArts right" style="width:100%;">
+                                                    <div style="width: 225px; overflow: hidden;" class="nspArtScroll1">
+                                                        <div style="width: 100000px;" class="nspArtScroll2">
+                                                            <div style="width: 225px; float: left;" class="nspArtPage">
+                                                                <div class="nspArt" style="width:100%;">
+                                                                    <div style="padding:0 0 30px">
+                                                                        @if (i == 0)
+                                                                        {
+                                                                            <img class="nspImage tleft fleft" src="../../Content/images/featuredpackage1.png" alt="Featured package Image" style="margin:0 0 12px;" title="Featured package Image">
+                                                                            i++;
+                                                                        }
+                                                                        else if (i == 1)
+                                                                        {
+                                                                            <img class="nspImage tleft fleft" src="../../Content/images/featuredpackage2.png" alt="Featured package Image" style="margin:0 0 12px;" title="Featured package Image">
+                                                                            i++;
+                                                                        }
+                                                                        else if (i == 2)
+                                                                        {
+                                                                            <img class="nspImage tleft fleft" src="../../Content/images/featuredpackage3.png" alt="Featured package Image" style="margin:0 0 12px;" title="Featured package Image">
+                                                                            i++;
+                                                                        }
+                                                                        else if (i == 3)
+                                                                        {
+                                                                            <img class="nspImage tleft fleft" src="../../Content/images/featuredpackage4.png" alt="Featured package Image" style="margin:0 0 12px;" title="Featured package Image">
+                                                                            i++;
+                                                                        }
+                                                                        else if (i == 4)
+                                                                        {
+                                                                            <img class="nspImage tleft fleft" src="../../Content/images/featuredpackage5.png" alt="Featured package Image" style="margin:0 0 12px;" title="Featured package Image">
+                                                                            i++;
+                                                                        }
+                                                                        else if (i == 5)
+                                                                        {
+                                                                            <img class="nspImage tleft fleft" src="../../Content/images/featuredpackage6.png" alt="Featured package Image" style="margin:0 0 12px;" title="Featured package Image">
+                                                                            i = 0;
+                                                                        }
+                                                                      
+                                                                            <h4 class="nspHeader tleft fnone">
+                                                                                <strong>@featuredPackages.PackageName 
+                                                                                @if (@featuredPackages.PackageTypeId == 1)
+                                                                                {
+                                                                                   <b>(</b> @featuredPackages.Shifting.ShiftingName<b>)</b>
+                                                                                }
+                                                                                </strong>
+                                                                               
+                                                                        </h4>
+                                                                        
+                                                                        
+                                                                        <h3 style="color: #990000; font-weight: bold;">
+                                                                            <span>@featuredPackages.Duration1.DuratioName</span><br />
+                                                                            <span>£@featuredPackages.PricePerPerson</span>
+                                                                        </h3>
+                                                                        @if (@featuredPackages.IsFlightDepRetDateExist)
+                                                                        {
+                                                                            <h4 class="nspHeader tleft fnone">
+                                                                                <strong>Depart:</strong> <b>@featuredPackages.FlightsDepart</b>
+
+                                                                            </h4>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <h4 class="nspHeader tleft fnone">
+                                                                                <strong>Depart:</strong>  <b>[contact agent for details]</b>
+                                                                            </h4>
+                                                                        }
+                                                                        <div class="pricetag_clear"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @if (@featuredPackages.PackageDisplayTypeId == 1)
+                                                            {
+                                                                <a class="readon  fleft" style="background-color: #4d79ff;margin-bottom:10px; margin-left: 15px;" href="~/PackagesInfo/PackagesInfoDetails?id=@featuredPackages.PackageId" target="_blank">View Details</a>
+                                                            }
+
+                                                            else if (@featuredPackages.PackageDisplayTypeId == 2)
+                                                            {
+                                                                <a class="readon  fleft" style="background-color: #4d79ff;margin-bottom:10px; margin-left: 15px;" href="@featuredPackages.PackageDisplayInput" target="_blank">View Details</a>
+                                                            }
+                                                            else if (@featuredPackages.PackageDisplayTypeId == 3)
+                                                            {
+                                                                <a class="readon  fleft" style="background-color: #4d79ff;margin-bottom:10px; margin-left: 15px;" href="~/binaryObjects/GetPDFBinaryObjectById?id=@featuredPackages.PackageId&objectTypeId=10" target="_blank">View Details</a>
+
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    }
+                </div>
+                <div class="row-fluid registeryourinterest">
+                    <div class="">
+                        Register your interest for future Hajj and 'Umrah deals (coming next)
+                    </div>
+                </div>
+            </div>
+            @*<div class="span9">
+                    <div class="row-fluid">
+                        @Html.Partial("~/Views/Package/PackageInfo.cshtml", Model.lstPackages)
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12 panel">
+                            Register your interest for @System.DateTime.Now.ToString("yyyy") Hajj and Umrah
+                            package
+                        </div>
+                    </div>
+                    <div class="row-fluid" style="margin-top: 20px">
+                        <div class="span4">
+                            @Model.position3
+                        </div>
+                        <div class="span3">
+                            <h5>
+                                About CHP
+                            </h5>
+                            <hr />
+                            <p style="text-align: justify">
+                                it is a long established fact that a reader will be distracted by the readable content
+                                of a page when looking at its layout. The point of using Lorem Ipsum is that it
+                                has a more-or-less normal distribution of letters
+                            </p>
+                        </div>
+                        <div class="span3">
+                            <h5>
+                                Free!
+                            </h5>
+                            <hr />
+                            <p style="text-align: justify">
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                                in their infancy.
+                            </p>
+                        </div>
+                        <div class="span2">
+
+                            @Model.position4
+                        </div>
+                    </div>
+                </div>*@
+            @foreach (var item12 in Model.advertisePosition.ToList())
+            {
+
+
+                if (item12.TargetId == "position2")
+                {
+                    <div class="span2" id="position2">
+                        <div class="infSliderBak">
+                            <div class="carousel slide InfoSlide" id="InfoSlide3">
+                                <ol class="carousel-indicators">
+                                    <li class="" data-slide-to="0" data-target=".InfoSlide3"></li>
+                                    <li data-slide-to="1" data-target=".InfoSlide3" class="active"></li>
+                                    <li data-slide-to="2" data-target=".InfoSlide3" class=""></li>
+                                    <li data-slide-to="3" data-target=".InfoSlide3" class=""></li>
+                                    <li data-slide-to="4" data-target=".InfoSlide3" class=""></li>
+                                    <li data-slide-to="5" data-target=".InfoSlide3" class=""></li>
+                                </ol>
+                                <div class="carousel-inner" style="text-align: justify">
+                                    @{bool flag2 = false;
+                                    foreach (var item1 in item12.Advertises.ToList())
+                                    {
+
+                                        if (!flag2)
+                                        {
+                                            <div class="item active AdvertImg">
+
+                                                @MvcHtmlString.Create(item1.AdvertiseContent);
+
+                                            </div>
+                                            flag2 = true;
+                                        }
+                                        else
+                                        {
+                                            <div class="item AdvertImg">
+                                                @MvcHtmlString.Create(item1.AdvertiseContent);
+                                            </div>
+                                        }
+                                    }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="row-fluid divNarrative">
+            <div class="span5 thikborder">
+                @*<h6 class="fontcolorblue" style="color:  #3c4a14">Your Hajj & Umrah experience</h6>*@
+                <h6 class="fontcolorblue">Your Hajj & Umrah experience</h6>
+                <div class="infSliderBak">
+                    <div class="carousel slide InfoSlide" id="InfoSlide2">
+                        <ol class="carousel-indicators">
+                            <li class="" data-slide-to="0" data-target=".InfoSlide"></li>
+                            <li data-slide-to="1" data-target=".InfoSlide" class="active"></li>
+                            <li data-slide-to="2" data-target=".InfoSlide" class=""></li>
+                            <li data-slide-to="3" data-target=".InfoSlide" class=""></li>
+                            <li data-slide-to="4" data-target=".InfoSlide" class=""></li>
+                            <li data-slide-to="5" data-target=".InfoSlide" class=""></li>
+                        </ol>
+                        <div class="carousel-inner" style="text-align: left">
+                            @{bool flag = false;
+                            foreach (var item1222 in Model.experience)
+                            {
+                                if (!flag)
+                                {
+                                    <div class="item active">
+                                        <span>
+                                            @MvcHtmlString.Create(@item1222.Narratives)
+
+                                            <h6 class="pull-right">@item1222.Name</h6>
+                                        </span>
+                                    </div>
+                                    flag = true;
+                                }
+                                else
+                                {
+                                    <div class="item">
+                                        <span>
+                                            @MvcHtmlString.Create(@item1222.Narratives)
+
+                                            <h6 class="pull-right">@item1222.Name</h6>
+                                        </span>
+                                    </div>
+                                }
+                            }
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="span7 thikborder">
+
+                <div class="row-fluid">
+                    <div class="span5 bordersemithik">
+                        <h6 class="fontcolorblue">What is CHP?</h6>
+                        Comparehajjpackages.com is a web based search engine facilitating pilgrims to compare and book hajj and umrah packages. We compare hundreds of packages to find you the best deal to match your requirements.
+
+                    </div>
+                    <div class="span5 bordersemithik">
+                        <h6 class="fontcolorblue">
+                            Free! No hidden charges?
+                        </h6>
+                        The use of Comparehajjpackages.com site is absolutely free. We don’t even ask user to register or sign up to use the site, unless you are interested to receive future deals. When you find a package, we link you through directly to the advertisers.
+                    </div>
+                    <div style="text-align: left" class="span2">
+
+                        <a href="../Footer/UnderstandingPackages">
+                            <img class="img-responsive" alt="" src="~/Content/images/Dontknow.png" />
+
+                            <h4 style="color: red"> Don't know!</h4><h5 style="color: red">How to understand a hajj package?</h5>
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.autoplay').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: false,
+            responsive: [
+    {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+        }
+    },
+     {
+         breakpoint: 800,
+         settings: {
+             slidesToShow: 2,
+             slidesToScroll: 2
+         }
+     },
+    {
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+        }
+    },
+    {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }
+            ]
+        });
+    });
+</script>

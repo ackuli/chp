@@ -1,0 +1,139 @@
+﻿@model HMS.Entities.Models.Advertis
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Advertis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvertisePosition.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvertisePosition.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvertiseType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvertiseType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientInfo.ClientIdentityId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientInfo.ClientIdentityId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Extension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Extension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdvertiseContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdvertiseContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDefault)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDefault)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SetBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SetBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SetDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SetDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriorityLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriorityLevel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AdvertiseId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

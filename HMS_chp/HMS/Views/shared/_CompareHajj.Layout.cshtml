@@ -1,0 +1,300 @@
+﻿@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>
+    @RenderSection("head", required: false) @Html.Partial("_html5shiv")
+    @* favicons and touch icons go here *@
+    <style type="text/css">
+        .user-details
+        {
+            margin-bottom: 3px;
+            margin-top: 10px;
+        }
+        .user-details img
+        {
+            float: left;
+        }
+        .welcome-text
+        {
+            color: #428BCA;
+            font-size: 12px;
+            padding-top: 5px;
+            text-align: right;
+        }
+        
+        
+        #manu-top > ul > li
+        {
+            background: none repeat scroll 0 0 #FAFAFA;
+            border-radius: 2px 2px 0 0;
+            float: left;
+            margin-right: 1px;
+            min-width: 95px;
+            transition: all 0.2s ease 0s;
+        }
+        #manu-top ul li a
+        {
+            color: #404040;
+            display: block;
+            font-size: 13px;
+            line-height: 18px;
+            padding: 10px;
+            text-align: left;
+        }
+        .socialMedia .span8
+        {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header row-fluid">
+            <div class="row-fluid">
+                <div class="span6">
+                    <img class="logo" src="../../Content/images/CHP_logo.png"/>
+                </div>
+                <div class="span6">
+                    <div class="row-fluid">
+                        <div class="input-append pull-right">
+                            <input class="span8" id="appendedInput" value="United Kingdom" readonly="readonly" type="text">
+                            <img class="add-on" src="../../Content/images/uk.png" />
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="menu">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="">
+                                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                    </span></a>@*<a href="#" class="brand"></a>*@
+                                <div class="nav-collapse navbar-responsive-collapse in collapse" style="height: auto;">
+                                    <ul class="nav">
+                                        <li class="active"><a href="#">Home</a></li>
+                                        <li><a href="#">News & Event</a></li>
+                                        <li><a href="#">Information</a></li>
+                                        <li><a href="#">Send Me Deals</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.nav-collapse -->
+                            </div>
+                        </div>
+                        <!-- /navbar-inner -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="clearfix">
+        </div>
+        <div class="row-fluid">
+            @Scripts.Render("~/js") @RenderSection("Scripts", required: false)
+            <script type="text/javascript">
+                var Hajj;
+                $(document).ready(function () {
+                    Hajj = {
+                        getItemByAjax: function (url, param) {
+                            var option = {
+                                type: "POST",
+                                url: url,
+                                data: param,
+                                contentType: "application/json;charset=utf-8",
+                                dataType: "json",
+                                async: false,
+                                success: function (item) {
+                                },
+                                error: function (msg) {
+                                    //alert("failed: " + msg);
+                                }
+
+                            };
+                            returnText = $.ajax(option).responseText;
+                            return returnText;
+                        }
+                    };
+                });
+            </script>
+            @RenderBody()
+        </div>
+        <hr>
+        <footer>
+            <div class="row-fluid">
+                <div class="span12 backgroundColor">
+                    <h2>
+                        Comparehajjpackages.com</h2>
+                    <div class="row-fluid">
+                        <div class="content contentBG">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <h5>
+                                        General</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a>Mobile Site</a></li>
+                                        <li><a>FAQ</a></li>
+                                        <li><a>Site Map</a></li>
+                                        <li><a>About us</a></li>
+                                        <li><a>Private Policy</a></li>
+                                        <li><a>Contact us</a></li>
+                                        <li><a>Affiliate</a></li>
+                                        <li><a>Advertise</a></li>
+                                        <li><a>Terms and conditions</a></li>
+                                        <li><a>Cookie Policy</a></li>
+                                        <li><a>Widgets</a></li>
+                                        <li><a>API</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h5>
+                                        Information</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a href="#">Understanding Packages</a></li>
+                                        <li><a href="#">Visas</a></li>
+                                        <li><a href="#">Means of Travel</a></li>
+                                        <li><a href="#">Health Considerations, including inoculations</a></li>
+                                        <li><a href="#">Travel item recommandations</a></li>
+                                        <li><a href="#">Accomodation</a></li>
+                                        <li><a href="#">Weather</a></li>
+                                        <li><a href="#">Facts About Saudi Arabia</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h5>
+                                        Noteable Events</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a href="#">Eid ul Fitr</a></li>
+                                        <li><a href="#">Eid ul Adha</a></li>
+                                        <li><a href="#">Lailatul Qader</a></li>
+                                        <li><a href="#">Moharram</a></li>
+                                    </ul>
+                                    <h5>
+                                        Popular Guides</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a href="#">Imrah 2013 Walkthrough</a></li>
+                                        <li><a href="#">How to permorm Umrah</a></li>
+                                        <li><a href="#">How to perform Hajj</a></li>
+                                        <li><a href="#">History of Hajj</a></li>
+                                        <li><a href="#">Important Hajj Prayers</a></li>
+                                        <li><a href="#">Performing Hajj Salah</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h5>
+                                        General</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a href="#">ATOL</a></li>
+                                        <li><a href="#">IATA</a></li>
+                                        <li><a href="#">ABTA</a></li>
+                                        <li><a href="#">Ministry of Hajj</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid siteCountry">
+                        <div class="content">
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/uk.png" />Comparehajjpackages(UK & Ireland) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/france.png" />Comparehajjpackages(France) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/southafrica.png" />Comparehajjpackages(Southafrica)
+                                    </a>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/usa.png" />Comparehajjpackages(USA) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/germany.png" />Comparehajjpackages(Germany) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/newzeland.png" />Comparehajjpackages(New zeland)
+                                    </a>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/canada.png" />Comparehajjpackages(Canada) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/spain.png" />Comparehajjpackages(Spain) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/malaysia.png" />Comparehajjpackages(Malaysia)
+                                    </a>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/australia.png" />Comparehajjpackages(Australia)
+                                    </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/italy.png" />Comparehajjpackages(Italy) </a>
+                                </div>
+                                <div class="span4">
+                                    <a href="#">
+                                        <img src="../../Content/images/china.png" />Comparehajjpackages(China) </a>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="row-fluid contentBG" style="text-align: center">
+                        <br />
+                        <p style="font-size: 1.1em">
+                            &copy;@System.DateTime.Now.ToString("yyyy") Comparehajjpackages.com all rights reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- container -->
+</body>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c438cf42ad4b0d"></script>
+<script type="text/javascript">
+    addthis.layers({
+        'theme': 'transparent',
+        'share': {
+            'position': 'left',
+            'numPreferredServices': 5
+        },
+        'follow': {
+            'services': []
+        }
+    });
+</script>
+<!-- AddThis Smart Layers END -->
+<!-- AddThis Follow END -->
+<!-- AddThis Follow BEGIN -->
+<!-- AddThis Follow END -->
+</html>

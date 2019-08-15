@@ -1,0 +1,318 @@
+﻿@{
+    ViewBag.Title = "Hajj Rites at a glance";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="hajj rites at a glance" />
+    <meta name="Keywords" content="hajj rites at a glance, step by step guide to hajj, how to perform hajj, how to perform tamattu hajj, how to perform qiran hajj, how to perform ifrad hajj" />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+<style type="text/css">
+    #btninformation {
+        background-color: #D95902 !important;
+    }
+
+
+
+
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+
+
+    h2 {
+        /*font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;*/
+        padding: 0 45px;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+
+    section.page-container {
+        display: flex;
+        padding: 0 35px;
+    }
+
+    .main-content {
+        flex-basis: 70%;
+        margin: 0 10px 1rem;
+    }
+
+    aside {
+        flex-basis: 30%;
+        background: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+
+
+    .hero-banner {
+        margin-bottom: 1rem;
+        height: 400px;
+        width: 100%;
+        background-color: #4d4d4d;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .hero-banner img {
+            display: block;
+        }
+
+         .hero-banner span {
+            display: block;
+            padding: 5px;
+            color: #888888;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+          
+    /*.sidebar-ads {
+        padding-top: 10px;
+        padding-right: 30px;
+        margin-bottom: 1rem;
+        flex: 1;
+       align-items: center;
+      
+    }*/
+         .post-list {
+        display:flex;
+        padding-top:  10px;
+         /*flex: 1;*/
+         align-items: center;
+        flex-wrap: wrap;
+        align-content: flex-end;
+
+    }
+
+        .post-list h4 {
+            color: #252525;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0 0.5rem;
+            border-bottom: 1px solid #aeaeac;
+         
+            }
+
+        .post-list ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .post-list ul li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .post-list ul li a {
+                padding: 0.8rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: #252525;
+                background: #D1D1D1;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid #aeaeac;
+                box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
+            }
+
+                .post-list ul li a:hover {
+                    text-decoration: none;
+                }
+
+                .post-list ul li a img {
+                    border-radius: 10px;
+                    margin-bottom: 0.8rem;
+                    border: 1px solid #aeaeac;
+                }
+
+                .post-list ul li a span {
+                    padding-left: 0.8rem;
+                    flex: 1;
+                }
+
+
+    /* call - out container */
+.call-outs-container {
+   max-width: 1400px;
+  margin: 20px auto 0 auto;
+  }
+   
+.call-out {
+
+ padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  flex-basis: 30%;
+  border: solid;
+  border-style: ridge;
+align-items:center;
+   }
+
+    .call-out a {color: #f2f2f2;
+  background-color: transparent;
+  text-decoration: none;
+    }
+
+.call-out:nth-child(1) {background-color: #4f81bd;}
+.call-out:nth-child(2) {background-color: #9b2d2a;}
+.call-out:nth-child(3) {background-color:  #8064a2;}
+
+
+
+
+
+    /*//breadcrumb starts here//*/
+    ul.breadcrumb {
+        padding: 8px 10px;
+        list-style: none;
+        background-color: #eee;
+    }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+            ul.breadcrumb li + li:before {
+                padding: 5px;
+                color: black;
+                content: "/\00a0";
+            }
+
+            ul.breadcrumb li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+
+                ul.breadcrumb li a:hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
+
+    /*//breadcrumb ends//*/
+</style>
+
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/GettingReadyForHajj">Getting Ready for Hajj</a></li>
+    <li><a href="../Footer/HajjAndHajjRites">Hajj and Hajj Rites</a></li>
+    <li>Hajj rites at a glance</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+
+
+<h2>Hajj rites at a glance</h2>
+
+<section class="page-container">
+    <div class="main-content">
+        <div class="hero-banner">
+            <img src="~/Content/images/hajj_rites_at_a_glance.jpg" alt="hajj_rites_at_a_glance" />
+
+            <span>Step by step guide to hajj</span>
+        </div>
+        <br />
+        <p> Many people find difficult to absorb and retain vast amount of information on hajj rites when encounter for the first time. Below we have provided a quick snapshot on each hajj type. This is particularly to help pilgrims to visualise the whole process of hajj before reading all the rituals in details. However, it is paramount that if anybody is thinking of performing hajj, he or she must read all the sections (e.g. Miqat, Ihram, Tawaf, Sa’i etc.) of this guide to fully understand rulings on each ritual.  </p>
+
+        <h3>Select the type of hajj you want to find out more:</h3>
+
+        <div class="call-outs-container">
+            <div class="call-out">
+
+                <p style="text-align:center; font-size:x-large;">
+                    <a href="../Footer/TamattuHajjataglance">
+
+                        Tammattu Hajj at a glance
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="call-out">
+
+                <p style="text-align:center; font-size:x-large;">
+                    <a href="~/Footer/QiranHajjataglance">
+
+                        Qiran Hajj at a glance
+                    </a>
+                </p>
+            </div>
+            <div class="call-out">
+
+                <p style="text-align:center; font-size:x-large;">
+                    <a class="pane a" style="width:276px" href="~/Footer/IfradHajjataglance">
+
+                        Ifrad Hajj at a glance
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <aside>
+       
+        <div class="post-list">
+            <h4>Most Searched</h4>
+
+
+            <ul>
+                <li>
+                    <a href="../Footer/WhichTypeHajjChoose">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Which type of Hajj to choose?</strong> There are three types of Hajj: Ifrad, Qiran and Tamattu. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Footer/miqat">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Path.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="miqat diagram" />
+                        <span style="color: #004d66"><strong>  What is miqat and rulings on miqat? </strong> The literal meaning of miqat is “a stated time or place.”  </span>
+
+                    </a>
+
+
+
+
+                </li>
+                <li>
+                    <a href="../Footer/StepByStepGuideToTammattuHajj">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Step by step guide to Tammattu Hajj</strong> Tammattu Hajj consists of both ‘Umrah and Hajj.</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        @*<div class="sidebar-ads">*@
+            @*<img src="http://via.placeholder.com/400x750" alt="Alternate Text" />*@
+
+
+            @*<img src="~/content/images/Add3NewsEvent.jpg" att="Alternate Text" align="right" class="img-responsive" />
+        </div>*@
+
+
+
+
+    </aside>
+
+</section>
+

@@ -1,0 +1,265 @@
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.dll.config
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Antlr3.Runtime.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Elmah.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Elmah.Mvc.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\EntityFramework.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\EntityFramework.SqlServer.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Google.GData.Analytics.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Google.GData.Client.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Google.GData.Extensions.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.Entities.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.Service.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.utility.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HtmlAgilityPack.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.ServiceLocation.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Mvc.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Web.Infrastructure.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Web.Mvc.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\MvcPaging.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Newtonsoft.Json.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.Ef6.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Service.Pattern.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Net.Http.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Net.Http.WebRequest.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Helpers.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Mvc.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Optimization.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Razor.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Deployment.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Razor.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\UnityConfiguration.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\WebActivatorEx.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\WebGrease.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\LinqKit.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.Ef6.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Service.Pattern.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.Entities.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.Service.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HMS.utility.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\EntityFramework.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\EntityFramework.SqlServer.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HtmlAgilityPack.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\HtmlAgilityPack.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.ServiceLocation.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Mvc.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Helpers.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Mvc.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.Razor.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Deployment.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Razor.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\Newtonsoft.Json.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Net.Http.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\System.Net.Http.WebRequest.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\bin\UnityConfiguration.xml
+D:\CHP\visual studio\Hajj\HMS\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache
+D:\CHP\visual studio\Hajj\HMS\HMS\obj\Debug\HMS.dll
+D:\CHP\visual studio\Hajj\HMS\HMS\obj\Debug\HMS.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.dll.config
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Antlr3.Runtime.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\CKFinder.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Elmah.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Elmah.Mvc.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\EntityFramework.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\EntityFramework.SqlServer.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Google.GData.Analytics.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Google.GData.Client.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Google.GData.Extensions.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.Admin.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.Entities.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.Service.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.utility.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HtmlAgilityPack.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.ServiceLocation.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Configuration.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Mvc.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Web.Infrastructure.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Web.Mvc.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\MvcPaging.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\MvcSiteMapProvider.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\MvcSiteMapProvider.WebActivator.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Newtonsoft.Json.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.Ef6.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Service.Pattern.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Net.Http.Formatting.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Helpers.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Http.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Http.WebHost.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Mvc.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Optimization.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Razor.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Deployment.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Razor.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\UnityConfiguration.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\WebActivatorEx.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\WebGrease.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\LinqKit.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Owin.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.AspNet.Identity.Core.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\BundleTransformer.Core.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Security.Cookies.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Security.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.AspNet.Identity.Owin.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Security.OAuth.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.Ef6.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Repository.Pattern.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Service.Pattern.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.Admin.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.Entities.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.Service.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HMS.utility.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\CKFinder.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\EntityFramework.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\EntityFramework.SqlServer.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HtmlAgilityPack.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\HtmlAgilityPack.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.ServiceLocation.pdb
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.ServiceLocation.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Configuration.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.Mvc.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\MvcSiteMapProvider.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\MvcSiteMapProvider.WebActivator.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Newtonsoft.Json.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Net.Http.Formatting.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Helpers.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Http.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Http.WebHost.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Mvc.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.Razor.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Deployment.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\System.Web.WebPages.Razor.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\UnityConfiguration.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.AspNet.Identity.Core.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Security.Cookies.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Security.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.AspNet.Identity.Owin.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\Microsoft.Owin.Security.OAuth.xml
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\bin\ru-ru\BundleTransformer.Core.resources.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\obj\Debug\HMS.dll
+P:\CHP\visual studio\visual studio\Hajj\HMS\HMS\obj\Debug\HMS.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.dll.config
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Antlr3.Runtime.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\CKFinder.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Elmah.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Elmah.Mvc.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\EntityFramework.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\EntityFramework.SqlServer.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Google.GData.Analytics.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Google.GData.Client.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Google.GData.Extensions.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.Admin.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.Entities.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.Service.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.utility.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HtmlAgilityPack.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.ServiceLocation.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.Configuration.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.Mvc.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Web.Infrastructure.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Web.Mvc.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\MvcPaging.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\MvcSiteMapProvider.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\MvcSiteMapProvider.WebActivator.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Newtonsoft.Json.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Repository.Pattern.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Repository.Pattern.Ef6.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Service.Pattern.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Net.Http.Formatting.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Helpers.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Http.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Http.WebHost.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Mvc.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Optimization.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Razor.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.WebPages.Deployment.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.WebPages.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.WebPages.Razor.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\UnityConfiguration.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\WebActivatorEx.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\WebGrease.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\LinqKit.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Owin.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.AspNet.Identity.Core.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\BundleTransformer.Core.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Security.Cookies.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Security.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.AspNet.Identity.Owin.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Security.OAuth.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Repository.Pattern.Ef6.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Repository.Pattern.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Service.Pattern.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.Admin.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.Entities.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.Service.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HMS.utility.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\CKFinder.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\EntityFramework.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\EntityFramework.SqlServer.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HtmlAgilityPack.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\HtmlAgilityPack.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.ServiceLocation.pdb
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.ServiceLocation.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.Configuration.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.Mvc.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\MvcSiteMapProvider.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\MvcSiteMapProvider.WebActivator.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Newtonsoft.Json.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Net.Http.Formatting.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Helpers.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Http.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Http.WebHost.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Mvc.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.Razor.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.WebPages.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.WebPages.Deployment.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\System.Web.WebPages.Razor.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\UnityConfiguration.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.AspNet.Identity.Core.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Security.Cookies.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Security.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.AspNet.Identity.Owin.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\Microsoft.Owin.Security.OAuth.xml
+P:\CHP\Chp_git\chp\HMS_chp\HMS\bin\ru-ru\BundleTransformer.Core.resources.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\obj\Debug\HMS.csprojResolveAssemblyReference.cache
+P:\CHP\Chp_git\chp\HMS_chp\HMS\obj\Debug\HMS.dll
+P:\CHP\Chp_git\chp\HMS_chp\HMS\obj\Debug\HMS.pdb

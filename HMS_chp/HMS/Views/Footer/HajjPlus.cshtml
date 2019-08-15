@@ -1,0 +1,287 @@
+﻿
+@{
+    ViewBag.Title = "Hajj Plus";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+
+<style type="text/css">
+    #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    h2 {
+        /*font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;*/
+        padding: 0 45px;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+
+    section.page-container {
+        display: flex;
+        padding: 0 35px;
+    }
+
+    .main-content {
+        flex-basis: 70%;
+        margin: 0 10px 1rem;
+    }
+
+    aside {
+        flex-basis: 30%;
+        margin: 0 10px 1rem;
+        background: #C7C7C7;
+        height: 800px;
+    }
+
+
+    .hero-banner {
+        margin-bottom: 1rem;
+    }
+
+        .hero-banner img {
+            display: block;
+        }
+
+        .hero-banner span {
+            display: block;
+            padding: 5px;
+            color: #888888;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+    /*.inline-ads {
+        clear: left;
+        margin: 5px 15px 10px 0;
+    }*/
+
+    .sidebar-ads {
+        padding-top: 10px;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post-list {
+        padding: 0 15px;
+        padding-top: 5vh;
+    }
+
+        .post-list h4 {
+            color: #252525;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0 0.5rem;
+            border-bottom: 1px solid #aeaeac;
+        }
+
+        .post-list ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .post-list ul li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .post-list ul li a {
+                padding: 0.8rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: #252525;
+                background: #D1D1D1;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid #aeaeac;
+                box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
+            }
+
+                .post-list ul li a:hover {
+                    text-decoration: none;
+                }
+
+                .post-list ul li a img {
+                    border-radius: 10px;
+                    margin-bottom: 0.8rem;
+                    border: 1px solid #aeaeac;
+                }
+
+                .post-list ul li a span {
+                    padding-left: 0.8rem;
+                    flex: 1;
+                }
+
+    .arabicCSS p {
+        font-size: 20px;
+        font-weight: normal;
+        margin-right: 10px;
+        text-align: right;
+    }
+    /*//breadcrumb starts here//*/
+    ul.breadcrumb {
+        padding: 8px 14px;
+        list-style: none;
+        background-color: #eee;
+    }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+            ul.breadcrumb li + li:before {
+                padding: 5px;
+                color: black;
+                content: "/\00a0";
+            }
+
+            ul.breadcrumb li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+
+                ul.breadcrumb li a:hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
+
+    /*//breadcrumb ends//*/
+</style>
+
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/GettingReadyForHajj">Getting Ready for Hajj</a></li>
+    <li>Hajj Plus</li>
+</ul>
+<h2>Hajj Plus</h2>
+
+<section class="page-container">
+    <div class="main-content">
+        <div class="hero-banner">
+
+            <img src="http://via.placeholder.com/900x400" alt="Alternate Text" />
+
+            @*<img src="../../content/images/Madinah_test.jpg" att="Alternate Text" />*@
+
+
+
+            @*<span>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</span>*@
+        </div>
+        <h3>Fequently Asked Questions on Hajj & 'Umrah</h3>
+
+        <h4>My husband does not allow me to go for Hajj</h4>
+        <p>
+            Question:  I am a wealthy woman, and I asked my husband more than once about performing hajj, but without any reason, he continues to refuse to allow me to go for hajj. I do, however, have an adult brother who wants to perform hajj, so can I [travel to] perform hajj with him if my husband does not permit me, or should I abandon [the idea of going for] hajj and remain at home in obedience to my husband. Please provide us a legal ruling, and may Allah reward you with good?
+        </p>
+
+        <p>
+            Answer: Since the [performance] of the hajj is obligatory once all its conditions are met, and since you have the financial and physical ability in addition to having a mahram [to accompany her], then it is obligatory upon you to hasten in perfuming the hajj; and it is not permissible for your husband to prevent you without any [legally acceptable] reason.
+        </p>
+
+        <p>
+
+            And in this case, it is permissible for you [to travel] to perform the hajj with your brother even if your husband has not consented. This is because the hajj is an individual obligation, just like the individual obligation of the prayer and the fast. So the Rights of Allah takes precedence, and this husband [of yours] who prevents his wife from performing the obligatory hajj has no right [to do so] without [any legally acceptable] justification.
+        </p>
+
+        <p>
+            Allah knows best.
+
+        </p>
+
+        <h4>
+           I made an oath to go for Hajj every year
+        </h4>
+
+        <p>
+            Question: Before I had a civil job, I made an oath to Allah that I would perform Hajj every year. My circumstances have changed. I am now in the army. My supervisor does not permit me to go for hajj every year; Am I liable for any sin for this?
+        </p>
+        <p>
+            Answer: If that which prevents you from going for hajj is a matter which is beyond your control, such that you are unable to overcome it, then there is no sin upon you [in not going for hajj when the situation is such] as Allah (Subhaanahu wa Ta’aala) says:
+        </p>
+        <p><strong>Allah burdens not a person beyond his scope
+            </strong></p>
+        <p>And He (Subhaanahu wa Ta’aala) says:</p>
+        <p>
+            <strong>
+                Allah does not want to place you in difficulty
+            </strong>
+
+            </p>
+        <p>If this job prevents you performing your obligatory hajj [i.e. once in lifetime] that you should think of changing your job. </p>
+        <p>Allah knows best.</p>
+
+        <h4>Makkan women performing Hajj without a Mahram</h4>
+        <p>
+            Question: Some women from Makkah travel to perform the hajj without their mahram, going in groups of women on public transport. So is this permissible?
+        </p>
+        <p>
+            Answer: That which is correct is that it is not permissible for a woman to perform the hajj without her mahram. Even if she was from the [resident] people of Makkah. That is because the distance between Makkah and ‘Arafah is considered a journey according to the preponderant opinion [of the scholars], and this being the case, the people of Makkah would shorten their prayers along with the Prophet (sal-Allahu ‘alayhe wa sallam) throughout [their time at] the places of the sacred rites.
+        </p>
+
+        <p>
+            Shaykh Muhammad ibn ‘Uthaymeen
+        </p>
+        <br />
+
+    </div>
+    <aside>
+        <div class="post-list">
+            <h4>More related topics </h4>
+
+
+            <ul>
+                <li>
+                    <a href="../Footer/DuaforhajjandUmrah">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Du'as for Hajj and Umrah </strong>- “du’a is (the essence of) worship,”  </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Footer/RiadulJannah">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+                        <span style="color: #004d66"><strong> How to perform Janaza Salah -  </strong> a very special area located close to the front of the mosque.   </span>
+
+                    </a>
+
+
+
+
+                </li>
+                <li>
+                    <a href="../Footer/ProphetsGrave">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+                        <img src="~/content/images/Prophets_grave_Thumbnail.jpg" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Visiting the Prophet’s Grave</strong>•	When visiting the grave the clarity of your intention is very important.  </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Footer/HistoricsitesaroundMadinah">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Historic_sites_of_Madinah_thumb.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="miqat diagram" />
+                        <span style="color: #004d66"><strong> Historic sites around Madinah - </strong>Madinah is full of Islamic history.  </span>
+
+                    </a>
+
+
+
+
+                </li>
+            </ul>
+
+        </div>
+    </aside>
+</section>
+

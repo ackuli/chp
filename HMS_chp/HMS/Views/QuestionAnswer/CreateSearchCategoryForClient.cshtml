@@ -1,0 +1,242 @@
+﻿@model HMS.Entities.Models.QuestionAnswer
+
+@{
+    ViewBag.Title = "Search Question By Keywords";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+    #askthescholer {
+        background-color: #D95902 !important;
+    }
+
+    #btnaskthescholer {
+        background-color: #D95902 !important;
+    }
+
+    .panel {
+        height: 150px;
+    }
+
+    .imgScholarFooter h4 {
+        color: rgb(51, 51, 51);
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .imgScholarFooter a p {
+        font-size: 0.9em;
+        font-style: normal;
+        padding: 20px;
+    }
+
+    .imgScholarFooter a.a {
+        background: url("../content/images/ats.png") no-repeat scroll 205px 117px rgb(255, 255, 255);
+    }
+
+    .imgScholarFooter a {
+        border: 1px solid rgb(237, 237, 237);
+        color: rgb(111, 111, 111);
+        display: block;
+        float: left;
+        outline: medium none;
+        overflow: hidden;
+        width: 100%;
+        text-decoration: none;
+    }
+
+        .imgScholarFooter a:hover {
+            background: none repeat scroll 0 0 rgb(48, 175, 232);
+            color: rgb(255, 255, 255) !important;
+            transition: background-color 1s ease-out 0s;
+        }
+
+        .imgScholarFooter a.a:hover {
+            background: url("../content/images/ats.png") no-repeat scroll 205px 117px rgb(48, 175, 232);
+        }
+    /*Nazmul*/
+    .eventborder {
+        border: 1px solid #000000;
+    }
+
+    .backgroundcolor {
+        background: #E0E0DC;
+        margin-right: 20px;
+    }
+
+    .hr1 {
+        border: 1px solid #0c0101;
+    }
+
+    .hr2 {
+        border: 1px solid #820000;
+    }
+
+    .hr3 {
+        border: 1px solid #0c0101;
+        margin-right: 20px;
+    }
+
+    .footerbutton {
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 8px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        shape-rendering: optimizeQuality;
+        border-style: dotted;
+        background-color: #0c0101;
+        font: 11;
+        color: #ffd800;
+    }
+
+    #btnaskthescholer {
+        background-color: #D95902 !important;
+    }
+</style>
+@Html.Partial("_questionModal")
+@using (Html.BeginForm("CreateSearchCategoryForClient", "QuestionAnswer"))
+{
+    <div class="FAQ">
+        <div class="row-fluid">
+
+            <div class="row-fluid form-inline" style="margin-bottom:20px">
+                <div class="span8">
+                    <b> Search Question by Category</b>
+                    <div>
+                        <div class="input-append">
+
+                            @Html.DropDownListFor(model => model.TypeId, new SelectList(Model.kvpQuestionType, "Key", "Value", Model.TypeId), "Please Select..", new { @style = "width:400px;" })
+
+                            <button type="submit" class="btn">
+                                <i class="icon-search"></i>&nbsp;Search
+                            </button>
+                        </div>
+
+                    </div>
+                    @Html.ValidationMessageFor(model => model.TypeId)
+                </div>
+                <div class="span4">
+                </div>
+            </div>
+            <div class="backgroundcolor">
+                <hr class="hr1">
+                <div>
+                    <span>Search Results</span>
+                    <div class="pull-right">Results Found:<sapn class="label label-danger"> @Model.CategoryWiseQuestionAnswersList.ToList().Count</sapn>  </div>
+                </div>
+
+                <div style="margin-left:6px">
+                    <div class="eventborder" style="margin-top: 1px">
+
+                        <ul>
+                            @foreach (var item in Model.CategoryWiseQuestionAnswersList)
+                            {
+                                <li>@Html.ActionLink(@item.Question, "QuestionDetails", "QuestionAnswer", new { id = @item.Id }, null)</li>
+                            }
+                            @if (@Model.CategoryWiseQuestionAnswersList.ToList().Count < 5)
+                            {
+                                for (int i = 0; i < 12;i++ )
+                                {
+                                    
+                                        <br/>
+                                  
+                                }
+                            }
+                        </ul>
+
+                    </div>
+
+
+                </div>
+                <hr class="hr2">
+                <div class=" imgScholarFooter" style="margin-right: 0px; margin-bottom: 10px;width: 99%;margin-left: 6px;">
+
+                    @Html.Partial("_question")
+                </div>
+            </div>
+        </div>
+        <hr class="hr3">
+    </div>
+
+}
+
+
+@*<style type="text/css">
+        select {
+            width: 100%;
+        }
+         #btnaskthescholer {
+            background-color: #D95902 !important;
+        }
+    </style>*@
+
+
+@*<div style="margin-right:auto;margin-left:auto;width:95%;">
+        @using (Html.BeginForm("CreateSearchCategoryForClient", "QuestionAnswer"))
+        {
+
+            <div class="row-fluid form-inline" style="margin-bottom:20px">
+                <div class="span5">
+                    @Html.LabelFor(model => model.QuestionType.Id)
+                    <div>
+                        <div class="input-append">
+
+                            @Html.DropDownListFor(model => model.TypeId, new SelectList(Model.kvpQuestionType, "Key", "Value", Model.TypeId), "Please Select..", new { })
+
+
+
+                            <button type="submit" class="btn">
+                                <i class="icon-search"></i>&nbsp;Search
+                            </button>
+                        </div>
+
+                    </div>
+                    @Html.ValidationMessageFor(model => model.TypeId)
+                </div>
+
+            </div>
+            <div>
+                <span>Search Results</span>
+                <div class="pull-right">Results Found:<sapn class="label label-danger"> @Model.CategoryWiseQuestionAnswersList.ToList().Count</sapn>  </div>
+            </div>
+            <table class="table table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Question)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Answer)
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model.CategoryWiseQuestionAnswersList)
+                {
+                    <tr>
+                        <td style="width:20%">
+                            @Html.DisplayFor(modelItem => item.Question)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Answer)
+
+                        </td>
+
+
+                    </tr>
+                }
+
+            </table>
+
+        }
+    </div>*@
+

@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Questions";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<link href="~/assets/css/Step/jquery.steps.css" rel="stylesheet" />
+
+<link href="~/assets/css/Step/normalize.css" rel="stylesheet" />
+<script type="text/javascript">
+  
+    $(document).ready(function () {
+        var form = $("#example-form");
+        form.validate({
+            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                }
+            }
+        });
+        form.children("div").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            onStepChanging: function (event, currentIndex, newIndex) {
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onFinishing: function (event, currentIndex) {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex) {
+                alert("Submitted!");
+            }
+        });
+    });
+</script>
+<form id="example-form" action="#">
+    <div>
+        <h3>Account</h3>
+        <section>
+          
+            <p class="question"><h3>1. What is the answer to this question?</h3></p>
+            <ul class="answers">
+                <li>
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a">Answer 1</label>
+                    </li>
+                <li>
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b">Answer 2</label>
+                </li>
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c">Answer 3</label>
+                <br />
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d">Answer 4</label>
+                <br />
+            </ul>
+            <p class="question"><h3>1. What is the answer to this question?</h3></p>
+            <ul class="answers">
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a">Answer 1</label>
+                <br />
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b">Answer 2</label>
+                <br />
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c">Answer 3</label>
+                <br />
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d">Answer 4</label>
+                <br />
+            </ul>
+            <p class="question"><h3>2. What is the answer to this question?</h3></p>
+            <ul class="answers">
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a">Answer 1</label>
+                <br />
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b">Answer 2</label>
+                <br />
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c">Answer 3</label>
+                <br />
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d">Answer 4</label>
+                <br />
+            </ul>
+            <p class="question"><h3>3. What is the answer to this question?</h3></p>
+            <ul class="answers">
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a">Answer 1</label>
+                <br />
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b">Answer 2</label>
+                <br />
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c">Answer 3</label>
+                <br />
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d">Answer 4</label>
+                <br />
+            </ul>
+        </section>
+        <h3>Profile</h3>
+        <section>
+            <label for="name">First name *</label>
+            <input id="name" name="name" type="text" class="required">
+            <label for="surname">Last name *</label>
+            <input id="surname" name="surname" type="text" class="required">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="text" class="required email">
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text">
+            <p>(*) Mandatory</p>
+        </section>
+        <h3>Hints</h3>
+        <section>
+            <ul>
+                <li>Foo</li>
+                <li>Bar</li>
+                <li>Foobar</li>
+            </ul>
+        </section>
+        <h3>Finish</h3>
+        <section>
+            <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+        </section>
+    </div>
+</form>
+<script src="~/assets/js/jquery.steps.min.js"></script>
+

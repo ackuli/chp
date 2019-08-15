@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "StepbyStepToHajj";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+
+<style type="text/css">
+    .Footercontent {
+        margin-bottom: 10px;
+        /*background-image: url('../Content/images/hajj_rites_background.jpg');*/
+        background-color: #7e581b;
+        
+        padding-right: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    /* first example */
+    .container {
+      width:100%;
+       margin: 20px auto 0 auto;
+      padding: 30px;
+        background-color: #FFF;
+    }
+
+    .form-row {
+        padding: 10px 0;
+        display: flex;
+    }
+
+        .form-row label {
+            padding-right: 10px;
+            flex-basis:10%;
+
+        }
+
+        .form-row input {
+              flex-basis:50%;
+        }
+        input {
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+}
+
+</style>
+
+<h2>StepbyStepToHajj</h2>
+
+
+<div class="container-fluid Footercontent">
+
+
+    <div class="row-fluid">
+
+
+
+        <!-- first example -->
+        <div class="container">
+            <form action="">
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-row">
+                    <label for="favColor">Favorite Color:</label>
+                    <input type="text" id="favColor">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

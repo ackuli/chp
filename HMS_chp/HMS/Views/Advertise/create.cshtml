@@ -1,0 +1,195 @@
+﻿@model HMS.ViewModels.AdvertiseVM
+@{
+    ViewBag.Title = "create";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<script src="~/assets/js/FileUpload JS/jquery.fileupload-image.js"></script>
+<script src="~/assets/js/FileUpload JS/jquery.fileupload-process.js"></script>
+<link href="~/assets/js/FileUpload JS/jquery.fileupload-ui.css" rel="stylesheet" />
+<script src="~/assets/js/FileUpload JS/jquery.fileupload-ui.js"></script>
+<script src="~/assets/js/FileUpload JS/jquery.fileupload-validate.js"></script>
+<script src="~/assets/js/FileUpload JS/jquery.fileupload.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.input-append.date.FromDate').datepicker({
+            format: "dd/M/yyyy",
+            daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+        $('.input-append.date.ToDate').datepicker({
+            format: "dd/M/yyyy",
+            daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $("#Advertise_FromDate").val("");
+        $("#Advertise_ToDate").val("");
+    })
+</script>
+@using (Html.BeginForm("create", "Advertise", FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Advertise</legend>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.Name)
+                    @Html.ValidationMessageFor(model => model.Advertise.Name)
+                </div>
+                
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Type)
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownListFor(model => model.Advertise.Type, new SelectList(Model.Advertise.lstAdvertiseType, "Key", "Value", Model.Advertise.Type), "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Advertise.Type)
+                </div>
+                
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.PositionId)
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownListFor(model => model.Advertise.PositionId, new SelectList(Model.Advertise.lstAdvertisePosition, "Key", "Value", Model.Advertise.PositionId), "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Advertise.PositionId)
+                </div>
+                
+                
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Pictute)
+                </div>
+                <div class="editor-field">
+                    <input id="AddPicture" type="file" name="AddPicture"/>
+                    @Html.ValidationMessageFor(model => model.Advertise.Pictute)
+                </div>
+                
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Extension)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.Extension)
+                    @Html.ValidationMessageFor(model => model.Advertise.Extension)
+                </div>
+                
+                
+                 <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Script)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.Script)
+                    @Html.ValidationMessageFor(model => model.Advertise.Script)
+                </div>
+                
+                
+
+                
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.IsDefault)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.IsDefault)
+                    @Html.ValidationMessageFor(model => model.Advertise.IsDefault)
+                </div>
+            </div>
+            <div class="span6">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.FromDate)
+                </div>
+                <div class="editor-field">
+                    <div class="input-append date FromDate">
+                        @Html.EditorFor(model => model.Advertise.FromDate)
+                        <span class="add-on"><i class="icon-th"></i></span>
+                        @Html.ValidationMessageFor(model => model.Advertise.FromDate)
+                    </div>
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.ToDate)
+                </div>
+                <div class="editor-field">
+                    <div class="input-append date ToDate">
+                        @Html.EditorFor(model => model.Advertise.ToDate)
+                        <span class="add-on"><i class="icon-th"></i></span>
+                        @Html.ValidationMessageFor(model => model.Advertise.ToDate)
+                    </div>
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Amount)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.Amount)
+                    @Html.ValidationMessageFor(model => model.Advertise.Amount)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.ContactNumber)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.ContactNumber)
+                    @Html.ValidationMessageFor(model => model.Advertise.ContactNumber)
+                </div>
+                
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.Address)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.Address)
+                    @Html.ValidationMessageFor(model => model.Advertise.Address)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Advertise.IsActive)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Advertise.IsActive)
+                    @Html.ValidationMessageFor(model => model.Advertise.IsActive)
+                </div>
+                <div class="col-lg-7">
+                    <div class="btn-toolbar">
+                        <!-- The fileinput-button span is used to style the file input field as button -->
+                        <span class="btn btn-success fileinput-button">
+                            <i class="fa fa-plus"></i>
+                            <span>Add files...</span>
+                            <input type="file" name="files[]" multiple="">
+                        </span>
+                        <button type="submit" class="btn btn-primary start">
+                            <i class="fa fa-upload"></i>
+                            <span>Start upload</span>
+                        </button>
+                        <button type="reset" class="btn btn-warning cancel">
+                            <i class="fa fa-ban"></i>
+                            <span>Cancel upload</span>
+                        </button>
+                        <button type="button" class="btn btn-danger delete">
+                            <i class="fa fa-trash-o"></i>
+                            <span>Delete</span>
+                        </button>
+                        <input type="checkbox" class="toggle"></input>
+                        <!-- The loading indicator is shown during file processing -->
+                        <span class="fileupload-loading"></span>
+                    </div>
+                </div>
+            </div>
+
+          
+
+
+
+        </div>
+        <hr/>
+        <p>
+            <input type="submit" value="Create" class="btn btn-success" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

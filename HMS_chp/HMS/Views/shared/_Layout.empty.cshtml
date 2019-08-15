@@ -1,0 +1,116 @@
+@using System.Web.Optimization
+@using BootstrapSupport
+@using NavigationRoutes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Styles.Url("~/content/css")" rel="stylesheet"/>
+    @RenderSection("head", required: false) @Html.Partial("_html5shiv")
+    @* favicons and touch icons go here *@
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+        <hr>
+        <footer>
+            @*<p>
+                &copy; Company @System.DateTime.Now.ToString("yyyy")</p>*@
+            <div class="row-fluid">
+                <div class="span12 backgroundColor">
+                    <h2>
+                        Comparehajjpackages.com</h2>
+                    <div class="row-fluid">
+                        <div class="content">
+                            <div class="row-fluid">
+                                <div class="span3">
+                                    <h5>
+                                        General</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a>Mobile Site</a></li>
+                                        <li><a>FAQ</a></li>
+                                        <li><a>Site Map</a></li>
+                                        <li><a>About us</a></li>
+                                        <li><a>Private Policy</a></li>
+                                        <li><a>Contact us</a></li>
+                                        <li><a>Affiliate</a></li>
+                                        <li><a>Advertise</a></li>
+                                        <li><a>Terms and conditions</a></li>
+                                        <li><a>Cookie Policy</a></li>
+                                        <li><a>Widgets</a></li>
+                                        <li><a>API</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h5>
+                                        Information</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a>Mobile Site</a></li>
+                                        <li><a>FAQ</a></li>
+                                        <li><a>Site Map</a></li>
+                                        <li><a>About us</a></li>
+                                        <li><a>Private Policy</a></li>
+                                        <li><a>Contact us</a></li>
+                                        <li><a>Affiliate</a></li>
+                                        <li><a>Advertise</a></li>
+                                        <li><a>Terms and conditions</a></li>
+                                        <li><a>Cookie Policy</a></li>
+                                        <li><a>Widgets</a></li>
+                                        <li><a>API</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h5>
+                                        Noteable Events</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a>Mobile Site</a></li>
+                                        <li><a>FAQ</a></li>
+                                        <li><a>Site Map</a></li>
+                                        <li><a>About us</a></li>
+                                        <li><a>Private Policy</a></li>
+                                    </ul>
+                                    <h5>
+                                        Popular Guides</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a>Affiliate</a></li>
+                                        <li><a>Advertise</a></li>
+                                        <li><a>Terms and conditions</a></li>
+                                        <li><a>Cookie Policy</a></li>
+                                        <li><a>Widgets</a></li>
+                                        <li><a>API</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <h5>
+                                        General</h5>
+                                    <ul class="unstyled link-footer">
+                                        <li><a>Mobile Site</a></li>
+                                        <li><a>FAQ</a></li>
+                                        <li><a>Site Map</a></li>
+                                        <li><a>About us</a></li>
+                                        <li><a>Private Policy</a></li>
+                                        <li><a>Contact us</a></li>
+                                        <li><a>Affiliate</a></li>
+                                        <li><a>Advertise</a></li>
+                                        <li><a>Terms and conditions</a></li>
+                                        <li><a>Cookie Policy</a></li>
+                                        <li><a>Widgets</a></li>
+                                        <li><a>API</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <img width="100%" src="../../Content/images/footer_ColorCode.jpg" />
+            </div>
+        </footer>
+    </div>
+     @Scripts.Render("~/js") @RenderSection("Scripts", required: false)
+    <!-- container -->
+</body>
+</html>

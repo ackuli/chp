@@ -1,0 +1,114 @@
+﻿@model IEnumerable<HMS.Entities.Models.AdvertisePosition>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+
+<h2>Advertise Position List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().AdvertisePositionsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Width)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.SetBy)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.SetDate)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.IsDefault)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.LastUpdatedTime)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvertisePositionsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TargetId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Width)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.SetBy)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.SetDate)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDefault)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.LastUpdatedTime)
+        </td>*@
+        <td>
+
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li> @Html.ActionLink("Position Edit", "Edit", new { id = item.AdvertisePositionsId }) </li>
+                    <li>@Html.ActionLink("Position Details", "Details", new { id = item.AdvertisePositionsId }) </li>
+                    <li>@Html.ActionLink("Position Delete", "Delete", new { id = item.AdvertisePositionsId })</li>
+                    <li> @Html.ActionLink("Add Advertise", "Create", "Advertis", new { id = item.AdvertisePositionsId }, null) </li>
+                    <li>@Html.ActionLink("Advertise Details List", "PositionWiseAdvertiseList", "Advertis", new { id = item.AdvertisePositionsId }, null)</li>
+                </ul>
+            </div>
+       
+           
+        </td>
+    </tr>
+}
+
+</table>

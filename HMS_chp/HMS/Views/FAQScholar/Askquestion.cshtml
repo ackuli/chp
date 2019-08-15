@@ -1,0 +1,106 @@
+﻿@model HMS.Models.QuestionAnswer
+@{
+    ViewBag.Title = "Askquestion";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .text-box.multi-line
+    {
+        width: 48.7179%;
+    }
+    
+    #Question
+    {
+        height: 150px;
+    }
+    
+    #askthescholer
+    {
+        background-color: #D95902 !important;
+    }
+   
+</style>
+@using (Html.BeginForm("Askquestion", "FAQScholar"))
+{
+    @Html.ValidationSummary(true)
+
+    <div style="margin-left: 20px">
+        <h4>
+            Ask question @Html.ActionLink("Back to List", "Index")</h4>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailId)
+            @Html.ValidationMessageFor(model => model.EmailId)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TypeId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.TypeId, new SelectList(Model.Types, "Key", "Value", Model.TypeId), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TypeId)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question)
+            @Html.ValidationMessageFor(model => model.Question)
+        </div>
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.Answer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Answer)
+            @Html.ValidationMessageFor(model => model.Answer)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ScoloarId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ScoloarId)
+            @Html.ValidationMessageFor(model => model.ScoloarId)
+        </div>
+        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Count)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Count)
+            @Html.ValidationMessageFor(model => model.Count)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsVisible)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsVisible)
+            @Html.ValidationMessageFor(model => model.IsVisible)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnswerDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnswerDate)
+            @Html.ValidationMessageFor(model => model.AnswerDate)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SetDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SetDate)
+            @Html.ValidationMessageFor(model => model.SetDate)
+        </div>*@
+        <p>
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </p>
+    </div>
+}

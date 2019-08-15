@@ -1,0 +1,248 @@
+﻿@using MvcPaging
+@model IPagedList<HMS.Entities.Models.PackagesInfo>
+@{
+    ViewBag.Title = "Hajj Package List";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .table {
+        width: 98%;
+        margin-left: 10px;
+    }
+
+    .ImgSize {
+        width: 100px;
+        height: 70px;
+    }
+
+    .headercolor {
+        background-color: black;
+    }
+
+    .headertextcolor {
+        color: white;
+    }
+
+    .media-object {
+        display: inline;
+    }
+
+    .image {
+        position: relative;
+    }
+
+    .setposition {
+        position: absolute;
+        top: 20px;
+        left: 25px;
+        width: 100%;
+        color: white;
+    }
+
+    .setpositionLink {
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        width: 100%;
+        color: white;
+    }
+
+    .search {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        border-right: 1px solid #ffffff;
+    }
+
+    .box {
+        border-right: 25px solid #ffffff;
+        background-color: #604020;
+        color: #ffffff;
+        width: 20%;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .add {
+        color: #ffffff;
+        width: 20%;
+        text-align: center;
+        border-top: 25px solid #ffffff;
+        border-right: 25px solid #ffffff;
+    }
+
+    .singleBox {
+        border: 1px solid #ddd;
+        height: 120px;
+    }
+</style>
+<p style="margin-left:15px; color: #00004d; margin-bottom: 15px"><b>Hajj Packages from UK</b></p>
+@using (Html.BeginForm("PackagesInfoList", "PackagesInfo", FormMethod.Get))
+{
+    @*<div class="row-fluid">
+            <div class="span6 pull-left">
+                <div class="input-append">
+                    <input type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Package Search" value="@ViewData["searchItem"]">
+                    <button type="submit" class="btn">
+                        <i class="icon-search"></i>&nbsp;Search
+                    </button>
+                </div>
+            </div>
+        </div>*@
+    <div class="table-responsive">
+    <table class="table" style="border-style: none; margin: 0 auto; ">
+        <thead>
+            <tr>
+                <th class="headercolor" style="width: 14%;">
+                    <b class="headertextcolor"> @Html.DisplayName("Price Per Adult")</b>
+                </th>
+                <th class="headercolor" style="text-align: center; width: 30%;">
+                    <b class="headertextcolor">  @Html.DisplayName("Hotel")</b>
+                </th>
+                <th class="headercolor" style="width: 10%; text-align: center;">
+                    <b class="headertextcolor">@Html.DisplayNameFor(model => model.FirstOrDefault().Duration)</b>
+                </th>
+                <th class="headercolor" style="width: 9%; padding: 1px 8px 2px 10px">
+                    <b class="headertextcolor">@Html.DisplayName("People Per Room")</b>
+                </th>
+                <th class="headercolor" style="text-align: center;">
+                    <b class="headertextcolor">@Html.DisplayName("Flights")</b>
+                </th>
+                <th class="headercolor" style="text-align: center; width: 15%;">
+                    <b class="headertextcolor">@Html.DisplayName("Agent")</b>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td class="image search">
+                        @if (@item.PackageDisplayTypeId == 1)
+                        {
+                            <a href="~/PackagesInfo/PackagesInfoDetails?id=@item.PackageId" class="pull-left" target="_blank">
+                                <img class="media-object img-responsive" src="~/Content/images/Phoneonly.png" />
+                                <p class="setposition">
+                                    From
+                                    <br /><b> £@Html.DisplayFor(modelItem => item.PricePerPerson)</b>
+                                </p>
+
+                                <p class="setpositionLink">Phone only</p>
+                            </a>
+                        }
+                        else if (@item.PackageDisplayTypeId == 2)
+                        {
+                            <a href="@item.PackageDisplayInput" class="pull-left" target="_blank">
+                                <img class="media-object img-responsive" src="~/Content/images/Gotowebsite.png" />
+                                <p class="setposition">
+                                    From
+                                    <br /><b>£@Html.DisplayFor(modelItem => item.PricePerPerson)</b>
+                                </p>
+
+                                <p class="setpositionLink">Go to Website</p>
+                            </a>
+                        }
+                        else if (@item.PackageDisplayTypeId == 3)
+                        {
+
+                            @*<a href="~/PackagesInfo/PackagesInfoLleaflet?id=@item.PackageId" class="pull-left" target="_blank">*@
+                            <a href="~/binaryObjects/GetPDFBinaryObjectById?id=@item.PackageId&objectTypeId=10" class="pull-left" target="_blank">
+                                <img class="media-object img-responsive" src="~/Content/images/leafletonly.png" />
+                                <p class="setposition">
+                                    From
+                                    <br /> <b>£@Html.DisplayFor(modelItem => item.PricePerPerson)</b>
+                                </p>
+
+                                <p class="setpositionLink">Package Leaflet</p>
+                            </a>
+                        }
+
+                    </td>
+                    <td class="search">
+                        <b>@Html.DisplayName("Makkah:")</b>
+                        @Html.DisplayFor(modelItem => item.HotelNameMakka)<br />
+                        (@Html.DisplayFor(modelItem => item.HotelDistanceMakka) @Html.DisplayFor(modelItem => item.DistanceUnit.DistanceUnitName) from Masjid al Haram)
+                        <b><br />@Html.DisplayName("Madina:")</b>
+                        @Html.DisplayFor(modelItem => item.HotelNameMadinah)<br />
+                        (@Html.DisplayFor(modelItem => item.HotelDistanceMadinah) @Html.DisplayFor(modelItem => item.DistanceUnit.DistanceUnitName) from Masjid an-Nabawi)
+                    </td>
+                    <td class="search" style="text-align: center;">
+                        @Html.DisplayFor(modelItem => item.Duration1.DuratioName)
+
+                    </td>
+                    <td class="search" style="text-align: center;">
+                        @Html.DisplayFor(modelItem => item.PeoplePerRoom.RoomCapacity)
+                    </td>
+                    @if (@item.IsFlightDepRetDateExist)
+                    {
+                         <td class="search">
+                        Depart: @Html.DisplayFor(modelItem => item.FlightsDepart)<br/>
+                        Return: @Html.DisplayFor(modelItem => item.FlightsReturn)<br />
+                        (subject to availability)
+                    </td>
+                    }
+                    else
+                    { <td class="search">
+                        <p>[contact agent for details]</p>
+                    </td>
+                    }
+                   
+                    <td class="search">
+                     <b>   @Html.DisplayFor(modelItem => item.Client.ClientName)</b>
+                        <img class="ImgSize" src="~/binaryObjects/GetBinaryObjectById?id=@item.ClientId&objectTypeId=9">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        </div>
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                IsShowPages = true
+            }, new { searchItem = ViewData["searchItem"] }))
+    </div>
+    <div class="row-fluid">
+        <table class="table-responsive" style="border-style: none; width: 98%; margin: 0 auto; ">
+            <tr>
+                <td class="box">Direct Flights</td>
+                <td class="box">Indirect Flights</td>
+                <td class="box">Hotels in Makkah</td>
+                <td class="box">Hotels in Medina</td>
+            </tr>
+            <tr>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/Directflight1.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/IndirectFlight1.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/MakkahHotel1.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/Madinahhotel1.png" /></div></td>
+            </tr>
+            <tr>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/Directflight2.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/IndirectFlight2.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/MakkahHotel2.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/Madinahhotel2.png" /></div></td>
+            </tr>
+            <tr>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/Directflight1.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/IndirectFlight3.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/MakkahHotel3.png" /></div></td>
+                <td class="add"><div class="singleBox"><img class="media-object img-responsive" style="padding-top: 10%; " src="~/Content/images/Madinahhotel3.png" /></div></td>
+            </tr>
+        </table>
+    </div>
+}

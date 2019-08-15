@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Hajj and Umrah event";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .container {
+        background-color: rgb(255, 255, 255);
+    }
+
+    select, input[type="file"] {
+        font-size: 14px;
+    }
+
+    span.label {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+        font-size: 14px;
+    }
+</style>
+
+
+<script type="text/javascript">
+    var myFirstDate = new Date();
+    $(document).ready(function () {
+        //$('.input-append.date.Date').datepicker({
+        //    format: "dd/M/yyyy",
+        //    //daysOfWeekDisabled: "5,6",
+        //    autoclose: true,
+        //    todayHighlight: true
+        //});
+
+        //$("#EventsDate").val(EventsDate);
+        //$('.input-append.date.EventsDate').datepicker({
+        //    format: "dd/M/yyyy",
+        //    autoclose: true,
+        //    todayHighlight: false
+        //});
+        //$('.input-append.date.EndDate').datepicker({
+        //    format: "dd/M/yyyy",
+        //    //daysOfWeekDisabled: "5,6",
+        //    autoclose: true,
+        //    todayHighlight: true
+        //});
+
+    });
+</script>
+@*@Html.Partial("_alertstoastr")*@
+@using (Html.BeginForm("Questions", "Questions", FormMethod.Post, new { }))
+{
+    <div class="row-fluid">
+       
+        
+          
+                <div class="span12">
+                    <p>1. Bootstrap 3 is mobile-first.</p>
+                   
+                    <label>
+                        @Html.RadioButton("answer", "Choices") Q1
+                    </label>
+                           
+                               
+                         
+
+                </div>
+
+         
+            <p>
+                <input type="submit" value="Submit" class="btn btn-primary button--medium  button--primary" />
+            </p>
+       
+    </div>
+}

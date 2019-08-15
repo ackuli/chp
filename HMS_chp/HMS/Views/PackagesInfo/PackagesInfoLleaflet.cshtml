@@ -1,0 +1,61 @@
+﻿@model HMS.Entities.Models.PackagesInfo
+@{
+    ViewBag.Title = "Package Lleaflet";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+<style type="text/css">
+    .Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+    .container {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .Title {
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .display-field {
+        line-height: 20px;
+    }
+
+    legend {
+        margin-bottom: 0px;
+    }
+
+    .Eventlogo {
+    }
+
+    .header {
+        border-bottom: 1px solid rgb(221, 221, 221);
+        margin-top: 10px;
+        border-left: 0px;
+    }
+
+    #btnnewsevent {
+        background-color: #D95902 !important;
+    }
+</style>
+<div style="width: 98%; margin-top: 10px; margin-left: 2%;margin-bottom:10px">
+    <h3>Package Lleaflet</h3>
+    <div class="row-fluid">
+        <div class="span3">
+                                                           
+            <img class="form-control po" src="~/binaryObjects/GetPDFBinaryObjectById?id=@Model.PackageId&objectTypeId=10">
+            
+        </div>
+      
+
+    </div>
+</div>

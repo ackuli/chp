@@ -1,0 +1,86 @@
+﻿@model HMS.Entities.Models.AdvertisePosition
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<p>
+    @Html.ActionLink("Create New", "Create", "Advertis")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdvertisePositionsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().AdvertiseId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().AdvertiseTypeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().ClientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.advertisList.FirstOrDefault().Name)
+        </th>             
+        <th>
+            @Html.DisplayNameFor(model => model.IsDefault)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.advertisList) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvertisePositionsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvertiseId)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvertiseTypeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>     
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDefault)
+        </td>    
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Advertis", new { id = item.AdvertiseId },null) |
+            @Html.ActionLink("Details", "Details","Advertis", new { id = item.AdvertiseId },null) |
+            @Html.ActionLink("Delete", "Delete","Advertis",new { id = item.AdvertiseId },null)
+        </td>
+    </tr>
+}
+
+</table>

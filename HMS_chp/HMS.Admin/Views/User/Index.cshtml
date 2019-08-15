@@ -1,0 +1,105 @@
+﻿@using MvcPaging
+@model  HMS.Entities.ViewModels.VmUser
+@{
+    ViewBag.Title = "User info List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .form-inline .form-control {
+        width: 100%;
+    }
+
+    .form-inline input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form-inline .form-group {
+        width: 70%;
+    }
+
+    .margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liAdmin").addClass("active");
+    });
+</script>
+
+@section breadcrumb
+{
+   <li><a href="~/Home/index">Dashboard</a></li>
+    <li class="active">@ViewBag.Title</li>
+}
+@section title
+{
+    @ViewBag.Title
+}
+
+
+@using (Html.BeginForm("Index", "User", FormMethod.Get))
+{
+
+    <div class="row margin">
+        <div class="col-md-9">
+            @Html.ActionLink("Create New", "UserCreate", "User")
+        </div>
+        <div class="form-inline col-md-3" style="margin-bottom: 20px">
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.clientId, new SelectList(Model.clientList, "Key", "Value", Model.clientId), "Please Select", new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+
+    <table class="table">
+        <tr style="background-color: rgb(223, 224, 226) ">
+
+            <th>
+               Name
+            </th>
+            <th>
+                User Id
+            </th>
+            <th>
+               Email
+            </th>
+            <th>
+               Action
+            </th>
+        </tr>
+        @if (Model.searchData.Count() > 0) { 
+            foreach (var item in Model.searchData)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserAccountsId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmailId)
+                    </td>       
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "User", new { id = item.Id }, null) |                   
+                        @Html.ActionLink("Delete", "Delete", "User", new { id = item.Id }, null)
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">
+                    No users found
+                </td>
+            </tr>
+        }
+
+    </table>
+}

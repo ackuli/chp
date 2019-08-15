@@ -1,0 +1,84 @@
+﻿@model IEnumerable<HMS.Entities.Models.QuizDetail>
+@{
+    ViewBag.Title = "Quiz Result";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+@section MetaContent{
+    <meta charset="UTF-8">
+    <meta name="description" content="Frequently asked questions about hajj and umrah" />
+    <meta name="Keywords" content="Quiz Test,Hajj Quiz " />
+    <meta name="author" content="comparehajjpackages.com">
+}
+
+
+<style type="text/css">
+    .backgroundcolor {
+        background: rgba(128, 128, 128, 0.23);
+        margin-bottom: 14px;
+        padding: 20px;
+    }
+</style>
+
+@using (Html.BeginForm("quiztest", "Question", FormMethod.Post, new { }))
+{
+
+    <div style="width: 100%;margin-left: auto;margin-right: auto;">
+        <div class="row-fluid">
+            <div class="container-fluid">
+                <div class="span12">
+                    <div class="backgroundcolor">
+
+                        <div class="row-fluid">
+
+
+                            <div class="span12 mobileview" style="margin: 13px">
+                                <div class="row-fluid">
+
+
+                                    <div class="span12" style="margin-top: 5px">
+                                        <h2 style="text-align:center">Result:</h2>
+                                        <h2 style="text-align:center">@Model.Where(x => x.Score != 0).ToList().Count of @Model.ToList().Count</h2>
+                                        <h2 style="text-align:center">your score: @Model.ToList().Sum(x => x.Score)</h2>
+
+
+
+                                    </div>
+                                    <div class="span12" style="margin-top: 5px">
+
+
+                                        <div class="span4" style="text-align:left">
+                                            <div style="text-align: left; margin-top: 5px;">
+                                                <a class="btn-danger btn-large" id="btnlink" href="~/Question/checkyouranswer?QuizId=@Model.FirstOrDefault().QuizId">Check Your Answer</a>
+                                            </div>
+                                        </div>
+                                        <div class="span5">
+                                        </div>
+                                        <div class="span3" style="text-align:right">
+                                            <div style="text-align: left; margin-top: 5px;">
+                                                <a class="btn-danger btn-large" id="btnlink" href="~/Question/quiztest?quizId=@Model.FirstOrDefault().QuizId">Try Again</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+
+    });
+</script>
+
+

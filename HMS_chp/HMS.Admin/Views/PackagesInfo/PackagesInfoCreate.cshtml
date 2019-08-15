@@ -1,0 +1,258 @@
+﻿@model HMS.Entities.Models.PackagesInfo
+@{
+    ViewBag.Title = "Packages Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section breadcrumb
+{
+    <li><a href="~/Home/index">Dashboard</a></li>
+    @*<li><a href="~/User/">Package</a></li>*@
+    <li class="active">@ViewBag.Title</li>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liPackages").addClass("active open");
+        $('#liPackages .acc-menu').css('display', 'block');
+        $('#liPackages .acc-menu').collapse('show');
+    });
+</script>
+
+<style type="text/css">
+    input, select, textarea {
+        max-width: 100%;
+    }
+
+    .backTolist {
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+        .backTolist:hover {
+            text-decoration: none;
+        }
+
+    .fileSets {
+        border: 1px dotted #ddd;
+        margin: 0px 10px 20px 0;
+        padding: 20px 10px 0px 10px;
+    }
+
+    .required:after {
+        content: " *";
+        color: #f00;
+    }
+
+    legend.scheduler-border {
+        width: inherit; /* Or auto */
+        padding: 0 10px; /* To give a bit of padding on the left and right */
+        border-bottom: none;
+    }
+</style>
+
+@section title
+{
+    @ViewBag.Title
+}
+
+@if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(27)))
+{
+    @Html.ActionLink("Back to List", "PackagesInfoList")  @Html.ActionLink("Create New", "PackagesInfoCreate", "Client")
+}
+<hr />
+@using (Html.BeginForm("PackagesInfoCreate", "PackagesInfo", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="row">
+
+
+        <div class="col-sm-6">
+            <fieldset class="fileSets">
+                <legend class="scheduler-border">Basic Info</legend>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PackageTypeId, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.PackageTypeId, new SelectList(Model.kvpPackagetype, "Key", "Value", Model.PackageTypeId), "Select Package Type", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PackageTypeId)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ShiftingId, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.ShiftingId, new SelectList(Model.kvplistShifting, "Key", "Value", Model.ShiftingId), "Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ShiftingId)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PackageName, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.PackageName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PackageName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Duration, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.Duration, new SelectList(Model.kvpDuration, "Key", "Value", Model.Duration), "Select Duration", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Duration)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PricePerPerson, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.PricePerPerson, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PricePerPerson)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PeoplePerRooms, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.PeoplePerRooms, new SelectList(Model.kvpPeoplePerRoom, "Key", "Value", Model.PeoplePerRooms), "Select People Per Room", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PeoplePerRooms)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Package Display Type", new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.PackageDisplayTypeId, new SelectList(Model.kvpPackageDisplayType, "Key", "Value", Model.PackageDisplayTypeId), "Select Package Display Type", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PackageDisplayTypeId)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.Label("Package Leaflet", new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        <input type="file" class="form-control" name="file" id="file" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Package Display Site URL", new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.PackageDisplayInput, new { @class = "form-control" })
+
+                        @Html.ValidationMessageFor(model => model.PackageDisplayInput)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PackagesubscribeId, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.PackagesubscribeId, new SelectList(Model.kvpPackagesubscribe, "Key", "Value", Model.PackagesubscribeId), "Select Package Subscribe", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PackagesubscribeId)
+                    </div>
+
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-sm-6">
+            <fieldset class="fileSets">
+                <legend class="scheduler-border">Hotel Info</legend>
+                               
+                <div class="form-group">
+                    @Html.Label("Distance Unit", new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.DistanceUnitId, new SelectList(Model.kvpDistanceUnit, "Key", "Value", Model.DistanceUnitId), "Select Distance Unit", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DistanceUnitId)
+                    </div>
+                    <p>[e.g. meter or kilometre]</p>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HotelNameMakka, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.HotelNameMakka, new { @class = "form-control" })
+
+                        @Html.ValidationMessageFor(model => model.HotelNameMakka)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HotelDistanceMakka, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.HotelDistanceMakka, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.HotelDistanceMakka)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HotelNameMadinah, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.HotelNameMadinah, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.HotelNameMadinah)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HotelDistanceMadinah, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.HotelDistanceMadinah, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.HotelDistanceMadinah)
+                    </div>
+
+                </div>
+               
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"></label>
+                    <div class="col-sm-6">
+                        <div class="checkbox">
+                            <label>
+                                @Html.CheckBoxFor(model => model.IsFlightDepRetDateExist)
+                                Depart & Return Flight Date Details Available
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FlightsDepart, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.FlightsDepart, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FlightsDepart)
+                    </div>
+                    <p>[e.g. 21 Mar 2019]</p>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FlightsReturn, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.FlightsReturn, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FlightsReturn)
+                    </div>
+                    <p>[e.g. 21 Mar 2019]</p>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HotelClassId, new { @class = "col-sm-3 control-label" })
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.HotelClassId, new SelectList(Model.kvplistHotelClass, "Key", "Value", Model.HotelClassId), "Select Hotel Class", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.HotelClassId)
+                    </div>
+
+                </div>
+
+            </fieldset>
+        </div>
+       
+
+
+    </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="btn-toolbar">
+                    <input type="submit" value="Create" class="btn-primary btn" onclick=" return AddConfirm()" />
+                </div>
+            </div>
+        </div>
+
+        }
+
+        @section Scripts {
+
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+
+
+
+

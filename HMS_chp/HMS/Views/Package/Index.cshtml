@@ -1,0 +1,90 @@
+﻿@using MvcPaging
+@model IPagedList<HMS.Models.Package>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "Package", FormMethod.Get))
+{
+    <div class="row-fluid">
+        <div class="span6 pull-left">
+            <div class="input-append">
+                <input class="form-control" name="searchinfo" type="text" value="@ViewData["searchinfo"]">
+                <button type="submit" class="btn">
+                    <i class="icon-search"></i>&nbsp;Search</button>
+            </div>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.FirstOrDefault().PackageSourceId)
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Fk_PackageSourceId.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().StartFrom)
+            </th>
+            <th>
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fk_PackageSourceId.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+                <td style="min-width: 45px;">
+                    @Html.DisplayFor(modelItem => item.PriceType) @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartFrom)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+                new Options
+                {
+                    PageSize = Model.PageSize,
+                    TotalItemCount = Model.TotalItemCount,
+                    CurrentPage = Model.PageNumber,
+                    ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                    ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                    TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                    Size = Size.normal,
+                    Alignment = Alignment.centered,
+                    IsShowControls = true,
+                    IsShowFirstLast = true,
+                    IsShowPages = true
+                }, new
+                {
+                    MemberName = ViewData["searchinfo"]
+
+                }))
+    </div>
+}

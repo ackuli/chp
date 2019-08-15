@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Comparehajjpackages";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<style type="text/css">
+    .dashboard
+    {
+        margin-left: -5px;
+    }
+    .dashboard li a
+    {
+        border: 1px solid #EDEDED;
+        color: #6F6F6F;
+        display: block;
+        float: left;
+        height: 200px;
+        outline: medium none;
+        overflow: hidden;
+        padding: 5px 10px;
+        width: 100%;
+        background: url("../../Content/images/dashboard.png") no-repeat scroll 150px 115px;
+    }
+    .dashboard li a:hover, .dashboard li a:focus
+    {
+        text-decoration: none;
+    }
+    .dashboard li
+    {
+        display: block;
+        padding: 5px;
+    }
+    .dashboard h5
+    {
+        color: #333333;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    .dashboard a p
+    {
+        font-size: 1em;
+        /*font-style: italic;*/
+        padding: 20px;
+        text-align: justify;
+    }
+    .dashboard li a:hover
+    {
+        background: #30AFE8;
+        color: #fff;
+        -webkit-transition: background-color 1s ease-out;
+        -moz-transition: background-color 1s ease-out;
+        -o-transition: background-color 1s ease-out;
+        -ms-transition: background-color 1s ease-out;
+        transition: background-color 1s ease-out;
+        background: #30AFE8 url("../../Content/images/dashboard.png") no-repeat scroll 150px 115px;
+    }
+    .dashboard li a:hover h4
+    {
+        color: #fff;
+    }
+</style>
+@section UserId
+{
+    @Session["UserId"].ToString()
+    
+}
+<div class="row-fluid">
+    <ul class="dashboard">
+        <li class="span4"><a href="../Advertise/">
+            <h5>
+                Manage Adds</h5>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout.
+            </p>
+        </a></li>
+        <li class="span4"><a href="#">
+            <h5>
+                Approval</h5>
+            <p>
+                Pending Photo(5)<br />
+                Pending Video(7)<br />
+                Pending Adds(4)<br />
+            </p>
+        </a></li>
+        <li class="span4"><a href="#">
+            <h5>
+                Analytics Report</h5>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout.
+            </p>
+        </a></li>
+    </ul>
+</div>
+<br />
+<div class="row-fluid">
+    <ul class="dashboard">
+        <li class="span4"><a href="#">
+            <h5>
+                Finance</h5>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout.
+            </p>
+        </a></li>
+        <li class="span4"><a href="#">
+            <h5>
+                Rejected IP's</h5>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout.
+            </p>
+        </a></li>
+        <li class="span4"><a href="#">
+            <h5>
+                CPM Rate</h5>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout.
+            </p>
+        </a></li>
+    </ul>
+</div>

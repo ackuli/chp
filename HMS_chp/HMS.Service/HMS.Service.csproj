@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B06857D-4AF1-4565-A35B-8F1365D8592D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HMS.Service</RootNamespace>
+    <AssemblyName>HMS.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ESHKUL\PNSMS\ProjuktiNextSchoolManagementSystem\pnsms\pnsms.Entities\ExtDlls\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AdvertisePositionService.cs" />
+    <Compile Include="Models\AdvertiseTypeService.cs" />
+    <Compile Include="Models\AdvertisService.cs" />
+    <Compile Include="Models\AnswerChoiceService.cs" />
+    <Compile Include="Models\AnswerService.cs" />
+    <Compile Include="Models\BinaryObjectService.cs" />
+    <Compile Include="Models\BinaryObjectTypeService.cs" />
+    <Compile Include="Models\ClientInformationService.cs" />
+    <Compile Include="Models\ClientInfoService.cs" />
+    <Compile Include="Models\ClientService.cs" />
+    <Compile Include="Models\ContactUsService.cs" />
+    <Compile Include="Models\ContentService.cs" />
+    <Compile Include="Models\CountryService.cs" />
+    <Compile Include="Models\CurrencyTypeService.cs" />
+    <Compile Include="Models\DistanceUnitService.cs" />
+    <Compile Include="Models\DurationService.cs" />
+    <Compile Include="Models\EventService.cs" />
+    <Compile Include="Models\EventsTypeService.cs" />
+    <Compile Include="Models\ExperienceService.cs" />
+    <Compile Include="Models\HotelDetailService.cs" />
+    <Compile Include="Models\HotelService.cs" />
+    <Compile Include="Models\NewsService.cs" />
+    <Compile Include="Models\PackageDetailService.cs" />
+    <Compile Include="Models\PackageDisplayTypeSevice.cs" />
+    <Compile Include="Models\PackageService.cs" />
+    <Compile Include="Models\QuestionDetailService.cs" />
+    <Compile Include="Models\QuestionService.cs" />
+    <Compile Include="Models\QuizDetailService.cs" />
+    <Compile Include="Models\QuizQuestionAnswerService.cs" />
+    <Compile Include="Models\QuizService.cs" />
+    <Compile Include="Models\ScholareService.cs" />
+    <Compile Include="Models\PackagesInfoService.cs" />
+    <Compile Include="Models\PackageSourceService.cs" />
+    <Compile Include="Models\PackageSubscribeService.cs" />
+    <Compile Include="Models\PageTypeService.cs" />
+    <Compile Include="Models\PeoplePerRoomService.cs" />
+    <Compile Include="Models\PriceTypeService.cs" />
+    <Compile Include="Models\QuestionAnswerService.cs" />
+    <Compile Include="Models\QuestionTypeService.cs" />
+    <Compile Include="Models\RecentSearchService.cs" />
+    <Compile Include="Models\RightssService.cs" />
+    <Compile Include="Models\RoleRightssService.cs" />
+    <Compile Include="Models\RoleService.cs" />
+    <Compile Include="Models\ShiftingService.cs" />
+    <Compile Include="Models\SubscribeService.cs" />
+    <Compile Include="Models\UserAccountService.cs" />
+    <Compile Include="PackageTypeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\HomePageViewModelService.cs" />
+    <Compile Include="ViewModels\newsEventVMService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
+      <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
+      <Name>Repository.Pattern.Ef6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Repository.Pattern\Repository.Pattern.csproj">
+      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
+      <Name>Repository.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Service.Pattern\Service.Pattern.csproj">
+      <Project>{86f86650-ee3c-4372-8fec-40c2fe015022}</Project>
+      <Name>Service.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HMS.Entities\HMS.Entities.csproj">
+      <Project>{a6eae2e4-a9f1-4487-80e5-846a8d8eb827}</Project>
+      <Name>HMS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HMS.utility\HMS.utility.csproj">
+      <Project>{cada0ee8-3632-4362-a054-f68cd2128e64}</Project>
+      <Name>HMS.utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

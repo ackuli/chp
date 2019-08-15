@@ -1,0 +1,257 @@
+﻿@using System.Web.Optimization
+@model HMS.Entities.ViewModels.EventVM
+
+@{
+    ViewBag.Title = "Hajj and Umrah event Create";
+    Layout = "~/Views/shared/_CompareHajj.Layout.Admin.cshtml";
+}
+<style type="text/css">
+    .container
+    {
+        background-color: rgb(255, 255, 255);
+    }
+    select, input[type="file"]
+    {
+        font-size: 14px;
+    }
+    span.label
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
+    {
+        font-size: 14px;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.input-append.date.Date').datepicker({
+            format: "dd/M/yyyy",
+            //daysOfWeekDisabled: "5,6",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $('.input-append.date.EndDate').datepicker({
+            format: "dd/M/yyyy",
+            autoclose: true,
+            todayHighlight: true
+        });
+        $('.input-append.date.StartDate').datepicker({
+            format: "dd/M/yyyy",
+            autoclose: true,
+            todayHighlight: true
+        });
+        $('.input-append.date.EventsDate').datepicker({
+            format: "dd/M/yyyy",
+            autoclose: true,
+            todayHighlight: true
+        });
+        
+
+        $("#Event_Date").val("");
+
+        $("#Event_EndDate").val("");
+    });
+</script>
+<div>
+        @Html.ActionLink("Back to List", "Index", "Events")
+    </div>
+@Html.Partial("_alertstoastr")
+@using (Html.BeginForm("create", "Events", FormMethod.Post,
+                            new { enctype = "multipart/form-data" }))
+{
+    <fieldset style="margin-left: 10px">
+        <legend>Event</legend>
+        <div class="row-fluid">
+            <div class="span6">
+                <span class="label label-warning">About Your Event</span>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.EventsTitle)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.EventsTitle)
+                    @Html.ValidationMessageFor(model => model.Event.EventsTitle)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.Language)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.Language)
+                    @Html.ValidationMessageFor(model => model.Event.Language)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.EventsTypeId)
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownListFor(model => model.Event.EventsTypeId, new SelectList(Model.Event.kvpEventType, "Key", "Value", Model.Event.EventsTypeId), "", new { @class = "ClearBoth" })
+                    @Html.ValidationMessageFor(model => model.Event.EventsTypeId)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.IsVisible)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.IsVisible)
+                    @Html.ValidationMessageFor(model => model.Event.IsVisible)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.IsArchive)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.IsArchive)
+                    @Html.ValidationMessageFor(model => model.Event.IsArchive)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.IsDefault)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.IsDefault)
+                    @Html.ValidationMessageFor(model => model.Event.IsDefault)
+                </div>
+                <span class="label label-warning">Event Specifics</span>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.StartDate)
+                </div>
+                <div class="editor-field">
+                    <div class="input-append date Date">
+                        @Html.EditorFor(model => model.Event.StartDate)
+                        <span class="add-on"><i class="icon-th"></i></span>
+                        @Html.ValidationMessageFor(model => model.Event.StartDate)
+                    </div>
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.EndDate)
+                </div>
+                <div class="editor-field">
+                    <div class="input-append date EndDate">
+                        @Html.EditorFor(model => model.Event.EndDate)
+                        <span class="add-on"><i class="icon-th"></i></span>
+                        @Html.ValidationMessageFor(model => model.Event.EndDate)
+                    </div>
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.EventsDate)
+                </div>
+                <div class="editor-field">
+                    <div class="input-append date EventsDate">
+                        @*@Html.EditorFor(model => model.Event.EventsDate)*@
+                        @Html.TextBoxFor(model => model.Event.EventsDate, new { @Value = @DateTime.Now.ToShortDateString() })
+                        <span class="add-on"><i class="icon-th"></i></span>
+                        @Html.ValidationMessageFor(model => model.Event.EventsDate)
+                    </div>
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.Time)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.Time)
+                    @Html.ValidationMessageFor(model => model.Event.Time)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.Venue)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.Venue)
+                    @Html.ValidationMessageFor(model => model.Event.Venue)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.Address)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.Address)
+                    @Html.ValidationMessageFor(model => model.Event.Address)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.PostCode)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.PostCode)
+                    @Html.ValidationMessageFor(model => model.Event.PostCode)
+                </div>
+            </div>
+            <div class="span6">
+                <span class="label label-warning">Organisation Information</span>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.OrgWebsite)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.OrgWebsite)
+                    @Html.ValidationMessageFor(model => model.Event.OrgWebsite)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.OrgPhone)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.OrgPhone)
+                    @Html.ValidationMessageFor(model => model.Event.OrgPhone)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.OrgEmail)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.OrgEmail)
+                    @Html.ValidationMessageFor(model => model.Event.OrgEmail)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.OrgContactAddress)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.OrgContactAddress)
+                    @Html.ValidationMessageFor(model => model.Event.OrgContactAddress)
+                </div>
+                <span class="label label-warning">Attachments</span>
+                <div class="editor-label">
+                    <span>(only pdf) Event Doc 1 </span>
+                </div>
+                <div class="editor-field">
+                    <input id="EventDoc1" type="file" name="EventDoc1" />
+                    @Html.ValidationMessageFor(model => model.EventDoc1)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.Logo)
+                </div>
+                <div class="editor-field">
+                    <input id="Logo" type="file" name="Logo" />
+                    @Html.ValidationMessageFor(model => model.Logo)
+                </div>
+                <span class="label label-warning">Your Details</span>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.YourName)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.YourName)
+                    @Html.ValidationMessageFor(model => model.Event.YourName)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.YourOrganisation)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.YourOrganisation)
+                    @Html.ValidationMessageFor(model => model.Event.YourOrganisation)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.YourPhone)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.YourPhone)
+                    @Html.ValidationMessageFor(model => model.Event.YourPhone)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Event.YourEmail)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Event.YourEmail)
+                    @Html.ValidationMessageFor(model => model.Event.YourEmail)
+                </div>
+            </div>
+        </div>
+        <p>
+            <input type="submit" value="submit" class="btn" />
+        </p>
+       
+    </fieldset>
+}

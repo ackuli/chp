@@ -1,0 +1,34 @@
+﻿@model List<HMS.Models.Event>
+@{
+    ViewBag.Title = "SearchEvent";
+    Layout = "~/Views/shared/_LayoutEvent.cshtml";
+}
+<style type="text/css">
+    .container
+    {
+        background-color: rgb(255, 255, 255);
+    }
+    .header
+    {
+        border-bottom: 1px solid rgb(221, 221, 221);
+        margin-top: 10px;
+        border-left: 0px;
+    }
+</style>
+<fieldset style="margin: 20px">
+    <legend>Search Result</legend>
+    <div>
+        @foreach (var item in Model)
+        {
+            <div class="row-fluid" style="margin-bottom: 20px; padding-top: 20px">
+                <div class="span2">
+                    <img class="eventimg" src="~/binaryObj/@item.Fk_Logo.Id@item.Fk_Logo.Name@item.Fk_Logo.Extension" />
+                </div>
+                <div class="span10">
+                    Title: @Html.ActionLink(@item.Title, "Details", "Events", new { id = item.Id }, null)<br />
+                    Event Date: @item.Date.ToString("dd-MMM-yyyy"),@item.Venue<br />
+                </div>
+            </div>
+        }
+    </div>
+</fieldset>

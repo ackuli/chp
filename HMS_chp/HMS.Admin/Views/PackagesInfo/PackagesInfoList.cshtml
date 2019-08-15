@@ -1,0 +1,158 @@
+﻿@using MvcPaging
+@model  MvcPaging.IPagedList<HMS.Entities.Models.PackagesInfo>
+@{
+    ViewBag.Title = "Packages Info List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .form-inline .form-control {
+        width: 100%;
+    }
+
+    .form-inline input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form-inline .form-group {
+        width: 70%;
+    }
+
+    .margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#page-leftbar li").removeClass("active");
+        $("#liPackages").addClass("active");
+    });
+</script>
+
+@section breadcrumb
+{
+    <li><a href="~/Home/index">Dashboard</a></li>
+    <li>Packages</li>
+    <li class="active">@ViewBag.Title</li>
+}
+@section title
+{
+    @ViewBag.Title
+}
+<style type="text/css">
+    .ImgSize {
+        width: 40px;
+        height: 30px;
+    }
+</style>
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+@using (Html.BeginForm("PackagesInfoCreate", "PackagesInfo", FormMethod.Get))
+{
+
+    <div class="row margin">
+        <div class="col-md-6">
+            @Html.ActionLink("Create New", "PackagesInfoCreate")
+        </div>
+        <div class="form-inline col-md-6" style="margin-bottom: 20px">
+
+            <div class="form-group">
+                <input type="text" class="form-control " id="searchItem" name="searchItem" placeholder="Search" value="@ViewData["searchItem"]">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+
+    <table class="table">
+
+
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PackageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PeoplePerRooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Client.ClientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PackageType.PackageTypename)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Statuss.StatusName)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.ToList())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PackageName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeoplePerRooms)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client.ClientName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PackageType.PackageTypename)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Statuss.StatusName)
+                </td>
+                <td>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Edit", "EditPackagesInfo", "PackagesInfo", new { id = item.PackageId }, null)</li>
+                            <li class="divider"></li>
+                            @if (HMS.Admin.MvcApplication.GolbalSession.gblSession.UserRights.Exists(x => x.Equals(1)))
+                            {
+                                <li>@Html.ActionLink("Approved", "ApprovedPackagesInfo", "PackagesInfo", new { id = item.PackageId, StatusId = 2 }, null) </li>
+                                <li class="divider"></li>
+                                 <li>@Html.ActionLink("Reject", "ApprovedPackagesInfo", "PackagesInfo", new { id = item.PackageId, StatusId=3 }, null) </li>
+                                <li class="divider"></li>
+                                 <li>@Html.ActionLink("Pending", "ApprovedPackagesInfo", "PackagesInfo", new { id = item.PackageId, StatusId = 4 }, null) </li>
+                                <li class="divider"></li>
+                                 <li>@Html.ActionLink("Time Over", "ApprovedPackagesInfo", "PackagesInfo", new { id = item.PackageId, StatusId = 5 }, null) </li>
+                            }
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Delete", "Delete", "PackagesInfo", new { id = item.PackageId }, null)</li>
+                            <li class="divider"></li>
+                        </ul>
+                    </div>
+                  
+
+                    
+
+                </td>
+            </tr>
+        }
+
+    </table>
+    <hr />
+    <div class="pager">
+        @Html.Raw(Html.Pager(
+                     new Options
+                     {
+                         PageSize = Model.PageSize,
+                         TotalItemCount = Model.TotalItemCount,
+                         CurrentPage = Model.PageNumber,
+                         ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                         ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                         TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                         Size = Size.normal,
+                         Alignment = Alignment.centered,
+                         IsShowControls = true,
+                         IsShowFirstLast = true,
+                         IsShowPages = true
+                     }, null))
+
+    </div>
+}

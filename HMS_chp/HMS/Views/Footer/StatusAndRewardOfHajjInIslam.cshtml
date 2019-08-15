@@ -1,0 +1,333 @@
+﻿@{
+    ViewBag.Title = "Status & Reward of Hajj in Islam";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+
+<style type="text/css">
+    /*.Footercontent {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .Footercontent p {
+            text-align: justify;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        .Footercontent li {
+            text-align: left;
+            line-height: 25px;
+            font-size: 1.1em;
+        }*/
+     #btninformation {
+        background-color: #D95902 !important;
+    }
+
+    h2 {
+        /*font-size: 2.5rem;
+        padding: 0.5rem 0.7rem;*/
+        padding: 0 45px;
+        margin-bottom: 1rem;
+        color: #444;
+    }
+
+    section.page-container {
+        display: flex;
+        padding: 0 35px;
+    }
+
+    .main-content {
+        flex-basis: 70%;
+        margin: 0 10px 1rem;
+    }
+
+    aside {
+        flex-basis: 30%;
+        background: #f2f2f2;
+        display:flex;
+        flex-direction: column;
+            align-content: center;
+    
+      }
+
+
+
+    .hero-banner {
+        margin-bottom: 1rem;
+        height: 400px;
+        width: 100%;
+        background-color:   #4d4d4d;
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+        .hero-banner img {
+            display: block;
+        }
+
+        .hero-banner span {
+            display: block;
+            padding: 5px;
+            color: #888888;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+    .inline-ads {
+        clear: left;
+        margin: 5px 25px 10px 10px;
+        height: 230px;
+        width: 180px;
+        background-color:  #e6e6e6;
+        border: 1px solid #808080;
+                   
+    }
+
+    hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #00e6e6;
+    margin: 5px 0;
+    width:28%;
+  
+}
+    
+    .sidebar-ads {
+        padding-top: 10px;
+        padding-right: 30px;
+        margin-bottom: 1rem;
+        flex: 1;
+       align-items: center;
+      
+    }
+
+    .post-list {
+        display:flex;
+        padding-top:  10px;
+         flex: 1;
+         align-items: center;
+        flex-wrap: wrap;
+        align-content: flex-end;
+
+    }
+
+        .post-list h4 {
+            color: #252525;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0 0.5rem;
+            border-bottom: 1px solid #aeaeac;
+         
+            }
+
+        .post-list ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .post-list ul li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .post-list ul li a {
+                padding: 0.8rem;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: #252525;
+                background: #D1D1D1;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid #aeaeac;
+                box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
+            }
+
+                .post-list ul li a:hover {
+                    text-decoration: none;
+                }
+
+                .post-list ul li a img {
+                    border-radius: 10px;
+                    margin-bottom: 0.8rem;
+                    border: 1px solid #aeaeac;
+                }
+
+                .post-list ul li a span {
+                    padding-left: 0.8rem;
+                    flex: 1;
+                }
+
+       .arabicCSS p {
+        font-size: 25px;
+        font-weight: normal;
+        /*text-align: right;*/
+        line-height: 35px;
+        padding: 30px;
+    }
+
+       
+
+       /*//breadcrumb starts here//*/
+       ul.breadcrumb {
+    padding: 8px 14px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    content: "/\00a0";
+    }
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/*//breadcrumb ends//*/
+
+</style>
+<ul class="breadcrumb">
+
+    <li><a href="~/Information/Index">Guides</a></li>
+    <li><a href="../Footer/GettingReadyForHajj">Getting Ready for Hajj</a></li>
+    <li><a href="../Footer/HajjAndHajjRites">Hajj and Hajj Rites</a></li>
+    <li>Status & Reward of Hajj in Islam</li>
+    @*<li class="active" style="color:black">@ViewBag.Title</li>*@
+
+</ul>
+
+
+@*<div class="row-fluid">
+    <div class="Footercontent">*@
+
+        <h2>Status & reward of hajj in Islam</h2>
+
+        <section class="page-container">
+    <div class="main-content">
+        <div class="row" style="background-color:#4d4d4d; margin-left:2px;">
+           
+
+                @*<img src="http://via.placeholder.com/900x400" alt="Alternate Text" />*@
+
+
+
+                <div class="arabicCSS">
+
+                    <p style="font-size:30px; color:#ffb31a; text-align: right;">     حَدَّثَنَا آدَمُ، حَدَّثَنَا شُعْبَةُ، حَدَّثَنَا سَيَّارٌ أَبُو الْحَكَمِ، قَالَ سَمِعْتُ أَبَا حَازِمٍ، قَالَ سَمِعْتُ أَبَا هُرَيْرَةَ ـ رضى الله عنه ـ قَالَ سَمِعْتُ النَّبِيَّ صلى الله عليه وسلم يَقُولُ,  مَنْ حَجَّ لِلَّهِ فَلَمْ يَرْفُثْ وَلَمْ يَفْسُقْ رَجَعَ كَيَوْمِ وَلَدَتْهُ أُمُّهُ </p>
+
+                    <p style="text-align:left; color:white;">The Prophet (pbuh) said, <q> Whoever performs Hajj for Allah's pleasure and does not have sexual relations with his wife, and does not do evil or sins then he will return (after Hajj free from all sins) as if he were born a new.</q><br /><small>Sahih al-Bukhari 1521, Book 25, Hadith 9, Vol. 2, Book 26, Hadith 596</small></p>
+
+                    @*<span>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</span>*@
+
+                </div>
+
+           
+        </div>
+
+
+        <p>
+            Hajj is the fifth of Islam after declaration of shahada (faith), salah (five daily prayers), Zakat (obligatory alms), sawm (obligatory fasting during month of Ramadan). It is an obligation on all Muslims (male and female), attested by the Qur’an and the Hadith that if he or she possess enough wealth and has good health, to undertake the journey to Makkah to perform Hajj.
+        </p>
+        <p>Allah says in the Qur’an: </p>
+
+        <div class="arabicCSS"> <p style="text-align:right;"> (إِنَّ أَوَّلَ بَيۡتٍ۬ وُضِعَ لِلنَّاسِ لَلَّذِى بِبَكَّةَ مُبَارَكً۬ا وَهُدً۬ى لِّلۡعَـٰلَمِينَ (٩٦) فِيهِ ءَايَـٰتُۢ بَيِّنَـٰتٌ۬ مَّقَامُ إِبۡرَٲهِيمَ‌ۖ وَمَن دَخَلَهُ ۥ كَانَ ءَامِنً۬ا‌ۗ وَلِلَّهِ عَلَى ٱلنَّاسِ حِجُّ ٱلۡبَيۡتِ مَنِ ٱسۡتَطَاعَ إِلَيۡهِ سَبِيلاً۬‌ۚ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ عَنِ ٱلۡعَـٰلَمِينَ (٩٧)(سُوۡرَةُ آل عِمرَان</p></div>
+        <p>“Verily, the first House (of worship) appointed for mankind was that at Bakkah (Makkah), full of blessing, and a guidance for Al-'Alamîn (the mankind and jinn).  In it are manifest signs (for example), the Maqâm (place) of Ibrâhim (Abraham); whosoever enters it, he attains security. And Hajj (pilgrimage to Makkah) to the House (Ka'bah) is a duty that mankind owes to Allâh, those who can afford the expenses (for one's conveyance, provision and residence); and whoever disbelieves [i.e. denies Hajj (pilgrimage to Makkah), then he is a disbeliever of Allâh], then Allâh stands not in need of any of the 'Alamîn (mankind and jinn and all that exists).” The Holy Qura’an [Al-Imran: 96-97]</p>
+
+        <hr />
+        <div class="pull-left inline-ads">
+
+            @*<img src="http://via.placeholder.com/200x250" alt="Alternate Text" />*@
+
+            <img src="~/content/images/CompareHajjManagement.jpg" att="Alternate Text" />
+            <h4 style="color:#0077b3; text-align:center">Pillar and Obligatory Actions of Hajj</h4>
+
+            <br />
+            <p style="text-align:right; padding-right:5px; color:#0077b3;"> <a href="../Footer/PillarandWajibActions"><strong>Read more</strong></a></p>
+        </div>
+
+
+        <p>The reward for hajj is paradise.  Narrated Abu Huraira: The Prophet (pbuh) said, "Whoever performs Hajj for Allah's pleasure and does not have sexual relations with his wife, and does not do evil or sins then he will return (after Hajj free from all sins) as if he were born a new." (Sahih al-Bukhari 1521)</p>
+        <p>The literal meaning of word hajj is “to set out for a place.” Although in English the word ‘pilgrimage’ is often referred to convey the meaning of hajj, in Islamic Shariah the word hajj is only applied to pilgrimage to Makkah. No other pilgrimage to any other place is called hajj. In fact in Islam, there is no other pilgrimage except hajj.   </p>
+
+        <br />
+        <h3 id="HajjObligation">Upon whom hajj is obligatory? </h3>
+        <p>Hajj is compulsory for every adult, sane Muslim, male or female, once in his or her lifetime, provided: </p>
+        <ol>
+            <li>They have the financial means,</li>
+            <li>They are free (not a slave), </li>
+            <li>They possess the physical means (in good health), </li>
+            <li>They have a Mahram (for women),</li>
+            <li>The journey to Makkah is safe and does not involve any danger.</li>
+        </ol>
+    </div>
+    <aside>
+        <div class="sidebar-ads">
+            @*<img src="http://via.placeholder.com/400x750" alt="Alternate Text" />*@
+
+
+            <img src="~/content/images/Add3NewsEvent.jpg" att="Alternate Text" align="right" class="img-responsive" />
+        </div>
+
+        <div class="post-list">
+            <h4>Most Searched</h4>
+
+
+            <ul>
+                <li>
+                    <a href="../Footer/WhichTypeHajjChoose">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Which type of Hajj to choose?</strong> There are three types of Hajj: Ifrad, Qiran and Tamattu. </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../Footer/miqat">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+
+                        <img src="~/content/images/Path.jpg" class="img-thumbnail" style="width:110px; height:110px;" alt="miqat diagram" />
+                        <span style="color: #004d66"><strong>  What is miqat and rulings on miqat? </strong> The literal meaning of miqat is “a stated time or place.”  </span>
+
+                    </a>
+
+
+
+
+                </li>
+                <li>
+                    <a href="../Footer/StepByStepGuideToTammattuHajj">
+                        @*<img src="http://via.placeholder.com/150x150" alt="Alternate Text" />*@
+                        <img src="~/content/images/add3.png" class="img-thumbnail" style="width:110px; height:110px;" alternate text" />
+
+                        <span style="color: #004d66"><strong> Step by step guide to Tammattu Hajj</strong> Tammattu Hajj consists of both ‘Umrah and Hajj.</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+
+    </aside>
+
+</section>
+<br>

@@ -1,0 +1,154 @@
+﻿
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+    header .row-fluid {
+        margin-left: 0;
+    }
+
+    header {
+        margin-bottom: 10px;
+        background-color: #FFF;
+        background-image: url(../../Content/images/kabaBackgroundlong.gif);
+        background-position: center -100px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .add-on {
+        border-radius: 0 0 5px !important;
+    }
+
+    .row-fluid.hmenu div {
+        margin-left: 10px;
+    }
+
+        .row-fluid.hmenu div a {
+            border-radius: 0;
+            padding: 5px 0;
+            font-size: 15px;
+            font-weight: bold;
+            background-image: url("~/Content/images/CHP_logo.png") !important;
+            background-color: #3c4b14;
+        }
+
+    .activeButton {
+        background-color: #D95902 !important;
+    }
+
+    .hmenu {
+        margin-left: 10px !important;
+        margin-right: 40px;
+    }
+
+    .banner {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .atss {
+        top: 13%;
+    }
+    .form-inline .form-control {
+        width: 32%;
+    }
+    .form-inline input {
+        max-width: 100%;
+        width: 100%;       
+    }
+
+    .form-inline .form-group {
+        width: 70%;
+    }
+    .margin {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+</style>
+<script type="text/javascript">
+    window.cookieconsent_options = { "message": "This website uses cookies to ensure you get the best experience on our website", "dismiss": "Got it!", "learnMore": "More info", "link": null, "theme": "dark-top" };
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<header class="">
+    <div class="row-fluid">
+
+        <div class="span2">
+          <a href="~/Home/moc4">  <img alt="logo" class="logo" src="../../Content/images/CHP_logo.png" /></a>
+        </div>
+       <div class="span7">
+            @*<img class="banner" src="~/Content/images/Home–topbanner.jpg" />*@
+            
+        </div>
+
+        <div class="span3 input-append">
+            <div style="display: flex;justify-content: flex-end;">
+                <input id="appendedInput" style="color: #FFF;text-align: center; width: 113px;border-radius: 0 0 0 5px;background-color: #906f28" value="United Kingdom" readonly="readonly" type="text">
+                <img alt="uk" class="add-on" src="../../Content/images/uk.png" style="background-color: #906f28" />
+            </div>
+            @*<div class="social-links-wrapper">
+                <ul class="social-links">
+                    <li>
+                        <a class="facebook" target="_blank" title="follow me on facebook" href="https://www.facebook.com/Compare-HAJJ-Packages-1340663379282921/?ref=settings">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="twitter" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="linkedin" target="_blank" rel="nofollow" href="https://www.linkedin.com/company/10649804?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A2172969401465312534228%2CVSRPtargetId%3A10649804%2CVSRPcmpt%3Aprimary" title="Share on Linkedin">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gplus" target="_blank" title="follow me on google plus" href="https://plus.google.com/PLACEHOLDER">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="youtube" target="_blank" title="follow me on youtube" href="http://www.youtube.com/PLACEHOLDER">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>*@
+        </div>
+    </div>
+   
+       <div class="row-fluid hmenu">
+        <div class="span2">
+          
+            @Html.ActionLink("Home", "moc6", "Home", new { }, new { @class = "btn btn-large btn-block btn-primary", id = "btnhome" })
+        </div>
+        
+        <div class="span2">
+            @Html.ActionLink("Guides", "Index", "Information", new { }, new { @class = "btn btn-large btn-block btn-primary", id = "btninformation" })
+           
+        </div>
+        <div class="span2">
+
+            @Html.ActionLink("News & Blogs", "Index", "newsAndEvents", new { }, new { @class = "btn btn-large btn-block btn-primary", id = "btnnewsevent" })
+
+        </div>
+        <div class="span2 4offset">
+            @Html.ActionLink("Ask The Scholar", "IndexForClient", "QuestionAnswer", new { }, new { @class = "btn btn-large btn-block btn-primary", id = "btnaskthescholer" })
+           
+        </div>
+        @using (Html.BeginForm("FindContent", "Content", FormMethod.Get))
+        {
+            <div class="earchboxAllgine">
+                <div class="form-inline col-md-4">
+                    @*<button type="submit" class="btn btn-primary" style="float: right; margin-right:10px;">Search</button>*@
+                    <button type="submit" class="add-on btn" style="float: right; margin-right: 15px;"><i class="icon-search"></i></button>
+                    <input type="text" class="form-control" required style="float: right;height: 30px;" id="freetext" name="freetext" placeholder="What are you looking for?" value="@ViewData["searchItem"]">
+                </div>
+            </div>
+        }
+    </div>
+</header>
+
+@*<hr />*@

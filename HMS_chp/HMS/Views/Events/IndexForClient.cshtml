@@ -1,0 +1,452 @@
+﻿
+@using System.Web.Optimization
+@using MvcPaging
+@model IPagedList<HMS.Entities.Models.Event>
+@{
+    ViewBag.Title = "comparehajjpackages";
+    Layout = "~/Views/shared/_LayoutPage.cshtml";
+}
+@*@section MetaContent{
+    <meta name="Keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+}*@
+<meta name="Keywords" content="hajj,hajj 2014,hajj seminar 2014,hajj packages,hajj and umrah,hajj tours,hajj 2015,hajj facts,hajj pilgrimage,hajj 2014 packages uk,hajj guide,hajj packages 2015"/>
+<meta name="description" content="Coming Soon, the most comprehensive hajj and umrah website that will change the way people search and book hajj and umrah trips" />
+<style type="text/css">
+    .container {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .carousel-control {
+        top: 50%;
+    }
+
+    #btnnewsevent {
+        background-color: #D95902 !important;
+    }
+
+    .pre {
+        background-color: rgb(245, 245, 245);
+        padding-top: 10px;
+        display: block;
+        font-size: 13px;
+        line-height: 20px;
+        margin: 0 0 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .yourevent {
+        background-color: #FFFFFF;
+        border: 1px solid #81B7D9;
+        margin-bottom: 10px;
+    }
+
+        .yourevent p {
+            text-align: justify;
+            margin: 10px;
+        }
+
+    .eventposition {
+        margin-top: 50px;
+    }
+
+    .buttonwithimage {
+        border: 0 none;
+        border-radius: 10px;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+
+    .control-group {
+        margin-bottom: 0px;
+    }
+
+    .controls input[type="text"] {
+        width: 120px;
+        font-size: 13px;
+    }
+
+    input[type="text"] {
+        font-size: 13px;
+    }
+
+    select {
+        width: 135px;
+        font-size: 13px;
+    }
+
+    .Eventtype {
+        font-weight: bold;
+    }
+
+    .btnsearch {
+        border: 0 none;
+        padding: 0;
+        margin-right: 5px;
+    }
+
+    .buttomAdd {
+        height: 60px;
+        border: 1px solid #DDD;
+    }
+
+    .AddEvent {
+        margin-top: 10px;
+    }
+
+        .AddEvent img {
+            height: 120px;
+            width: 99%;
+            border: 1px solid rgb(221, 221, 221);
+        }
+
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        width: 100%;
+    }
+
+    .subscribe {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        text-align: justify;
+    }
+
+    .AddEvent p {
+        margin-right: 15px;
+    }
+
+    .media {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+
+    .eventobject {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .news img {
+        height: 100px;
+        width: 80px;
+    }
+
+    .addspace {
+        width: 100%;
+        height: 150px;
+    }
+
+    .events {
+        margin-left: 5px;
+    }
+
+    .eventborder {
+        border: 1px solid #DDD;
+    }
+
+    .eventHead {
+        background-color: rgb(90, 90, 90);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 5px;
+    }
+</style>
+<div class="clearfix">
+</div>
+<div style="width: 98%; margin-top: 10px; margin-left: 2%">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="events">
+                <h5 class="">
+                    <span>EVENTS</span>
+                </h5>
+                @foreach (var item in Model)
+                {
+                    <div class="row-fluid eventobject">
+                        <div class="span2" style="margin-left: 0px">
+                            @*<img src="~/binaryObjects/GetBinaryObjectById?id=@item.Logo&objectTypeId=8">*@
+                            <img src="~/binaryObjects/GetBinaryObjectById?id=@item.Id&objectTypeId=6">
+                        </div>
+                        <div class="span10">
+                            Title: @Html.ActionLink(@item.Title, "Details", "Events", new { id = item.Id }, null)<br />
+                            Event Date: @item.Date.ToString("dd-MMM-yyyy"),@item.Venue<br />
+                        </div>
+                    </div>
+                }
+                <div class="pager">
+                    @Html.Raw(Html.Pager(
+                        new Options
+                        {
+                            PageSize = Model.PageSize,
+                            TotalItemCount = Model.TotalItemCount,
+                            CurrentPage = Model.PageNumber,
+                            ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                            //ItemIcon = new ItemIcon() { First = "icon-backward", Previous = "icon-chevron-left", Next = "icon-chevron-right", Last = "icon-forward" },
+                            //ooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
+                            Size = Size.normal,
+                            Alignment = Alignment.left,
+                            IsShowControls = true,
+                            IsShowFirstLast = false,
+                            IsShowPages = false
+                        }, new
+                           {
+                               typeId = ViewData["typeId"]
+
+                           }))
+                </div>
+            </div>
+            <div class="row-fluid pre">
+                @using (Html.BeginForm("SearchEvent", "Events", FormMethod.Get))
+                {
+                    <div class="row-fluid">
+                        <div class="span11 pull-right" style="margin-right: 5px;">
+                            <p class="Eventtype">
+                                Search events near your area
+                            </p>
+                            <div class="control-group">
+                                <div class="controls" style="text-align: right;">
+                                    <span>Type:</span>
+                                    @Html.DropDownList("Type", new SelectList(ViewBag.EventType, "Key", "Value"), "--- Select ---", new { id = "Type", Class = "dropdoenlist" })
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls" style="text-align: right;">
+                                    <span>Postal:</span>
+                                    <input type="text" id="txtPostalCode" name="PostCode" placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <p class="text-right">
+                                <button type="submit" class="btnsearch">
+                                    <img class="imagesearch" src="../../IndexTest/search-button.jpg" />
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row-fluid pre">
+                <div style="padding: 5px">
+                    <p class="Eventtype">
+                        Past Events
+                    </p>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img alt="64x64" style="width: 30px; height: 40px;" src="../../Content/images/calender-green.png">
+                        </a>
+                        <div class="media-body">
+                            <h6 class="media-heading">
+                                Media heading
+                            </h6>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                            commodo.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img alt="64x64" style="width: 30px; height: 40px;" src="../../Content/images/calender-green.png">
+                        </a>
+                        <div class="media-body">
+                            <h6 class="media-heading">
+                                Media heading
+                            </h6>
+                            CCras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                            commodo.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img alt="64x64" style="width: 30px; height: 40px;" src="../../Content/images/calender-green.png">
+                        </a>
+                        <div class="media-body">
+                            <h6 class="media-heading">
+                                Media heading
+                            </h6>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                            commodo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid pre">
+                @*<div style="padding: 5px">
+                        <div class="span3">
+                            <img src="../../IndexTest/calender.jpg" class="eventimg eventposition">
+                        </div>
+                        <div class="span9 ">
+                            <h5 style="color: #4C8DD7">
+                                Your event</h5>
+                            <p style="text-align: left">
+                                List your forthcoming events on comparehajjpackages.com for the best responses.
+                                Listing service is absolutely free.
+                            </p>
+                            <button class="buttonwithimage">
+                                <img src="../../IndexTest/list-your-event-button.jpg" style="border-radius: 10px"
+                                    alt="List your event">
+                            </button>
+                        </div>
+                    </div>*@
+
+
+                <div class="media">
+
+                    <div class="media-body">
+                        <h5 class="media-heading" style="color: #6387b2">
+                            Your event
+                        </h5>
+                        <p style="text-align: left">List your forthcoming events on   comparehajjpackages.com for the best responses. Listing service is absolutely free.</p>
+                        <br />
+
+                        <button class="buttonwithimage">
+                            <img src="../../IndexTest/list-your-event-button.jpg" style="border-radius: 10px"
+                                 alt="List your event">
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="span7 news">
+            <h5>
+                NEWS
+            </h5>
+            <div>
+                <div class="eventborder">
+
+                    @foreach (var item in Model.LstNewses)
+                    {<div class="media eventobject">
+                        <a href="#" class="pull-left">
+                            <img src="~/binaryObjects/GetBinaryObjectById?id=@item.Img&objectTypeId=7">
+                        </a>
+
+                        <div class="media-body">
+                            <h5 class="media-heading">
+                                @item.Title
+                            </h5>
+                            @MvcHtmlString.Create(@item.Description)
+                            @Html.ActionLink("News Details", "DetailsForClient", "News", new { id = item.Id }, null)<br />
+                        </div>
+                    </div>
+                    }
+
+                    @*<div class="media eventobject">
+                            <a href="#" class="pull-left">
+                                <img alt="64x64" src="../../Content/images/newsblack.jpg">
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    Media heading
+                                </h5>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                                commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </div>*@
+                    @*
+                        <div class="media eventobject">
+                            <a href="#" class="pull-left">
+                                <img alt="64x64" src="../../Content/images/newsblack.jpg">
+                            </a>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    Media heading
+                                </h5>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                                commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </div>*@
+                </div>
+                <h5 style="margin-left: 5px; color: #1605C6">
+                    ARCHIVE NEWS
+                </h5>
+                <div class="eventborder" style="margin-top: 5px">
+                    <div style="margin-left: 5px; margin-right: 5px">
+
+
+
+                        @foreach (var item in Model.LstArchiveNews)
+                        {
+                            <div class="archiveNews">
+                                <a href="#" class="pull-left">
+                                    <img src="~/binaryObjects/GetBinaryObjectById?id=@item.Img&objectTypeId=7">
+
+                                </a>
+
+                                <div class="media-body">
+                                    <h5 class="media-heading">
+                                        @item.Title
+                                    </h5>
+                                    @MvcHtmlString.Create(@item.Description)
+                                    @Html.ActionLink("News Details", "DetailsForClient", "News", new { id = item.Id }, null)<br />
+                                </div>
+                            </div>
+                        }
+                        @*<h6>
+                                11th December 2013
+                            </h6>
+                            <h5 class="media-heading">
+                                Media heading
+                            </h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                            commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                            condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.*@
+
+                        @*<div class="archiveNews">
+                                <h6>
+                                    11th December 2013
+                                </h6>
+                                <h5 class="media-heading">
+                                    Media heading
+                                </h5>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                                commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                            <div class="archiveNews">
+                                <h6>
+                                    11th December 2013
+                                </h6>
+                                <h5 class="media-heading">
+                                    Media heading
+                                </h5>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                                commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                            <div class="archiveNews">
+                                <h6>
+                                    11th December 2013
+                                </h6>
+                                <h5 class="media-heading">
+                                    Media heading
+                                </h5>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
+                                commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
+                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span2">
+            <img style="width: 93%" src="../../Content/images/Add3NewsEvent.jpg" />
+        </div>
+    </div>
+    <div class="row-fluid" style="margin-top: 10px; margin-bottom: 10px">
+        <div class="span3">
+            <img class="addspace" src="../../Content/images/Add1NewsEvent.jpg" />
+        </div>
+        <div class="span7 ">
+            <img class="addspace" src="../../Content/images/Add2NewsEvent.jpg" />
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#HajjSlide').carousel({
+            interval: 2000
+        }).carousel('cycle');
+    }) </script> 

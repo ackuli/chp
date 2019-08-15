@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+
+  <mvcSiteMapNode title="Home" controller="Home" action="moc">
+    <mvcSiteMapNode title="News Event and Blog" controller="newsAndEvents" action="Index"/>
+    <mvcSiteMapNode title="Information" controller="Information" action="Index">
+        <mvcSiteMapNode title="Hajj Portal" controller="Information" action="HajjPortal" key="Hajj Portal">
+      <mvcSiteMapNode title="Status and reward of hajj" controller="Footer" action="StatusAndRewardOfHajjInIslam"/>
+      <mvcSiteMapNode title="Upon whom hajj is obligatory?" controller="Footer" action="StatusAndRewardOfHajjInIslam/StatusAndRewardOfHajjInIslam#HajjObligation"/>
+      <mvcSiteMapNode title="Pillars of Hajj" controller="Footer" action="PillarandWajibActions"/>
+      <mvcSiteMapNode title="Obligatory (wajib) Actions of Hajj" controller="Footer" action="PillarandWajibActions/PillarandWajibActions#WajidActions"/>
+
+      <mvcSiteMapNode title="What is Miqat and Rulings on Miqat?" controller="Footer" action="/miqat"/>
+
+      <mvcSiteMapNode title="Which type of hajj to choose?" controller="Footer" action="WhichTypeHajjChoose"/>
+      <mvcSiteMapNode title="What is Ihram and Rulings on Ihram?" controller="Footer" action="Ihram"/>
+      <mvcSiteMapNode title="Making Hajj Intention" controller="Footer" action="Niyah"/>
+      <mvcSiteMapNode title="Talbiyah" controller="Footer" action="Talbiyah"/>
+      <mvcSiteMapNode title="What is Tawaf and How to Perform Tawaf?" controller="Footer" action="Tawaf"/>
+
+      <mvcSiteMapNode title="What is Sa’i and how to perform sa’i?" controller="Footer" action="Sai"/>
+
+      <mvcSiteMapNode title="Hajj rites at a glance" controller="Footer" action="Hajjritesataglance">
+        <mvcSiteMapNode title="Tammattu Hajj at a glance" controller="Footer" action="TamattuHajjataglance"/>
+        <mvcSiteMapNode title="Qiran Hajj at a glance" controller="Footer" action="QiranHajjataglance"/>
+        <mvcSiteMapNode title="Ifrad Hajj at a glance" controller="Footer" action="IfradHajjataglance"/>
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title="Step by step guide to hajj" controller="Footer" action="Stepbystepguidetohajjrites">
+        <mvcSiteMapNode title="Step by step guide to Tamattu Hajj" controller="Footer" action="StepByStepGuideToTammattuHajj"/>
+        <mvcSiteMapNode title="Step by step guide to Qiran Hajj" controller="Footer" action="StepbystepguidetoQiranHajj"/>
+        <mvcSiteMapNode title="Step by step guide to Ifrad Hajj" controller="Footer" action="StepbystepguidetoIfradHajj"/>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Hajj of a woman" controller="Footer" action="HajjWoman"/>
+      <mvcSiteMapNode title="Common misconceptions about Hajj and ‘Umrah" controller="Footer" action="CommonMisconceptions"/>
+      <mvcSiteMapNode title="Common mistakes people make during Hajj and ‘Umrah" controller="Footer" action="CommonMisconceptions#commonmistakes"/>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Umrah Portal" controller="Information" action="UmrahPortal" key="Umrah Portal">
+      <!--<mvcSiteMapNode title="Common misconceptions about Hajj and ‘Umrah" controller="Footer" action="CommonMisconceptions"/>-->
+    <mvcSiteMapNode title="'Umrah Hajj at a glance" controller="Footer" action="UmrahRitesAtAGlance"/>
+    <mvcSiteMapNode title="Stey by step guide to 'Umrah Hajj" controller="Footer" action="StepByStepGuideToUmrahHajj"/>
+    <mvcSiteMapNode title="Du’as for hajj and ‘umrah" controller="Footer" action="DuaforhajjandUmrah"/>
+    <mvcSiteMapNode title="Hajj and Umrah Glossary" controller="Footer" action="HajjUmrahGlossary"/>
+    <mvcSiteMapNode title="The Last Sermon of the Prophet Muhammad (PBUH)" controller="Footer" action="TheLastsermon"/>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Travel Guide Saudi Arabia" controller="Information" action="TravelGuaidSaudiAeabia" key="ravel Guaid Saudi Arabia">
+      
+      <mvcSiteMapNode title="Saudi Arabia: Key Facts And Statistics" controller="Footer" action="FactsAboutSaudiArabia"/>
+      <mvcSiteMapNode title="Hajj and ‘Umrah Visas" controller="Footer" action="HajjUmrahVisas"/>
+      
+      <mvcSiteMapNode title="Health Considerations" controller="Footer" action="HealthConsiderations"/>
+      <mvcSiteMapNode title="Recommended Travel Items" controller="Footer" action="TravelItemRecommandations"/>
+    <mvcSiteMapNode title="Accommodation" controller="Footer" action="Accommodation"/>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Safety Security And Fraud" controller="Information" action="SaftySecurityAndFraud" key="Safty Security And Fraud">
+      <mvcSiteMapNode title="The Hajj Market" controller="Footer" action="HajjMarket" key="The Hajj Market" />
+      <mvcSiteMapNode title="How To Understand A Hajj Package?" controller="Footer" action="UnderstandingPackages" key="How To Understand A Hajj Package?"/>
+    
+    <mvcSiteMapNode title="What Is A ‘Shifting Package?’" controller="Footer" action="ShiftingPackages"/>
+    <mvcSiteMapNode title="How To Choose An Agent?" controller="Footer" action="ChoosingAgent" key="How To Choose An Agent?"/>
+   
+    
+    </mvcSiteMapNode>
+      </mvcSiteMapNode>
+
+<mvcSiteMapNode title="Ask The Scholar" controller="QuestionAnswer" action="IndexForClient"/>
+
+  <mvcSiteMapNode title="About Us" controller="Footer" action="AboutUs" key="About Us"/>
+    <mvcSiteMapNode title="Mobile site(Responsive)" controller="Footer" action="ms" key="Mobile site(Responsive)"/>
+    <!--<mvcSiteMapNode title="Site FAQ" controller="Footer" action="faq" key="Site FAQ"/>-->
+    <mvcSiteMapNode title="Site Map" controller="Home" action="SiteMap" key="Site Map"/>
+    <mvcSiteMapNode title="Contact us" controller="ContactUs" action="Create" key="Contact us"/>
+    
+    <mvcSiteMapNode title="Advertise" controller="Footer" action="advertise" key="Advertise"/>
+    <mvcSiteMapNode title="Accessibility" controller="Footer" action="accessibility" key="Accessibility"/>
+    <mvcSiteMapNode title="Privacy and Cookies Policy" controller="Footer" action="pcp" key="Privacy and Cookies Policy"/>
+    <mvcSiteMapNode title="Terms and Conditions" controller="Footer" action="tac" key="Terms and Conditions"/>
+
+   
+
+  </mvcSiteMapNode>
+</mvcSiteMap>

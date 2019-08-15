@@ -1,0 +1,33 @@
+body
+{
+    /*     padding-top: 20px;     padding-bottom: 40px; */
+}
+
+/* featured packages css */
+#gkComponentWrap .nsp{font:normal 13px/1.8 Arial,sans-serif; background:none repeat scroll 0 0 #eee;border-radius:4px 4px 4px 4px;box-shadow:0 0 3px #aaa inset;float:left;margin-left:23px;margin-right:5px;margin-top:0;padding:10px;width:250px;}
+#gkComponentWrap .nspArt{background:none repeat scroll 0 0 #FAFAFA;border-radius:4px 4px 4px 4px;float:left;margin-bottom:10px;padding:5px;width:95%;height:271px !important;}#gkComponentWrap .nspArt div{padding:10px !important}
+#gkComponentWrap .nspArt div div{padding:0 !important;}.itemBody{overflow:hidden;}p.readmore a,a.readon{background:none repeat scroll 0 0 #006633;border-radius:3px 3px 3px 3px;clear:both;color:#FFFFFF !important;display:block;float:left;margin-top:10px;padding:5px 10px;}p.readmore a:hover,a.readon:hover,p.readmore a:focus,a.readon:focus{background:#333 !important;text-shadow:0 0 4px #fff;}.pricetag_wrapper{padding:0 !important;}.pricetag_bg{background:url('/templates/default/images/pricetag_bg.png') no-repeat scroll 0 0 transparent;float:right;margin:0 0 0 10px;padding-bottom:17px;padding-top:57px;text-align:center;width:91px;}.pricetag{background:none;color:#FFFFFF;font-size:150%;font-weight:bold;}.pricetag_content{background:none repeat scroll 0 0 transparent;float:left;padding:0;width:126px;}.pricetag_departing{font-weight:bold;}.pricetag_note{background:none;color:#666;}.pricetag_clear{clear:both !important; padding:0 !important;margin:0 !important;overflow:hidden !important;max-height:1px !important;}.itemIntroText{background:none repeat scroll 0 0 #FAFAFA;border-bottom:1px solid #CCCCCC;border-radius:4px 4px 4px 4px;padding:10px !important;box-shadow:0 0 4px #DDDDDD inset;width:363px;}.componentheading{display:none;}#gkPage{border-bottom:5px solid #006633;border-radius:4px;}.borderedtable{border:4px solid #ccc;width:100%; verticle-align:middle;}.borderedtable tr td{vertical-align:middle;}.link_buynow{background:#006633;border-radius:3px;box-shadow:0 0 3px #555555 inset;color:#FFFFFF;display:block;font-weight:bold;padding:10px 0;}.link_buynow:hover{background:#333;box-shadow:0 0 3px #000 inset;color:#fff !important;}.portfolio li{background:none repeat scroll 0 0 #FAFAFA;border-bottom:1px solid #EEEEEE;border-right:1px solid #EEEEEE;display:block;float:left;height:185px;margin-bottom:5px;margin-right:5px;overflow:hidden;text-align:center;width:185px;}.gkContentR{width:794px !important;}#gkFooterNav li:last-child{background:none repeat scroll 0 0 #101010;border-radius:4px 4px 4px 4px;bottom:10px;color:#FFFFFF;display:block;overflow:hidden;padding:15px 8px;position:fixed;margin:0 auto 0 1010px; display:block;}.item-409 a{color:#555 !important;padding:10px !important;text-align:center !important;}.item-409 a:hover{color:#ccc !important;}.box a,.box_text a{font-weight:600;text-decoration:none;}#gkRightTop h4{border-top:1px solid #ddd;margin-top:6px;padding-top:20px;}.last{border-right:none !important;}.rsmg_float_right,.rsmg_float_left{background:none repeat scroll 0 0 #006633;border-radius:2px 2px 2px 2px;color:#FFFFFF;display:block;font-weight:bold;margin-bottom:20px;padding:8px 14px;}rsmg_float_right:hover,.rsmg_float_left:hover{background:none repeat scroll 0 0 #333;color:#fff;}ul#rsmg_gallery li div.rsmg_item_container a{border-radius:2px 2px 2px 2px;color:#A00000;display:block;overflow:hidden;}#test_cont_fl{float:left;width:50%;}#test_cont_fr{float:right;width:40%;margin-left:10%;}.test_banner{display:block;padding:0 0 15px 7px !important;text-align:left;}.gkCircle2,.gkCircle2 li{list-style-position:outside !important;}
+
+
+
+.pricetag_bg {
+    background: transparent url("pricetag_bg.png") no-repeat scroll 0 0;
+    float: right;
+    margin: 0 0 0 10px;
+    padding-bottom: 17px;
+    padding-top: 57px;
+    text-align: center;
+    width: 91px;
+}
+.pricetag {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #ffffff;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.pricetag_note {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #666;
+    
+}
